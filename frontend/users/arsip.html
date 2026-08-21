@@ -1,0 +1,2185 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#0b3d7a">
+
+    <title>SKALA | Arsip</title>
+
+
+    <!-- =====================================================
+       TAILWIND CSS
+  ====================================================== -->
+<link rel="stylesheet" href="../assets/css/output.css">
+
+
+    <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+       FONT NUNITO
+  ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+       AUTH
+  ====================================================== -->
+
+    <script src="../assets/js/auth.js"></script>
+
+
+    <!-- =====================================================
+       TAILWIND CONFIG
+  ====================================================== -->
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: {
+
+                        sans: [
+                            "Nunito",
+                            "sans-serif"
+                        ]
+
+                    },
+
+                    colors: {
+
+                        primary: {
+
+                            DEFAULT: "#1458A6",
+
+                            dark: "#0B3D7A",
+
+                            deep: "#082F61",
+
+                            light: "#3B82D0"
+
+                        },
+
+                        accent: "#F97316"
+
+                    }
+
+                }
+
+            }
+
+        };
+
+    </script>
+
+
+    <!-- =====================================================
+       GLOBAL
+  ====================================================== -->
+
+    <style>
+        html,
+        body {
+
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+
+            margin: 0;
+            padding: 0;
+
+            overflow-x: hidden;
+
+        }
+
+
+        *,
+        *::before,
+        *::after {
+
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            -webkit-font-smoothing: antialiased;
+
+            text-rendering: optimizeLegibility;
+
+        }
+
+
+        button,
+        a,
+        input,
+        select {
+
+            -webkit-tap-highlight-color: transparent;
+
+        }
+
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+
+            opacity: 1;
+
+        }
+    </style>
+
+</head>
+
+
+<body class="min-h-screen w-full overflow-x-hidden bg-[#f6f8fc] font-sans text-slate-800">
+
+
+    <!-- =====================================================
+       PAGE
+  ====================================================== -->
+
+    <div id="page" class="mx-auto min-h-screen w-full max-w-[1440px] overflow-x-clip pb-[88px]">
+
+
+        <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+        <header
+            class="relative z-[200] w-full overflow-visible rounded-b-[26px] bg-gradient-to-br from-[#082f61] via-[#0b3d7a] to-[#1458a6] text-white shadow-[0_8px_30px_rgba(8,47,97,0.18)] sm:rounded-b-[30px]">
+
+
+            <!-- DECORATION -->
+
+            <div class="pointer-events-none absolute -right-20 -top-28 h-56 w-56 rounded-full bg-white/[0.04]"></div>
+
+            <div class="pointer-events-none absolute -bottom-20 left-[35%] h-36 w-36 rounded-full bg-white/[0.025]">
+            </div>
+
+
+            <!-- =================================================
+           HEADER INNER
+      ================================================== -->
+
+            <div
+                class="relative flex min-h-[82px] w-full min-w-0 items-center px-3 py-2.5 sm:min-h-[92px] sm:px-7 sm:py-4 lg:px-10">
+
+
+                <!-- =================================================
+             BRAND
+        ================================================== -->
+
+                <div class="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
+
+                    <!-- LOGO -->
+
+                    <div
+                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.08] sm:h-14 sm:w-14 sm:rounded-[16px]">
+
+                        <i class="fa-solid fa-folder-open text-[15px] sm:text-[24px]"></i>
+
+                    </div>
+
+
+                    <!-- BRAND -->
+
+                    <div class="min-w-0">
+
+                        <h1 class="text-[19px] font-black leading-none tracking-[-0.5px] sm:text-[29px]">
+                            SKALA
+                        </h1>
+
+
+                        <p
+                            class="mt-[3px] max-w-[125px] text-[6.8px] font-semibold uppercase leading-[1.3] tracking-[0.2px] text-white/65 min-[360px]:max-w-[135px] min-[390px]:max-w-[145px] min-[430px]:max-w-[160px] sm:mt-1 sm:max-w-[240px] sm:text-[9px] sm:leading-[1.4]">
+                            SISTEM KELOLA ARSIP DAN LAPORAN
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+             DESKTOP NAVIGATION
+        ================================================== -->
+
+                <nav
+                    class="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-2 lg:flex">
+
+                    <!-- DASHBOARD -->
+
+                    <a href="dashboard.html"
+                        class="flex h-11 min-w-[115px] items-center justify-center gap-2 rounded-xl bg-white/[0.08] px-4 text-[12px] font-extrabold text-white transition hover:bg-white/[0.16]">
+
+                        <i class="fa-solid fa-house text-[11px]"></i>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- TAMBAH -->
+
+                    <button type="button" id="desktopAddButton"
+                        class="flex h-11 min-w-[140px] items-center justify-center gap-2 rounded-xl bg-white px-4 text-[12px] font-extrabold text-skala-primary shadow-md transition hover:-translate-y-0.5 hover:bg-blue-50 active:translate-y-0">
+
+                        <i class="fa-solid fa-plus text-[11px]"></i>
+
+                        <span>
+                            Tambah Data
+                        </span>
+
+                    </button>
+
+                </nav>
+
+
+                <!-- =================================================
+             USER
+        ================================================== -->
+
+                <div class="infoUser relative ml-auto flex min-w-0 shrink-0 items-center">
+
+
+                    <!-- =================================================
+               DESKTOP USER CARD
+          ================================================== -->
+
+                    <div
+                        class="hidden h-[58px] max-w-[280px] items-center rounded-[16px] border border-white/10 bg-white/[0.08] px-3 backdrop-blur-md lg:flex">
+
+                        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.10]">
+
+                            <i class="fa-solid fa-user text-[12px]"></i>
+
+                        </div>
+
+
+                        <div class="ml-2.5 min-w-0">
+
+                            <span id="namaUser"
+                                class="block max-w-[210px] truncate text-[13px] font-extrabold leading-[1.2]">
+                                Loading...
+                            </span>
+
+
+                            <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                                <span id="roleUser"
+                                    class="max-w-[80px] truncate text-[9px] font-semibold text-white/55">
+                                    ...
+                                </span>
+
+                                <span class="text-[9px] text-white/25">
+                                    •
+                                </span>
+
+                                <span id="teknisUser"
+                                    class="max-w-[110px] truncate text-[9px] font-extrabold text-white">
+                                    Loading...
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+               MOBILE USER CARD
+          ================================================== -->
+
+                    <div
+                        class="flex h-[48px] w-[142px] min-w-0 shrink-0 items-center rounded-[12px] border border-white/10 bg-white/[0.08] px-2 min-[360px]:w-[150px] min-[390px]:w-[158px] min-[430px]:w-[168px] sm:h-[54px] sm:w-[210px] sm:px-3 lg:hidden">
+
+                        <!-- AVATAR -->
+
+                        <div
+                            class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/[0.10] min-[390px]:h-8 min-[390px]:w-8 sm:h-9 sm:w-9">
+
+                            <i class="fa-solid fa-user text-[8px] min-[390px]:text-[9px] sm:text-[11px]"></i>
+
+                        </div>
+
+
+                        <!-- USER -->
+
+                        <div
+                            class="ml-1.5 flex min-w-0 flex-1 flex-col justify-center overflow-hidden min-[390px]:ml-2">
+
+                            <span id="mobileNamaUser"
+                                class="block w-full truncate text-[9.5px] font-black leading-[1.05] text-white min-[360px]:text-[10px] min-[390px]:text-[10.5px] min-[430px]:text-[11px] sm:text-[12px]">
+                                Loading...
+                            </span>
+
+
+                            <span id="mobileRoleUser"
+                                class="mt-[3px] block w-full truncate text-[7px] font-semibold leading-[1.1] text-white/55 min-[390px]:text-[7.5px] min-[430px]:text-[8px] sm:text-[9px]">
+                                ...
+                            </span>
+
+
+                            <span id="mobileTeknisUser"
+                                class="mt-[2px] block w-full truncate text-[7px] font-extrabold leading-[1.1] text-white/90 min-[390px]:text-[7.5px] min-[430px]:text-[8px] sm:text-[9px]">
+                                Loading...
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+               DESKTOP BURGER
+          ================================================== -->
+
+                    <button type="button" id="menuButton" aria-label="Menu" aria-expanded="false"
+                        class="ml-2 hidden h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.07] text-white transition hover:bg-white/[0.14] active:scale-95 lg:flex">
+
+                        <i id="menuIcon" class="fa-solid fa-bars text-[16px]"></i>
+
+                    </button>
+
+
+                    <!-- =================================================
+               HEADER MENU
+          ================================================== -->
+
+                    <div id="headerMenu"
+                        class="absolute right-0 top-[64px] hidden w-[245px] max-w-[calc(100vw-24px)] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+
+                        <!-- USER INFO -->
+
+                        <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-skala-primary">
+
+                                    <i class="fa-solid fa-user text-sm"></i>
+
+                                </div>
+
+
+                                <div class="min-w-0">
+
+                                    <p id="menuUserName" class="truncate text-[12px] font-extrabold text-slate-800">
+                                        Pengguna
+                                    </p>
+
+
+                                    <div class="mt-1 flex min-w-0 items-center gap-1 text-[10px]">
+
+                                        <span id="menuUserRole"
+                                            class="max-w-[75px] truncate font-semibold text-slate-400">
+                                            User
+                                        </span>
+
+                                        <span class="text-slate-300">
+                                            •
+                                        </span>
+
+                                        <span id="menuUserTeknis" class="max-w-[100px] truncate font-bold text-skala-primary">
+                                            -
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-2">
+
+
+                            <!-- ARSIP -->
+
+                            <a href="arsip.html"
+                                class="flex w-full items-center gap-3 rounded-xl bg-blue-50 px-3 py-3 text-[12px] font-bold text-skala-primary">
+
+                                <span
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-skala-primary shadow-sm">
+
+                                    <i class="fa-solid fa-folder-open text-xs"></i>
+
+                                </span>
+
+
+                                <span>
+                                    Arsip
+                                </span>
+
+
+                                <i class="fa-solid fa-check ml-auto text-[9px]"></i>
+
+                            </a>
+
+
+                            <div class="my-1 h-px bg-slate-100"></div>
+
+
+                            <!-- LOGOUT -->
+
+                            <button type="button" id="menuLogoutButton"
+                                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+                                <span
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+                                    <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+                                </span>
+
+
+                                <span>
+                                    Logout
+                                </span>
+
+
+                                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+        <main class="w-full max-w-full overflow-x-clip px-4 pt-5 sm:px-6 sm:pt-6 lg:px-10">
+
+
+            <!-- ===================================================
+           PAGE TITLE
+      ==================================================== -->
+
+            <section class="mb-5 flex min-w-0 items-center justify-between gap-3">
+
+                <div class="flex min-w-0 items-center gap-3">
+
+                    <div
+                        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-blue-50 text-skala-primary">
+
+                        <i class="fa-solid fa-box-archive text-base"></i>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h2 class="truncate text-[19px] font-extrabold tracking-tight text-slate-900 sm:text-[21px]">
+                            Arsip Laporan
+                        </h2>
+
+
+                        <p class="mt-0.5 truncate text-[11px] text-slate-500 sm:text-[12px]">
+                            Cari dan lihat riwayat laporan kegiatan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <span id="resultCount"
+                    class="shrink-0 rounded-xl border border-slate-200 bg-white px-3 py-2 text-[10px] font-bold text-slate-500 shadow-sm"></span>
+
+            </section>
+
+
+            <!-- ===================================================
+           FILTER CARD
+      ==================================================== -->
+
+            <section
+                class="mb-6 w-full overflow-hidden rounded-[21px] border border-slate-200 bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)] sm:p-5 lg:p-6">
+
+
+                <!-- FILTER HEADER -->
+
+                <div class="mb-5 flex min-w-0 items-center gap-3">
+
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-skala-primary">
+
+                        <i class="fa-solid fa-filter text-sm"></i>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h3 class="truncate text-[15px] font-extrabold text-slate-900 sm:text-[16px]">
+                            Filter Arsip
+                        </h3>
+
+
+                        <p class="mt-0.5 hidden text-[11px] text-slate-500 sm:block">
+                            Gunakan filter untuk menemukan laporan berdasarkan periode.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FILTER FORM -->
+
+                <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
+
+
+                    <!-- TAHUN -->
+
+                    <div class="min-w-0">
+
+                        <label for="tahun" class="mb-1.5 block text-[11px] font-extrabold text-slate-600">
+                            Tahun
+                        </label>
+
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-regular fa-calendar absolute left-3 top-1/2 -translate-y-1/2 text-[11px] text-slate-400"></i>
+
+
+                            <input type="number" id="tahun" placeholder="Contoh: 2026" min="2000" max="2100"
+                                class="h-[47px] w-full rounded-xl border border-slate-200 bg-white pl-9 pr-3 text-[13px] font-semibold text-slate-700 outline-none transition placeholder:text-slate-300 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-50">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TRIWULAN -->
+
+                    <div class="min-w-0">
+
+                        <label for="triwulan" class="mb-1.5 block text-[11px] font-extrabold text-slate-600">
+                            Triwulan
+                        </label>
+
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-solid fa-chart-column pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[11px] text-slate-400"></i>
+
+
+                            <select id="triwulan"
+                                class="h-[47px] w-full appearance-none rounded-xl border border-slate-200 bg-white pl-9 pr-9 text-[13px] font-semibold text-slate-700 outline-none transition hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-50">
+
+                                <option value="">
+                                    Pilih Triwulan
+                                </option>
+
+                                <option value="1">
+                                    Triwulan I
+                                </option>
+
+                                <option value="2">
+                                    Triwulan II
+                                </option>
+
+                                <option value="3">
+                                    Triwulan III
+                                </option>
+
+                                <option value="4">
+                                    Triwulan IV
+                                </option>
+
+                            </select>
+
+
+                            <i
+                                class="fa-solid fa-chevron-down pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[9px] text-slate-400"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BULAN -->
+
+                    <div class="min-w-0">
+
+                        <label for="bulan" class="mb-1.5 block text-[11px] font-extrabold text-slate-600">
+                            Bulan
+                        </label>
+
+
+                        <div class="relative">
+
+                            <i
+                                class="fa-regular fa-calendar-days absolute left-3 top-1/2 -translate-y-1/2 text-[11px] text-slate-400"></i>
+
+
+                            <input type="number" id="bulan" placeholder="1 - 12" min="1" max="12"
+                                class="h-[47px] w-full rounded-xl border border-slate-200 bg-white pl-9 pr-3 text-[13px] font-semibold text-slate-700 outline-none transition placeholder:text-slate-300 hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-50">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <div class="min-w-0">
+
+                        <button id="btnLihat" type="button"
+                            class="flex h-[47px] w-full items-center justify-center gap-2 rounded-xl border-0 bg-skala-primary px-4 text-[13px] font-extrabold text-white shadow-[0_6px_15px_rgba(20,88,166,0.18)] transition hover:-translate-y-0.5 hover:bg-skala-primary-dark hover:shadow-[0_8px_20px_rgba(20,88,166,0.22)] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0">
+
+                            <i class="fa-solid fa-magnifying-glass text-[11px]"></i>
+
+                            <span>
+                                Lihat Arsip
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ===================================================
+           RESULT HEADER
+      ==================================================== -->
+
+            <div class="mb-4 flex min-w-0 items-center justify-between gap-3">
+
+                <div class="flex min-w-0 items-center gap-2.5">
+
+                    <div class="h-5 w-1 shrink-0 rounded-full bg-skala-primary"></div>
+
+
+                    <h3 class="truncate text-[16px] font-extrabold text-slate-900 sm:text-[18px]">
+                        Hasil Arsip
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===================================================
+           RESULT CONTAINER
+      ==================================================== -->
+
+            <div id="hasilContainer" class="grid w-full max-w-full grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-5">
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="col-span-full rounded-[20px] border border-slate-200 bg-white px-5 py-12 text-center shadow-[0_4px_15px_rgba(15,23,42,0.04)]">
+
+                    <div
+                        class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[17px] bg-slate-50 text-slate-300">
+
+                        <i class="fa-solid fa-folder-open text-2xl"></i>
+
+                    </div>
+
+
+                    <h3 class="text-[15px] font-extrabold text-slate-700">
+                        Belum ada data
+                    </h3>
+
+
+                    <p class="mt-1 text-[12px] text-slate-400">
+                        Silakan pilih tahun, triwulan, dan bulan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+       OVERLAY
+  ====================================================== -->
+
+    <div id="overlay" class="fixed inset-0 z-[9999] hidden h-screen w-screen bg-slate-950/45 backdrop-blur-[3px]"
+        aria-hidden="true"></div>
+
+
+    <!-- =====================================================
+       BOTTOM SHEET
+  ====================================================== -->
+
+    <div id="bottomSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true"
+        class="fixed inset-x-0 bottom-0 z-[10000] w-full max-w-full translate-y-full rounded-t-[28px] bg-white p-5 shadow-[0_-15px_50px_rgba(15,23,42,0.20)] transition-transform duration-300 sm:p-6 md:left-1/2 md:right-auto md:w-[620px] md:max-w-[620px] md:-translate-x-1/2">
+
+        <div class="mx-auto mb-5 h-1.5 w-12 rounded-full bg-slate-200"></div>
+
+
+        <div class="mb-5">
+
+            <span class="text-[10px] font-extrabold uppercase tracking-[1px] text-skala-primary">
+                Tambah Data
+            </span>
+
+
+            <h3 id="sheetTitle" class="mt-1 text-xl font-extrabold text-slate-900">
+                Pilih jenis laporan
+            </h3>
+
+
+            <p class="mt-1 text-xs text-slate-500">
+                Pilih jenis data yang ingin Anda tambahkan.
+            </p>
+
+        </div>
+
+
+        <!-- LAPORAN KEGIATAN -->
+
+        <a href="form-kegiatan.html"
+            class="mb-3 flex min-w-0 items-center rounded-[18px] border border-slate-200 bg-white p-4 text-slate-800 no-underline transition hover:border-blue-200 hover:bg-blue-50/40">
+
+            <div
+                class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-[15px] bg-blue-50 text-skala-primary">
+
+                <i class="fa-solid fa-file-lines text-lg"></i>
+
+            </div>
+
+
+            <div class="min-w-0 flex-1">
+
+                <h4 class="text-[14px] font-extrabold">
+                    Laporan Kegiatan
+                </h4>
+
+
+                <p class="mt-0.5 text-xs text-slate-500">
+                    Buat laporan kegiatan baru
+                </p>
+
+            </div>
+
+
+            <i class="fa-solid fa-chevron-right ml-2 shrink-0 text-[10px] text-slate-300"></i>
+
+        </a>
+
+
+        <!-- TINDAK LANJUT -->
+
+        <a href="pilih-tindakLanjut.html"
+            class="mb-3 flex min-w-0 items-center rounded-[18px] border border-slate-200 bg-white p-4 text-slate-800 no-underline transition hover:border-orange-200 hover:bg-orange-50/40">
+
+            <div
+                class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-[15px] bg-orange-50 text-orange-500">
+
+                <i class="fa-solid fa-circle-check text-lg"></i>
+
+            </div>
+
+
+            <div class="min-w-0 flex-1">
+
+                <h4 class="text-[14px] font-extrabold">
+                    Tindak Lanjut
+                </h4>
+
+
+                <p class="mt-0.5 text-xs text-slate-500">
+                    Isi tindak lanjut kegiatan
+                </p>
+
+            </div>
+
+
+            <i class="fa-solid fa-chevron-right ml-2 shrink-0 text-[10px] text-slate-300"></i>
+
+        </a>
+
+
+        <!-- CANCEL -->
+
+        <button type="button" id="closeSheetBtn"
+            class="mt-1 w-full rounded-[15px] border-0 bg-slate-100 p-3.5 text-[14px] font-bold text-slate-600 transition hover:bg-slate-200">
+            Batal
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+       MOBILE BOTTOM NAVIGATION
+  ====================================================== -->
+
+    <nav
+        class="fixed inset-x-0 bottom-0 z-[9000] block h-[70px] w-full max-w-full border-t border-slate-200 bg-white/95 shadow-[0_-8px_30px_rgba(15,23,42,0.10)] backdrop-blur-xl lg:hidden">
+
+        <div class="relative mx-auto h-full w-full max-w-[520px]">
+
+
+            <!-- HOME -->
+
+            <a href="dashboard.html" aria-label="Dashboard"
+                class="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-[13px] bg-skala-primary text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95 min-[380px]:left-5 min-[380px]:h-11 min-[380px]:w-11">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+
+            <!-- PLUS -->
+
+            <button type="button" id="openSheetBtn" aria-label="Tambah data" aria-expanded="false"
+                aria-controls="bottomSheet"
+                class="absolute left-1/2 top-1/2 flex h-[57px] w-[57px] -translate-x-1/2 -translate-y-[calc(50%+9px)] items-center justify-center rounded-[18px] bg-skala-primary text-[22px] text-white shadow-[0_8px_22px_rgba(20,88,166,0.28)] transition active:scale-95">
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+
+            <!-- BURGER -->
+
+            <button type="button" id="bottomMenuButton" aria-label="Menu" aria-expanded="false"
+                class="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-[13px] bg-skala-primary text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95 min-[380px]:right-5 min-[380px]:h-11 min-[380px]:w-11">
+
+                <i id="bottomMenuIcon" class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           LOAD USER
+        ====================================================== */
+
+        loadUser("user");
+
+
+        /* =====================================================
+           ELEMENT
+        ====================================================== */
+
+        const tahun =
+            document.getElementById("tahun");
+
+
+        const triwulan =
+            document.getElementById("triwulan");
+
+
+        const bulan =
+            document.getElementById("bulan");
+
+
+        const btnLihat =
+            document.getElementById("btnLihat");
+
+
+        const hasilContainer =
+            document.getElementById("hasilContainer");
+
+
+        const resultCount =
+            document.getElementById("resultCount");
+
+
+        const sheet =
+            document.getElementById("bottomSheet");
+
+
+        const overlay =
+            document.getElementById("overlay");
+
+
+        const openSheetBtn =
+            document.getElementById("openSheetBtn");
+
+
+        const desktopAddButton =
+            document.getElementById("desktopAddButton");
+
+
+        const closeSheetBtn =
+            document.getElementById("closeSheetBtn");
+
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+
+        const bottomMenuButton =
+            document.getElementById("bottomMenuButton");
+
+
+        const headerMenu =
+            document.getElementById("headerMenu");
+
+
+        const menuIcon =
+            document.getElementById("menuIcon");
+
+
+        const bottomMenuIcon =
+            document.getElementById("bottomMenuIcon");
+
+
+        const menuLogoutButton =
+            document.getElementById("menuLogoutButton");
+
+
+        /* =====================================================
+           SHEET INERT
+        ====================================================== */
+
+        sheet.inert = true;
+
+
+        /* =====================================================
+           DEFAULT YEAR
+        ====================================================== */
+
+        tahun.value =
+            new Date().getFullYear();
+
+
+        /* =====================================================
+           LOAD USER INFORMATION
+        ====================================================== */
+
+        function updateUserInformation() {
+
+            const nama =
+                document.getElementById("namaUser");
+
+
+            const role =
+                document.getElementById("roleUser");
+
+
+            const teknis =
+                document.getElementById("teknisUser");
+
+
+            const mobileNama =
+                document.getElementById("mobileNamaUser");
+
+
+            const mobileRole =
+                document.getElementById("mobileRoleUser");
+
+
+            const mobileTeknis =
+                document.getElementById("mobileTeknisUser");
+
+
+            const menuName =
+                document.getElementById("menuUserName");
+
+
+            const menuRole =
+                document.getElementById("menuUserRole");
+
+
+            const menuTeknis =
+                document.getElementById("menuUserTeknis");
+
+
+            const namaValue =
+                nama
+                    ? nama.textContent
+                        .replace(
+                            /^Hallo\s*/i,
+                            ""
+                        )
+                        .trim()
+                    : "Pengguna";
+
+
+            const roleValue =
+                role
+                    ? role.textContent
+                        .replace(
+                            /^Role\s*:\s*/i,
+                            ""
+                        )
+                        .trim()
+                    : "user";
+
+
+            const teknisValue =
+                teknis
+                    ? teknis.textContent.trim()
+                    : "-";
+
+
+            /* MOBILE */
+
+            if (mobileNama) {
+
+                mobileNama.textContent =
+                    "Hallo, " +
+                    (
+                        namaValue ||
+                        "Pengguna"
+                    );
+
+            }
+
+
+            if (mobileRole) {
+
+                mobileRole.textContent =
+                    "Role : " +
+                    (
+                        roleValue ||
+                        "user"
+                    );
+
+            }
+
+
+            if (mobileTeknis) {
+
+                mobileTeknis.textContent =
+                    teknisValue ||
+                    "-";
+
+            }
+
+
+            /* MENU */
+
+            if (menuName) {
+
+                menuName.textContent =
+                    "Hallo, " +
+                    (
+                        namaValue ||
+                        "Pengguna"
+                    );
+
+            }
+
+
+            if (menuRole) {
+
+                menuRole.textContent =
+                    "Role : " +
+                    (
+                        roleValue ||
+                        "user"
+                    );
+
+            }
+
+
+            if (menuTeknis) {
+
+                menuTeknis.textContent =
+                    teknisValue ||
+                    "-";
+
+            }
+
+        }
+
+
+        setTimeout(
+            updateUserInformation,
+            150
+        );
+
+
+        /* =====================================================
+           OPEN SHEET
+        ====================================================== */
+
+        function openSheet() {
+
+            sheet.classList.remove(
+                "translate-y-full"
+            );
+
+
+            sheet.classList.add(
+                "translate-y-0"
+            );
+
+
+            overlay.classList.remove(
+                "hidden"
+            );
+
+
+            overlay.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            sheet.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+
+            sheet.inert = false;
+
+
+            openSheetBtn.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+
+            document.body.classList.add(
+                "overflow-hidden"
+            );
+
+
+            closeSheetBtn.focus();
+
+        }
+
+
+        /* =====================================================
+           CLOSE SHEET
+        ====================================================== */
+
+        function closeSheet() {
+
+            sheet.classList.remove(
+                "translate-y-0"
+            );
+
+
+            sheet.classList.add(
+                "translate-y-full"
+            );
+
+
+            overlay.classList.add(
+                "hidden"
+            );
+
+
+            overlay.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+
+            sheet.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+
+            sheet.inert = true;
+
+
+            openSheetBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            document.body.classList.remove(
+                "overflow-hidden"
+            );
+
+        }
+
+
+        /* =====================================================
+           SHEET EVENTS
+        ====================================================== */
+
+        openSheetBtn.addEventListener(
+            "click",
+            openSheet
+        );
+
+
+        desktopAddButton.addEventListener(
+            "click",
+            openSheet
+        );
+
+
+        closeSheetBtn.addEventListener(
+            "click",
+            closeSheet
+        );
+
+
+        overlay.addEventListener(
+            "click",
+            closeSheet
+        );
+
+
+        /* =====================================================
+           MENU
+        ====================================================== */
+
+        function openMenu() {
+
+            headerMenu.classList.remove(
+                "hidden"
+            );
+
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+
+            bottomMenuButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+
+            if (menuIcon) {
+
+                menuIcon.classList.remove(
+                    "fa-bars"
+                );
+
+                menuIcon.classList.add(
+                    "fa-xmark"
+                );
+
+            }
+
+
+            bottomMenuIcon.classList.remove(
+                "fa-bars"
+            );
+
+            bottomMenuIcon.classList.add(
+                "fa-xmark"
+            );
+
+        }
+
+
+        function closeMenu() {
+
+            headerMenu.classList.add(
+                "hidden"
+            );
+
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+
+            bottomMenuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            if (menuIcon) {
+
+                menuIcon.classList.remove(
+                    "fa-xmark"
+                );
+
+                menuIcon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
+
+            bottomMenuIcon.classList.remove(
+                "fa-xmark"
+            );
+
+            bottomMenuIcon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+
+        function toggleMenu() {
+
+            if (
+                headerMenu.classList.contains(
+                    "hidden"
+                )
+            ) {
+
+                openMenu();
+
+            } else {
+
+                closeMenu();
+
+            }
+
+        }
+
+
+        /* =====================================================
+           DESKTOP MENU
+        ====================================================== */
+
+        if (menuButton) {
+
+            menuButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    toggleMenu();
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        bottomMenuButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                toggleMenu();
+
+            }
+        );
+
+
+        /* =====================================================
+           CLICK OUTSIDE MENU
+        ====================================================== */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+
+                    !headerMenu.contains(
+                        event.target
+                    )
+
+                    &&
+
+                    (!menuButton ||
+                        !menuButton.contains(
+                            event.target
+                        ))
+
+                    &&
+
+                    !bottomMenuButton.contains(
+                        event.target
+                    )
+
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           LOGOUT
+        ====================================================== */
+
+        menuLogoutButton.addEventListener(
+            "click",
+            async function () {
+
+                closeMenu();
+
+
+                if (
+                    typeof logout ===
+                    "function"
+                ) {
+
+                    await logout();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           FILTER BUTTON
+        ====================================================== */
+
+        btnLihat.addEventListener(
+            "click",
+            loadData
+        );
+
+
+        /* =====================================================
+           LOAD DATA
+        ====================================================== */
+
+        async function loadData() {
+
+            const tahunValue =
+                tahun.value;
+
+
+            const triwulanValue =
+                triwulan.value;
+
+
+            const bulanValue =
+                bulan.value;
+
+
+            /* ===================================================
+               VALIDATION
+            ==================================================== */
+
+            if (!tahunValue) {
+
+                alert(
+                    "Masukkan tahun."
+                );
+
+
+                tahun.focus();
+
+                return;
+
+            }
+
+
+            if (!triwulanValue) {
+
+                alert(
+                    "Pilih triwulan."
+                );
+
+
+                triwulan.focus();
+
+                return;
+
+            }
+
+
+            if (!bulanValue) {
+
+                alert(
+                    "Masukkan bulan."
+                );
+
+
+                bulan.focus();
+
+                return;
+
+            }
+
+
+            if (
+                bulanValue < 1 ||
+                bulanValue > 12
+            ) {
+
+                alert(
+                    "Bulan harus berada antara 1 sampai 12."
+                );
+
+
+                bulan.focus();
+
+                return;
+
+            }
+
+
+            /* ===================================================
+               LOADING BUTTON
+            ==================================================== */
+
+            btnLihat.disabled = true;
+
+
+            btnLihat.innerHTML = `
+
+        <i
+          class="fa-solid fa-spinner fa-spin"
+        ></i>
+
+        <span>
+          Memuat...
+        </span>
+
+      `;
+
+
+            /* ===================================================
+               LOADING RESULT
+            ==================================================== */
+
+            hasilContainer.innerHTML = `
+
+        <div
+          class="col-span-full rounded-[20px] border border-slate-200 bg-white px-5 py-12 text-center shadow-[0_4px_15px_rgba(15,23,42,0.04)]"
+        >
+
+          <div
+            class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[17px] bg-blue-50 text-skala-primary"
+          >
+
+            <i
+              class="fa-solid fa-spinner fa-spin text-xl"
+            ></i>
+
+          </div>
+
+
+          <p
+            class="text-[12px] font-semibold text-slate-500"
+          >
+            Memuat data arsip...
+          </p>
+
+        </div>
+
+      `;
+
+
+            resultCount.innerText = "";
+
+
+            /* ===================================================
+               REQUEST
+            ==================================================== */
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${BASE_URL}/api/dashboard/arsip?tahun=${tahunValue}&triwulan=${triwulanValue}&bulan=${bulanValue}`,
+                        {
+                            credentials: "include"
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                console.log(
+                    "DATA ARSIP:",
+                    result
+                );
+
+
+                /* =================================================
+                   SESSION EXPIRED
+                ================================================== */
+
+                if (
+                    response.status === 401 ||
+                    response.status === 403
+                ) {
+
+                    window.location.href =
+                        "../login.html";
+
+                    return;
+
+                }
+
+
+                /* =================================================
+                   RESULT ERROR
+                ================================================== */
+
+                if (!result.success) {
+
+                    tampilkanKosong(
+                        result.message ||
+                        "Data tidak ditemukan."
+                    );
+
+
+                    return;
+
+                }
+
+
+                /* =================================================
+                   SHOW DATA
+                ================================================== */
+
+                tampilkanData(
+                    result.data
+                );
+
+            }
+
+
+            catch (err) {
+
+                console.error(
+                    "ERROR ARSIP:",
+                    err
+                );
+
+
+                hasilContainer.innerHTML = `
+
+          <div
+            class="col-span-full rounded-[20px] border border-red-100 bg-white px-5 py-12 text-center shadow-[0_4px_15px_rgba(15,23,42,0.04)]"
+          >
+
+            <div
+              class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[17px] bg-red-50 text-red-500"
+            >
+
+              <i
+                class="fa-solid fa-triangle-exclamation text-xl"
+              ></i>
+
+            </div>
+
+
+            <h3
+              class="text-[15px] font-extrabold text-slate-700"
+            >
+              Gagal mengambil data
+            </h3>
+
+
+            <p
+              class="mt-1 text-[12px] text-slate-400"
+            >
+              Terjadi kesalahan saat menghubungi server.
+            </p>
+
+          </div>
+
+        `;
+
+
+                resultCount.innerText = "";
+
+            }
+
+
+            finally {
+
+                btnLihat.disabled =
+                    false;
+
+
+                btnLihat.innerHTML = `
+
+          <i
+            class="fa-solid fa-magnifying-glass text-[11px]"
+          ></i>
+
+          <span>
+            Lihat Arsip
+          </span>
+
+        `;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           SHOW DATA
+        ====================================================== */
+
+        function tampilkanData(data) {
+
+            hasilContainer.innerHTML = "";
+
+
+            /* ===================================================
+               EMPTY
+            ==================================================== */
+
+            if (
+                !data ||
+                data.length === 0
+            ) {
+
+                tampilkanKosong(
+                    "Tidak ada arsip pada filter yang dipilih."
+                );
+
+
+                return;
+
+            }
+
+
+            /* ===================================================
+               COUNT
+            ==================================================== */
+
+            resultCount.innerText =
+                `${data.length} data`;
+
+
+            /* ===================================================
+               LOOP DATA
+            ==================================================== */
+
+            data.forEach(
+                (item) => {
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className = `
+            group
+            min-w-0
+            overflow-hidden
+            rounded-[20px]
+            border
+            border-slate-200
+            bg-white
+            p-4
+            shadow-[0_4px_15px_rgba(15,23,42,0.04)]
+            transition
+            hover:-translate-y-1
+            hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)]
+            sm:p-5
+          `;
+
+
+                    card.innerHTML = `
+
+            <!-- =========================================
+                 CARD HEADER
+            ========================================== -->
+
+            <div
+              class="mb-4 flex min-w-0 items-start gap-3 border-b border-slate-100 pb-4"
+            >
+
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-[13px] bg-blue-50 text-skala-primary"
+              >
+
+                <i
+                  class="fa-solid fa-file-lines text-sm"
+                ></i>
+
+              </div>
+
+
+              <div
+                class="min-w-0 flex-1"
+              >
+
+                <strong
+                  class="block truncate text-[14px] font-extrabold leading-5 text-skala-primary sm:text-[15px]"
+                >
+                  ${escapeHTML(
+                        item.judul || "-"
+                    )}
+                </strong>
+
+
+                <span
+                  class="mt-0.5 block text-[10px] font-semibold text-slate-400"
+                >
+                  Arsip kegiatan
+                </span>
+
+              </div>
+
+
+              <span
+                class="flex shrink-0 items-center gap-1 rounded-lg bg-emerald-50 px-2 py-1 text-[9px] font-extrabold text-emerald-600"
+              >
+
+                <i
+                  class="fa-solid fa-circle-check text-[8px]"
+                ></i>
+
+                Tersimpan
+
+              </span>
+
+            </div>
+
+
+            <!-- =========================================
+                 DATA
+            ========================================== -->
+
+            <div
+              class="grid min-w-0 grid-cols-1 gap-2.5 sm:grid-cols-2"
+            >
+
+
+              <!-- INDIKATOR -->
+
+              <div
+                class="min-w-0 rounded-xl border border-slate-100 bg-slate-50/80 p-3 sm:col-span-2"
+              >
+
+                <span
+                  class="mb-1 block text-[9px] font-extrabold uppercase tracking-[0.6px] text-slate-400"
+                >
+                  Indikator
+                </span>
+
+
+                <span
+                  class="block break-words text-[12px] font-bold leading-5 text-slate-700"
+                >
+                  ${escapeHTML(
+                        item.nama_indikator || "-"
+                    )}
+                </span>
+
+              </div>
+
+
+              <!-- KEGIATAN -->
+
+              <div
+                class="min-w-0 rounded-xl border border-slate-100 bg-slate-50/80 p-3 sm:col-span-2"
+              >
+
+                <span
+                  class="mb-1 block text-[9px] font-extrabold uppercase tracking-[0.6px] text-slate-400"
+                >
+                  Kegiatan
+                </span>
+
+
+                <span
+                  class="block break-words text-[12px] font-bold leading-5 text-slate-700"
+                >
+                  ${escapeHTML(
+                        item.kegiatan || "-"
+                    )}
+                </span>
+
+              </div>
+
+
+              <!-- TANGGAL -->
+
+              <div
+                class="min-w-0 rounded-xl border border-slate-100 bg-slate-50/80 p-3"
+              >
+
+                <span
+                  class="mb-1 block text-[9px] font-extrabold uppercase tracking-[0.6px] text-slate-400"
+                >
+                  Tanggal
+                </span>
+
+
+                <span
+                  class="block break-words text-[12px] font-bold leading-5 text-slate-700"
+                >
+
+                  <i
+                    class="fa-regular fa-calendar mr-1 text-[10px] text-skala-primary"
+                  ></i>
+
+                  ${formatTanggal(
+                        item.tanggal
+                    )}
+
+                </span>
+
+              </div>
+
+
+              <!-- STATUS -->
+
+              <div
+                class="min-w-0 rounded-xl border border-emerald-100 bg-emerald-50/60 p-3"
+              >
+
+                <span
+                  class="mb-1 block text-[9px] font-extrabold uppercase tracking-[0.6px] text-emerald-500"
+                >
+                  Status
+                </span>
+
+
+                <span
+                  class="block text-[12px] font-extrabold leading-5 text-emerald-600"
+                >
+
+                  <i
+                    class="fa-solid fa-circle-check mr-1 text-[10px]"
+                  ></i>
+
+                  Tersimpan
+
+                </span>
+
+              </div>
+
+            </div>
+
+          `;
+
+
+                    hasilContainer.appendChild(
+                        card
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+        ====================================================== */
+
+        function tampilkanKosong(
+            message
+        ) {
+
+            hasilContainer.innerHTML = `
+
+        <div
+          class="col-span-full rounded-[20px] border border-slate-200 bg-white px-5 py-12 text-center shadow-[0_4px_15px_rgba(15,23,42,0.04)]"
+        >
+
+          <div
+            class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[17px] bg-slate-50 text-slate-300"
+          >
+
+            <i
+              class="fa-solid fa-folder-open text-2xl"
+            ></i>
+
+          </div>
+
+
+          <h3
+            class="text-[15px] font-extrabold text-slate-700"
+          >
+            Data tidak ditemukan
+          </h3>
+
+
+          <p
+            class="mx-auto mt-1 max-w-[420px] text-[12px] leading-5 text-slate-400"
+          >
+            ${escapeHTML(
+                message
+            )}
+          </p>
+
+        </div>
+
+      `;
+
+
+            resultCount.innerText = "";
+
+        }
+
+
+        /* =====================================================
+           FORMAT TANGGAL
+        ====================================================== */
+
+        function formatTanggal(
+            tanggal
+        ) {
+
+            if (!tanggal) {
+
+                return "-";
+
+            }
+
+
+            const date =
+                new Date(tanggal);
+
+
+            if (
+                isNaN(
+                    date.getTime()
+                )
+            ) {
+
+                return tanggal;
+
+            }
+
+
+            return date.toLocaleDateString(
+                "id-ID",
+                {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           ESCAPE HTML
+        ====================================================== */
+
+        function escapeHTML(
+            value
+        ) {
+
+            return String(value)
+
+                .replace(
+                    /&/g,
+                    "&amp;"
+                )
+
+                .replace(
+                    /</g,
+                    "&lt;"
+                )
+
+                .replace(
+                    />/g,
+                    "&gt;"
+                )
+
+                .replace(
+                    /"/g,
+                    "&quot;"
+                )
+
+                .replace(
+                    /'/g,
+                    "&#039;"
+                );
+
+        }
+
+
+        /* =====================================================
+           ESCAPE KEY
+        ====================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeSheet();
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bps-blue: #2c599d;
+    --bps-light-blue: #5a87c7;
+    --bg-content: #e6eef5; 
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --input-bg: #4b74b5; 
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    display: flex; 
+    background-color: var(--text-white); 
+    height: 100vh; 
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* MAIN CONTENT & CARD */
+.main-content { 
+    flex-grow: 1; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: #f4f6f9; 
+}
+
+.content-card { 
+    background-color: #dbeafe; 
+    border-radius: 12px; 
+    border: 1px solid #b6c6d3; 
+    padding: 30px; 
+    flex-grow: 1; 
+    position: relative; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+/* TOP BAR */
+.top-bar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 30px; 
+}
+
+.header-title { 
+    color: #003366; 
+    font-size: 22px; 
+    font-weight: 800; 
+    text-transform: uppercase;
+}
+
+.top-right-actions { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 10px; 
+}
+
+.user-info { 
+    display: flex; 
+    align-items: center; 
+    background: white; 
+    padding: 6px 16px; 
+    border-radius: 30px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border: 1px solid #ccc; 
+    color: #333;
+}
+
+.btn-kembali { 
+    background-color: #c4c4c4; 
+    color: #333; 
+    padding: 6px 20px; 
+    border-radius: 6px; 
+    border: 1px solid #999; 
+    font-size: 13px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: 0.2s;
+}
+
+.btn-kembali:hover { 
+    background-color: #b0b0b0; 
+}
+
+/* --- TOMBOL TAMBAH KEGIATAN (DIPERBESAR & LEBIH RAPI) --- */
+.btn-tambah { 
+    background-color: var(--input-bg); 
+    color: white; 
+    border: none; 
+    padding: 12px 24px; 
+    border-radius: 6px; 
+    font-size: 16px; 
+    font-weight: 700; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    cursor: pointer; 
+    margin-bottom: 25px; 
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); 
+}
+
+.btn-tambah:hover { 
+    background-color: var(--bps-blue); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+}
+
+.btn-tambah .material-symbols-outlined {
+    font-size: 24px !important; 
+}
+
+/* TABLE */
+.master-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background-color: transparent; 
+}
+
+.master-table th { 
+    background-color: var(--input-bg); 
+    color: white; 
+    padding: 12px; 
+    text-align: center; 
+    font-size: 14px; 
+    font-weight: 600; 
+}
+
+.master-table th:first-child { 
+    border-top-left-radius: 8px; 
+}
+
+.master-table th:last-child { 
+    border-top-right-radius: 8px; 
+}
+
+.master-table td { 
+    padding: 12px; 
+    text-align: center; 
+    color: #555; 
+    font-size: 14px; 
+    border-bottom: 1px solid #c2d3e0; 
+}
+
+/* FORM TAMBAH */
+.form-centered { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 80px; 
+    gap: 30px; 
+}
+
+.form-group-inline { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.form-group-inline label { 
+    font-size: 15px; 
+    font-weight: 600; 
+    color: #5c4a3d; 
+}
+
+.form-input { 
+    background-color: var(--input-bg); 
+    color: white; 
+    border: none; 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    font-size: 14px; 
+    outline: none; 
+    width: 300px; 
+}
+
+.btn-simpan { 
+    background-color: #1354b1; 
+    color: white; 
+    border: none; 
+    padding: 10px 30px; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-left: 0; 
+    transition: 0.2s; 
+}
+
+.btn-simpan:hover { 
+    background-color: #334e7a; 
+}
+
+/* --- ANIMASI DROPDOWN MENU --- */
+.submenu {
+    background-color: rgba(0,0,0,0.1);
+    max-height: 500px; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out; 
+}
+
+.submenu.collapsed {
+    max-height: 0;
+}
+
+.submenu-komponen {
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.submenu-komponen.collapsed {
+    max-height: 0;
+}
+
+/* --- TOMBOL AKSI TABEL BENTUK KOTAK (ICON SAJA) --- */
+.btn-action {
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px;
+    transition: 0.2s;
+}
+
+.btn-edit { 
+    background-color: #1a73e8; 
+}
+
+.btn-edit:hover { 
+    background-color: #1557b0; 
+}
+
+.btn-hapus { 
+    background-color: #ff3b30; 
+}
+
+.btn-hapus:hover { 
+    background-color: #d32f2f; 
+}
+
+/* --- TOMBOL BATAL FORM --- */
+.btn-batal {
+    background-color: #474242;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-batal:hover {
+    background-color: #514343;
+}
+
+/* --- MODAL HAPUS KUSTOM --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.modal-content p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-modal {
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(50, 9, 88);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-modal-batal {
+    background-color: #5c6b73; 
+}
+
+.btn-modal-batal:hover {
+    background-color: #475359;
+}
+
+.btn-modal-hapus {
+    background-color: #4d14d1; 
+}
+
+.btn-modal-hapus:hover {
+    background-color: #4d14d1;
+}

@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bps-blue:#2c599d;
+    --bg-card:#dbeafe;
+    --input-bg:#4b74b5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    height:100vh;
+}
+
+.container{
+    display:flex;
+    width:100%;
+    height:100%;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-content{
+    flex:1;
+    padding:20px;
+    display:flex;
+}
+
+.content-wrapper{
+    width:100%;
+    background:var(--bg-card);
+    border-radius:12px;
+    border:1px solid #bfd0dd;
+    padding:30px;
+    box-shadow:0 4px 8px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   TOP BAR
+=========================== */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.page-title{
+    color:#003366;
+    font-size:22px;
+    font-weight:800;
+}
+
+.user-profile{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:10px;
+}
+
+.profile-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    border:1px solid #ccc;
+    border-radius:30px;
+    padding:7px 16px;
+    cursor:pointer;
+}
+
+#btn-kembali{
+    background:#bdbdbd;
+    border:none;
+    padding:8px 18px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* ===========================
+   TAB
+=========================== */
+
+.tab-button{
+    display:inline-block;
+    margin-bottom:25px;
+    background:#295ea5;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:14px;
+}
+
+/* ===========================
+   VIEW
+=========================== */
+
+.view-section{
+    display:none;
+}
+
+.view-section.active{
+    display:block;
+}
+
+/* ===========================
+   BUTTON TAMBAH
+=========================== */
+
+.action-bar{
+    margin-bottom:20px;
+}
+
+.btn-blue{
+    background:var(--input-bg);
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:12px 22px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    font-weight:700;
+    font-size:15px;
+}
+
+.btn-blue:hover{
+    background:var(--bps-blue);
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.data-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.data-table th{
+    background:#4b74b5;
+    color:#fff;
+    padding:12px;
+    text-align:center;
+}
+
+.data-table td{
+    background:#fff;
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #d8d8d8;
+}
+
+.data-table tbody tr:hover{
+    background:#f5f9ff;
+}
+
+/* ===========================
+   BUTTON AKSI
+=========================== */
+
+.btn-action{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:6px;
+    color:#fff;
+    cursor:pointer;
+    margin:0 3px;
+}
+
+.btn-edit{
+    background:#1a73e8;
+}
+
+.btn-edit:hover{
+    background:#1557b0;
+}
+
+.btn-hapus{
+    background:#e53935;
+}
+
+.btn-hapus:hover{
+    background:#c62828;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-tambah-title{
+    text-align:center;
+    color:#003366;
+    margin-bottom:35px;
+    font-size:22px;
+}
+
+.custom-form{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.form-inline{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    width:100%;
+    justify-content:center;
+}
+
+.form-inline label{
+    width:90px;
+    font-weight:700;
+}
+
+.form-input{
+    border:none;
+    border-radius:8px;
+    background:var(--input-bg);
+    color:#fff;
+    padding:12px 14px;
+    outline:none;
+    font-size:14px;
+}
+
+.input-kode{
+    width:120px;
+}
+
+#in-uraian{
+    width:600px;
+}
+
+.form-input::placeholder{
+    color:#dbe7ff;
+}
+
+.form-actions{
+    margin-top:40px;
+    display:flex;
+    gap:15px;
+}
+
+.btn-simpan{
+    background:#1354b1;
+    color:#fff;
+    border:none;
+    padding:10px 28px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-simpan:hover{
+    background:#0d47a1;
+}
+
+.btn-batal{
+    background:#555;
+    color:#fff;
+    border:none;
+    padding:10px 28px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-batal:hover{
+    background:#444;
+}
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal-overlay{
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,.45);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-overlay.show{
+    display:flex;
+}
+
+.modal-box{
+    width:380px;
+    background:#fff;
+    border-radius:15px;
+    padding:28px;
+    text-align:center;
+}
+
+.modal-box h3{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.modal-box p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.modal-btn{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+    #in-uraian{
+        width:420px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .form-inline{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .form-inline label{
+        width:100%;
+    }
+
+    .input-kode,
+    #in-uraian{
+        width:100%;
+    }
+
+}

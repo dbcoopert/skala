@@ -1,0 +1,2610 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="theme-color" content="#0b3d7a">
+
+  <title>SKALA | Pilih Tindak Lanjut</title>
+
+
+  <!-- =====================================================
+       TAILWIND CSS
+  ====================================================== -->
+
+<link rel="stylesheet" href="../assets/css/output.css">
+
+
+  <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+  <!-- =====================================================
+       FONT NUNITO
+  ====================================================== -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- =====================================================
+       AUTH
+  ====================================================== -->
+
+  <script src="../assets/js/auth.js"></script>
+
+
+  <!-- =====================================================
+       TAILWIND CONFIG
+  ====================================================== -->
+
+  <script>
+
+    tailwind.config = {
+
+      theme: {
+
+        extend: {
+
+          fontFamily: {
+
+            sans: [
+              "Nunito",
+              "sans-serif"
+            ]
+
+          },
+
+          colors: {
+
+            primary: {
+
+              DEFAULT: "#1458A6",
+
+              dark: "#0B3D7A",
+
+              deep: "#082F61",
+
+              light: "#3B82D0"
+
+            },
+
+            accent: "#F97316"
+
+          }
+
+        }
+
+      }
+
+    };
+
+  </script>
+
+
+  <!-- =====================================================
+       GLOBAL STYLE
+  ====================================================== -->
+
+  <style>
+    html,
+    body {
+
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+
+      margin: 0;
+      padding: 0;
+
+      overflow-x: hidden;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+      box-sizing: border-box;
+
+    }
+
+
+    body {
+
+      -webkit-font-smoothing: antialiased;
+
+      text-rendering: optimizeLegibility;
+
+    }
+
+
+    button,
+    a,
+    input,
+    select {
+
+      -webkit-tap-highlight-color: transparent;
+
+    }
+
+
+    select {
+
+      -webkit-appearance: none;
+      appearance: none;
+
+    }
+  </style>
+
+</head>
+
+
+<body class="min-h-screen w-full overflow-x-hidden bg-[#f6f8fc] font-sans text-slate-800">
+
+
+  <!-- =====================================================
+       PAGE
+  ====================================================== -->
+
+  <div class="mx-auto min-h-screen w-full max-w-[1440px] overflow-x-clip pb-[88px]">
+
+
+    <!-- ===================================================
+         HEADER
+    ==================================================== -->
+
+    <header
+      class="relative z-[200] w-full overflow-visible rounded-b-[26px] bg-gradient-to-br from-[#082f61] via-[#0b3d7a] to-[#1458a6] text-white shadow-[0_8px_30px_rgba(8,47,97,0.18)] sm:rounded-b-[30px]">
+
+
+      <!-- DECORATION -->
+
+      <div class="pointer-events-none absolute -right-20 -top-28 h-56 w-56 rounded-full bg-white/[0.04]"></div>
+
+
+      <div class="pointer-events-none absolute -bottom-20 left-[35%] h-36 w-36 rounded-full bg-white/[0.025]"></div>
+
+
+      <!-- =================================================
+           HEADER INNER
+      ================================================== -->
+
+      <div
+        class="relative flex min-h-[82px] w-full min-w-0 items-center px-3 py-2.5 sm:min-h-[92px] sm:px-7 sm:py-4 lg:px-10">
+
+
+        <!-- =================================================
+             BRAND
+        ================================================== -->
+
+        <div class="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
+
+          <!-- LOGO -->
+
+          <div
+            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.08] sm:h-14 sm:w-14 sm:rounded-[16px]">
+
+            <i class="fa-solid fa-folder-open text-[15px] sm:text-[24px]"></i>
+
+          </div>
+
+
+          <!-- BRAND -->
+
+          <div class="min-w-0">
+
+            <h1 class="text-[19px] font-black leading-none tracking-[-0.5px] sm:text-[29px]">
+              SKALA
+            </h1>
+
+
+            <p
+              class="mt-[3px] max-w-[125px] text-[6.8px] font-semibold uppercase leading-[1.3] tracking-[0.2px] text-white/65 min-[360px]:max-w-[135px] min-[390px]:max-w-[145px] min-[430px]:max-w-[160px] sm:mt-1 sm:max-w-[240px] sm:text-[9px] sm:leading-[1.4]">
+              SISTEM KELOLA ARSIP DAN LAPORAN
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DESKTOP USER AREA
+             Tidak ada Dashboard / Arsip / Tambah Data
+        ================================================== -->
+
+        <div class="relative ml-auto flex min-w-0 shrink-0 items-center">
+
+
+          <!-- =================================================
+               DESKTOP USER
+          ================================================== -->
+
+          <div
+            class="hidden h-[58px] max-w-[280px] items-center rounded-[16px] border border-white/10 bg-white/[0.08] px-3 backdrop-blur-md lg:flex">
+
+            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.10]">
+
+              <i class="fa-solid fa-user text-[12px]"></i>
+
+            </div>
+
+
+            <div class="ml-2.5 min-w-0">
+
+              <span id="namaUser" class="block max-w-[210px] truncate text-[13px] font-extrabold leading-[1.2]">
+                Loading...
+              </span>
+
+
+              <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                <span id="roleUser" class="max-w-[80px] truncate text-[9px] font-semibold text-white/55">
+                  ...
+                </span>
+
+
+                <span class="text-[9px] text-white/25">
+                  •
+                </span>
+
+
+                <span id="teknisUser" class="max-w-[110px] truncate text-[9px] font-extrabold text-white">
+                  Loading...
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               MOBILE USER
+          ================================================== -->
+
+          <div
+            class="flex h-[48px] w-[142px] min-w-0 shrink-0 items-center rounded-[12px] border border-white/10 bg-white/[0.08] px-2 min-[360px]:w-[150px] min-[390px]:w-[158px] min-[430px]:w-[168px] sm:h-[54px] sm:w-[210px] sm:px-3 lg:hidden">
+
+            <!-- AVATAR -->
+
+            <div
+              class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/[0.10] min-[390px]:h-8 min-[390px]:w-8 sm:h-9 sm:w-9">
+
+              <i class="fa-solid fa-user text-[8px] min-[390px]:text-[9px] sm:text-[11px]"></i>
+
+            </div>
+
+
+            <!-- USER INFORMATION -->
+
+            <div class="ml-1.5 flex min-w-0 flex-1 flex-col justify-center overflow-hidden min-[390px]:ml-2">
+
+              <span id="mobileNamaUser"
+                class="block w-full truncate text-[9.5px] font-black leading-[1.05] text-white min-[360px]:text-[10px] min-[390px]:text-[10.5px] min-[430px]:text-[11px] sm:text-[12px]">
+                Loading...
+              </span>
+
+
+              <span id="mobileRoleUser"
+                class="mt-[3px] block w-full truncate text-[7px] font-semibold leading-[1.1] text-white/55 min-[390px]:text-[7.5px] min-[430px]:text-[8px] sm:text-[9px]">
+                ...
+              </span>
+
+
+              <span id="mobileTeknisUser"
+                class="mt-[2px] block w-full truncate text-[7px] font-extrabold leading-[1.1] text-white/90 min-[390px]:text-[7.5px] min-[430px]:text-[8px] sm:text-[9px]">
+                Loading...
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               DESKTOP BURGER
+          ================================================== -->
+
+          <button type="button" id="menuButton" aria-label="Menu" aria-expanded="false"
+            class="ml-2 hidden h-[46px] w-[46px] shrink-0 items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.07] text-white transition hover:bg-white/[0.14] active:scale-95 lg:flex">
+
+            <i id="menuIcon" class="fa-solid fa-bars text-[16px]"></i>
+
+          </button>
+
+
+          <!-- =================================================
+               HEADER MENU
+          ================================================== -->
+
+          <div id="headerMenu"
+            class="absolute right-0 top-[64px] hidden w-[245px] max-w-[calc(100vw-24px)] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+
+            <!-- USER INFO -->
+
+            <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+              <div class="flex items-center gap-3">
+
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-skala-primary">
+
+                  <i class="fa-solid fa-user text-sm"></i>
+
+                </div>
+
+
+                <div class="min-w-0">
+
+                  <p id="menuUserName" class="truncate text-[12px] font-extrabold text-slate-800">
+                    Pengguna
+                  </p>
+
+
+                  <div class="mt-1 flex min-w-0 items-center gap-1 text-[10px]">
+
+                    <span id="menuUserRole" class="max-w-[75px] truncate font-semibold text-slate-400">
+                      User
+                    </span>
+
+
+                    <span class="text-slate-300">
+                      •
+                    </span>
+
+
+                    <span id="menuUserTeknis" class="max-w-[100px] truncate font-bold text-skala-primary">
+                      -
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- MENU ITEMS -->
+
+            <div class="p-2">
+
+              <!-- =================================================
+                   ARSIP
+              ================================================== -->
+
+              <a href="arsip.html"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-[12px] font-bold text-slate-700 transition hover:bg-blue-50 hover:text-skala-primary">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-skala-primary">
+
+                  <i class="fa-solid fa-folder-open text-xs"></i>
+
+                </span>
+
+
+                <span>
+                  Arsip
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-slate-300"></i>
+
+              </a>
+
+
+              <!-- =================================================
+                   TINDAK LANJUT
+              ================================================== -->
+
+              <div
+                class="flex w-full items-center gap-3 rounded-xl bg-blue-50 px-3 py-3 text-[12px] font-bold text-skala-primary">
+
+                <span
+                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-skala-primary shadow-sm">
+
+                  <i class="fa-solid fa-list-check text-xs"></i>
+
+                </span>
+
+
+                <span>
+                  Tindak Lanjut
+                </span>
+
+
+                <i class="fa-solid fa-check ml-auto text-[9px]"></i>
+
+              </div>
+
+
+              <!-- SEPARATOR -->
+
+              <div class="my-1 h-px bg-slate-100"></div>
+
+
+              <!-- =================================================
+                   LOGOUT
+              ================================================== -->
+
+              <button type="button" id="menuLogoutButton"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+                  <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+                </span>
+
+
+                <span>
+                  Logout
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="w-full max-w-full overflow-x-clip px-4 pt-5 sm:px-6 sm:pt-6 lg:px-10">
+
+
+      <!-- ===================================================
+           PAGE TITLE
+      ==================================================== -->
+
+      <section
+        class="mb-5 flex min-w-0 items-center gap-3 rounded-[20px] border border-slate-200 bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)] sm:p-5">
+
+        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-blue-50 text-skala-primary">
+
+          <i class="fa-solid fa-list-check text-base"></i>
+
+        </div>
+
+
+        <div class="min-w-0">
+
+          <h2 class="truncate text-[19px] font-extrabold tracking-tight text-slate-900 sm:text-[21px]">
+            Tindak Lanjut
+          </h2>
+
+
+          <p class="mt-0.5 truncate text-[11px] text-slate-500 sm:text-[12px]">
+            Pilih rencana tindak lanjut triwulan lalu
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           INDIKATOR
+      ==================================================== -->
+
+      <section
+        class="mb-6 w-full overflow-hidden rounded-[21px] border border-slate-200 bg-white p-4 shadow-[0_4px_16px_rgba(15,23,42,0.04)] sm:p-5 lg:p-6">
+
+        <!-- HEADER -->
+
+        <div class="mb-4 flex min-w-0 items-center gap-3">
+
+          <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-skala-primary">
+
+            <i class="fa-solid fa-chart-column text-sm"></i>
+
+          </div>
+
+
+          <div class="min-w-0">
+
+            <h3 class="truncate text-[15px] font-extrabold text-slate-900 sm:text-[16px]">
+              Pilih Indikator Kinerja
+            </h3>
+
+
+            <p class="mt-0.5 hidden text-[11px] text-slate-500 sm:block">
+              Pilih indikator untuk menampilkan rencana tindak lanjut.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SELECT -->
+
+        <div class="relative">
+
+          <select id="indikator"
+            class="h-[49px] w-full cursor-pointer rounded-xl border border-slate-200 bg-white px-4 pr-10 text-[13px] font-semibold text-slate-700 outline-none transition hover:border-slate-300 focus:border-primary focus:ring-4 focus:ring-blue-50">
+
+            <option value="">
+              Pilih Indikator
+            </option>
+
+          </select>
+
+
+          <i
+            class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[10px] text-slate-400"></i>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           RTL HEADER
+      ==================================================== -->
+
+      <section class="mb-4 flex min-w-0 items-end justify-between gap-4">
+
+        <div class="min-w-0">
+
+          <div class="flex min-w-0 items-center gap-2.5">
+
+            <div class="h-5 w-1 shrink-0 rounded-full bg-skala-primary"></div>
+
+
+            <h3 class="truncate text-[16px] font-extrabold text-slate-900 sm:text-[18px]">
+              Daftar Rencana Tindak Lanjut
+            </h3>
+
+          </div>
+
+
+          <p class="mt-1.5 text-[11px] leading-5 text-slate-500 sm:text-[12px]">
+            Pilih rencana tindak lanjut triwulan lalu
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- ===================================================
+           RTL CONTAINER
+      ==================================================== -->
+
+      <div id="rtlContainer"
+        class="grid w-full max-w-full grid-cols-1 gap-4 overflow-visible md:grid-cols-2 lg:grid-cols-3 lg:gap-5"></div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =====================================================
+       OVERLAY
+  ====================================================== -->
+
+  <div id="overlay" class="fixed inset-0 z-[9999] hidden h-screen w-screen bg-slate-950/45 backdrop-blur-[3px]"
+    aria-hidden="true"></div>
+
+
+  <!-- =====================================================
+       BOTTOM SHEET
+  ====================================================== -->
+
+  <div id="bottomSheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" aria-hidden="true"
+    class="fixed inset-x-0 bottom-0 z-[10000] w-full max-w-full translate-y-full rounded-t-[28px] bg-white p-5 shadow-[0_-15px_50px_rgba(15,23,42,0.20)] transition-transform duration-300 sm:p-6 md:left-1/2 md:right-auto md:w-[620px] md:max-w-[620px] md:-translate-x-1/2">
+
+    <div class="mx-auto mb-5 h-1.5 w-12 rounded-full bg-slate-200"></div>
+
+
+    <div class="mb-5">
+
+      <span class="text-[10px] font-extrabold uppercase tracking-[1px] text-skala-primary">
+        Tambah Data
+      </span>
+
+
+      <h3 id="sheetTitle" class="mt-1 text-xl font-extrabold text-slate-900">
+        Pilih jenis laporan
+      </h3>
+
+
+      <p class="mt-1 text-xs text-slate-500">
+        Pilih jenis data yang ingin Anda tambahkan.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         KEGIATAN
+    ================================================== -->
+
+    <a href="form-kegiatan.html"
+      class="mb-3 flex min-w-0 items-center rounded-[18px] border border-slate-200 bg-white p-4 text-slate-800 no-underline transition hover:border-blue-200 hover:bg-blue-50/40">
+
+      <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-[15px] bg-blue-50 text-skala-primary">
+
+        <i class="fa-solid fa-file-lines text-lg"></i>
+
+      </div>
+
+
+      <div class="min-w-0 flex-1">
+
+        <h4 class="text-[14px] font-extrabold">
+          Laporan Kegiatan
+        </h4>
+
+
+        <p class="mt-0.5 text-xs text-slate-500">
+          Buat laporan kegiatan baru
+        </p>
+
+      </div>
+
+
+      <i class="fa-solid fa-chevron-right ml-2 shrink-0 text-[10px] text-slate-300"></i>
+
+    </a>
+
+
+    <!-- =================================================
+         TINDAK LANJUT
+    ================================================== -->
+
+    <a href="pilih-tindakLanjut.html"
+      class="mb-3 flex min-w-0 items-center rounded-[18px] border border-blue-200 bg-blue-50/50 p-4 text-slate-800 no-underline">
+
+      <div
+        class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-[15px] bg-white text-skala-primary shadow-sm">
+
+        <i class="fa-solid fa-list-check text-lg"></i>
+
+      </div>
+
+
+      <div class="min-w-0 flex-1">
+
+        <h4 class="text-[14px] font-extrabold text-skala-primary">
+          Tindak Lanjut
+        </h4>
+
+
+        <p class="mt-0.5 text-xs text-slate-500">
+          Isi tindak lanjut kegiatan
+        </p>
+
+      </div>
+
+
+      <i class="fa-solid fa-check ml-2 shrink-0 text-[10px] text-skala-primary"></i>
+
+    </a>
+
+
+    <!-- =================================================
+         CANCEL
+    ================================================== -->
+
+    <button type="button" id="closeSheetBtn"
+      class="mt-1 w-full rounded-[15px] border-0 bg-slate-100 p-3.5 text-[14px] font-bold text-slate-600 transition hover:bg-slate-200">
+      Batal
+    </button>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE BOTTOM NAV
+  ====================================================== -->
+
+  <nav
+    class="fixed inset-x-0 bottom-0 z-[9000] block h-[70px] w-full max-w-full border-t border-slate-200 bg-white/95 shadow-[0_-8px_30px_rgba(15,23,42,0.10)] backdrop-blur-xl lg:hidden">
+
+    <div class="relative mx-auto h-full w-full max-w-[520px]">
+
+
+      <!-- HOME -->
+
+      <a href="dashboard.html" aria-label="Dashboard"
+        class="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-[13px] bg-skala-primary text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95 min-[380px]:left-5 min-[380px]:h-11 min-[380px]:w-11">
+
+        <i class="fa-solid fa-house"></i>
+
+      </a>
+      <!-- BURGER -->
+
+      <button type="button" id="bottomMenuButton" aria-label="Menu" aria-expanded="false"
+        class="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-[13px] bg-skala-primary text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95 min-[380px]:right-5 min-[380px]:h-11 min-[380px]:w-11">
+
+        <i id="bottomMenuIcon" class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+
+    // =====================================================
+    // LOAD USER
+    // =====================================================
+
+    loadUser("user");
+
+
+    // =====================================================
+    // ELEMENT
+    // =====================================================
+
+    const indikator =
+      document.getElementById(
+        "indikator"
+      );
+
+
+    const rtlContainer =
+      document.getElementById(
+        "rtlContainer"
+      );
+
+
+    const sheet =
+      document.getElementById(
+        "bottomSheet"
+      );
+
+
+    const overlay =
+      document.getElementById(
+        "overlay"
+      );
+
+
+    const openSheetBtn =
+      document.getElementById(
+        "openSheetBtn"
+      );
+
+
+    const closeSheetBtn =
+      document.getElementById(
+        "closeSheetBtn"
+      );
+
+
+    const menuButton =
+      document.getElementById(
+        "menuButton"
+      );
+
+
+    const bottomMenuButton =
+      document.getElementById(
+        "bottomMenuButton"
+      );
+
+
+    const headerMenu =
+      document.getElementById(
+        "headerMenu"
+      );
+
+
+    const menuIcon =
+      document.getElementById(
+        "menuIcon"
+      );
+
+
+    const bottomMenuIcon =
+      document.getElementById(
+        "bottomMenuIcon"
+      );
+
+
+    const menuLogoutButton =
+      document.getElementById(
+        "menuLogoutButton"
+      );
+
+
+    // =====================================================
+    // SHEET INERT
+    // =====================================================
+
+    sheet.inert = true;
+
+
+    // =====================================================
+    // UPDATE USER INFORMATION
+    // =====================================================
+
+    function updateUserInformation() {
+
+      const nama =
+        document.getElementById(
+          "namaUser"
+        );
+
+
+      const role =
+        document.getElementById(
+          "roleUser"
+        );
+
+
+      const teknis =
+        document.getElementById(
+          "teknisUser"
+        );
+
+
+      const mobileNama =
+        document.getElementById(
+          "mobileNamaUser"
+        );
+
+
+      const mobileRole =
+        document.getElementById(
+          "mobileRoleUser"
+        );
+
+
+      const mobileTeknis =
+        document.getElementById(
+          "mobileTeknisUser"
+        );
+
+
+      const menuName =
+        document.getElementById(
+          "menuUserName"
+        );
+
+
+      const menuRole =
+        document.getElementById(
+          "menuUserRole"
+        );
+
+
+      const menuTeknis =
+        document.getElementById(
+          "menuUserTeknis"
+        );
+
+
+      const namaValue =
+        nama
+          ? nama.textContent
+            .replace(
+              /^Hallo\s*/i,
+              ""
+            )
+            .trim()
+          : "Pengguna";
+
+
+      const roleValue =
+        role
+          ? role.textContent
+            .replace(
+              /^Role\s*:\s*/i,
+              ""
+            )
+            .trim()
+          : "user";
+
+
+      const teknisValue =
+        teknis
+          ? teknis.textContent.trim()
+          : "-";
+
+
+      // ===================================================
+      // MOBILE
+      // ===================================================
+
+      if (mobileNama) {
+
+        mobileNama.textContent =
+          "Hallo, " +
+          (
+            namaValue ||
+            "Pengguna"
+          );
+
+      }
+
+
+      if (mobileRole) {
+
+        mobileRole.textContent =
+          "Role : " +
+          (
+            roleValue ||
+            "user"
+          );
+
+      }
+
+
+      if (mobileTeknis) {
+
+        mobileTeknis.textContent =
+          teknisValue ||
+          "-";
+
+      }
+
+
+      // ===================================================
+      // MENU
+      // ===================================================
+
+      if (menuName) {
+
+        menuName.textContent =
+          "Hallo, " +
+          (
+            namaValue ||
+            "Pengguna"
+          );
+
+      }
+
+
+      if (menuRole) {
+
+        menuRole.textContent =
+          "Role : " +
+          (
+            roleValue ||
+            "user"
+          );
+
+      }
+
+
+      if (menuTeknis) {
+
+        menuTeknis.textContent =
+          teknisValue ||
+          "-";
+
+      }
+
+    }
+
+
+    setTimeout(
+      updateUserInformation,
+      150
+    );
+
+
+    // =====================================================
+    // OPEN SHEET
+    // =====================================================
+
+    function openSheet() {
+
+      sheet.classList.remove(
+        "translate-y-full"
+      );
+
+
+      sheet.classList.add(
+        "translate-y-0"
+      );
+
+
+      overlay.classList.remove(
+        "hidden"
+      );
+
+
+      overlay.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+
+      sheet.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+
+      sheet.inert = false;
+
+
+      if (openSheetBtn) {
+
+        openSheetBtn.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+
+      document.body.classList.add(
+        "overflow-hidden"
+      );
+
+    }
+
+
+    // =====================================================
+    // CLOSE SHEET
+    // =====================================================
+
+    function closeSheet() {
+
+      sheet.classList.remove(
+        "translate-y-0"
+      );
+
+
+      sheet.classList.add(
+        "translate-y-full"
+      );
+
+
+      overlay.classList.add(
+        "hidden"
+      );
+
+
+      overlay.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+
+      sheet.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+
+      sheet.inert = true;
+
+
+      if (openSheetBtn) {
+
+        openSheetBtn.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+
+      document.body.classList.remove(
+        "overflow-hidden"
+      );
+
+    }
+
+
+    // =====================================================
+    // SHEET EVENTS
+    // =====================================================
+
+    if (openSheetBtn) {
+
+      openSheetBtn.addEventListener(
+        "click",
+        openSheet
+      );
+
+    }
+
+
+    closeSheetBtn.addEventListener(
+      "click",
+      closeSheet
+    );
+
+
+    overlay.addEventListener(
+      "click",
+      closeSheet
+    );
+
+
+    // =====================================================
+    // OPEN MENU
+    // =====================================================
+
+    function openMenu() {
+
+      headerMenu.classList.remove(
+        "hidden"
+      );
+
+
+      if (menuButton) {
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+
+      bottomMenuButton.setAttribute(
+        "aria-expanded",
+        "true"
+      );
+
+
+      if (menuIcon) {
+
+        menuIcon.classList.remove(
+          "fa-bars"
+        );
+
+
+        menuIcon.classList.add(
+          "fa-xmark"
+        );
+
+      }
+
+
+      bottomMenuIcon.classList.remove(
+        "fa-bars"
+      );
+
+
+      bottomMenuIcon.classList.add(
+        "fa-xmark"
+      );
+
+    }
+
+
+    // =====================================================
+    // CLOSE MENU
+    // =====================================================
+
+    function closeMenu() {
+
+      headerMenu.classList.add(
+        "hidden"
+      );
+
+
+      if (menuButton) {
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+
+      bottomMenuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+
+      if (menuIcon) {
+
+        menuIcon.classList.remove(
+          "fa-xmark"
+        );
+
+
+        menuIcon.classList.add(
+          "fa-bars"
+        );
+
+      }
+
+
+      bottomMenuIcon.classList.remove(
+        "fa-xmark"
+      );
+
+
+      bottomMenuIcon.classList.add(
+        "fa-bars"
+      );
+
+    }
+
+
+    // =====================================================
+    // TOGGLE MENU
+    // =====================================================
+
+    function toggleMenu() {
+
+      if (
+        headerMenu.classList.contains(
+          "hidden"
+        )
+      ) {
+
+        openMenu();
+
+      } else {
+
+        closeMenu();
+
+      }
+
+    }
+
+
+    // =====================================================
+    // DESKTOP MENU
+    // =====================================================
+
+    if (menuButton) {
+
+      menuButton.addEventListener(
+        "click",
+        function (event) {
+
+          event.stopPropagation();
+
+          toggleMenu();
+
+        }
+      );
+
+    }
+
+
+    // =====================================================
+    // MOBILE MENU
+    // =====================================================
+
+    bottomMenuButton.addEventListener(
+      "click",
+      function (event) {
+
+        event.stopPropagation();
+
+        toggleMenu();
+
+      }
+    );
+
+
+    // =====================================================
+    // CLICK OUTSIDE MENU
+    // =====================================================
+
+    document.addEventListener(
+      "click",
+      function (event) {
+
+        if (
+
+          !headerMenu.contains(
+            event.target
+          )
+
+          &&
+
+          (!menuButton ||
+            !menuButton.contains(
+              event.target
+            ))
+
+          &&
+
+          !bottomMenuButton.contains(
+            event.target
+          )
+
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+    // =====================================================
+    // LOGOUT
+    // =====================================================
+
+    menuLogoutButton.addEventListener(
+      "click",
+      async function () {
+
+        closeMenu();
+
+
+        if (
+          typeof logout ===
+          "function"
+        ) {
+
+          await logout();
+
+        }
+
+      }
+    );
+
+
+    // =====================================================
+    // EMPTY STATE
+    // =====================================================
+
+    function tampilkanEmpty(
+      icon,
+      title,
+      message
+    ) {
+
+      rtlContainer.innerHTML = `
+
+        <div
+          class="col-span-full rounded-[20px] border border-slate-200 bg-white px-5 py-12 text-center shadow-[0_4px_15px_rgba(15,23,42,0.04)]"
+        >
+
+          <div
+            class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-[17px] bg-slate-50 text-slate-300"
+          >
+
+            <i
+              class="${icon} text-2xl"
+            ></i>
+
+          </div>
+
+
+          <h4
+            class="text-[15px] font-extrabold text-slate-700"
+          >
+            ${title}
+          </h4>
+
+
+          <p
+            class="mx-auto mt-1 max-w-[430px] text-[12px] leading-5 text-slate-400"
+          >
+            ${message}
+          </p>
+
+        </div>
+
+      `;
+
+    }
+
+
+    // =====================================================
+    // FORMAT TANGGAL
+    // =====================================================
+
+    function formatTanggal(
+      tanggal
+    ) {
+
+      if (!tanggal) {
+
+        return "-";
+
+      }
+
+
+      const dateString =
+        String(tanggal)
+          .split("T")[0];
+
+
+      const parts =
+        dateString.split("-");
+
+
+      if (
+        parts.length === 3
+      ) {
+
+        const tahun =
+          parts[0];
+
+
+        const bulan =
+          parts[1];
+
+
+        const hari =
+          parts[2];
+
+
+        return (
+          hari +
+          "-" +
+          bulan +
+          "-" +
+          tahun
+        );
+
+      }
+
+
+      const date =
+        new Date(tanggal);
+
+
+      if (
+        isNaN(
+          date.getTime()
+        )
+      ) {
+
+        return "-";
+
+      }
+
+
+      const hari =
+        String(
+          date.getDate()
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      const bulan =
+        String(
+          date.getMonth() + 1
+        ).padStart(
+          2,
+          "0"
+        );
+
+
+      const tahun =
+        date.getFullYear();
+
+
+      return (
+        hari +
+        "-" +
+        bulan +
+        "-" +
+        tahun
+      );
+
+    }
+
+
+    // =====================================================
+    // LOAD INDIKATOR
+    // =====================================================
+
+    async function loadIndikator() {
+
+      try {
+
+        const response =
+          await fetch(
+            `${BASE_URL}/api/indikator`,
+            {
+              credentials: "include"
+            }
+          );
+
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "INDIKATOR:",
+          result
+        );
+
+
+        // =================================================
+        // SESSION EXPIRED
+        // =================================================
+
+        if (
+          response.status === 401 ||
+          response.status === 403
+        ) {
+
+          window.location.href =
+            "../login.html";
+
+          return;
+
+        }
+
+
+        // =================================================
+        // CEK RESPONSE
+        // =================================================
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          tampilkanEmpty(
+            "fa-solid fa-triangle-exclamation",
+            "Gagal Memuat Data",
+            result.message ||
+            "Terjadi kesalahan saat mengambil data indikator."
+          );
+
+          return;
+
+        }
+
+
+        // =================================================
+        // CEK DATA
+        // =================================================
+
+        if (
+          !result.data ||
+          result.data.length === 0
+        ) {
+
+          tampilkanEmpty(
+            "fa-solid fa-folder-open",
+            "Belum Ada Indikator",
+            "Belum terdapat indikator kinerja yang tersedia."
+          );
+
+          return;
+
+        }
+
+
+        // =================================================
+        // RESET SELECT
+        // =================================================
+
+        indikator.innerHTML = `
+
+          <option value="">
+            Pilih Indikator
+          </option>
+
+        `;
+
+
+        // =================================================
+        // LOOP INDIKATOR
+        // =================================================
+
+        result.data.forEach(
+          (item) => {
+
+            const option =
+              document.createElement(
+                "option"
+              );
+
+
+            option.value =
+              item.id_indikator;
+
+
+            option.textContent =
+              item.uraian_indikator ||
+              "Indikator";
+
+
+            indikator.appendChild(
+              option
+            );
+
+          }
+        );
+
+
+      } catch (err) {
+
+        console.error(
+          "ERROR LOAD INDIKATOR:",
+          err
+        );
+
+
+        tampilkanEmpty(
+          "fa-solid fa-triangle-exclamation",
+          "Gagal Memuat Data",
+          "Terjadi kesalahan saat mengambil data indikator."
+        );
+
+      }
+
+    }
+
+
+    // =====================================================
+    // PILIH RTL
+    // =====================================================
+
+    function pilihRTL(
+      id_kegiatan
+    ) {
+
+      window.location.href =
+        "form-tindakLanjut.html?id=" +
+        id_kegiatan;
+
+    }
+
+
+    // =====================================================
+    // LOAD KEGIATAN RTL
+    // =====================================================
+
+    async function loadKegiatan() {
+
+      const idIndikator =
+        indikator.value;
+
+
+      // =================================================
+      // BELUM PILIH
+      // =================================================
+
+      if (
+        idIndikator === ""
+      ) {
+
+        rtlContainer.innerHTML = "";
+
+        return;
+
+      }
+
+
+      try {
+
+        // =================================================
+        // LOADING
+        // =================================================
+
+        tampilkanEmpty(
+          "fa-solid fa-spinner fa-spin",
+          "Memuat Data...",
+          "Silakan tunggu sebentar."
+        );
+
+
+        // =================================================
+        // REQUEST
+        // =================================================
+
+        const response =
+          await fetch(
+            `${BASE_URL}/api/rtl/kegiatan/${idIndikator}`,
+            {
+              credentials: "include"
+            }
+          );
+
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "DATA KEGIATAN RTL USER:",
+          result
+        );
+
+
+        // =================================================
+        // SESSION EXPIRED
+        // =================================================
+
+        if (
+          response.status === 401 ||
+          response.status === 403
+        ) {
+
+          window.location.href =
+            "../login.html";
+
+          return;
+
+        }
+
+
+        // =================================================
+        // CEK RESPONSE
+        // =================================================
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          tampilkanEmpty(
+            "fa-solid fa-triangle-exclamation",
+            "Gagal Memuat Data",
+            result.message ||
+            "Terjadi kesalahan saat mengambil data kegiatan."
+          );
+
+          return;
+
+        }
+
+
+        // =================================================
+        // TIDAK ADA DATA
+        // =================================================
+
+        if (
+          !result.data ||
+          result.data.length === 0
+        ) {
+
+          tampilkanEmpty(
+            "fa-solid fa-clipboard-check",
+            "Tidak Ada Rencana Tindak Lanjut",
+            "Belum terdapat rencana tindak lanjut milik Anda pada indikator ini."
+          );
+
+          return;
+
+        }
+
+
+        // =================================================
+        // RESET
+        // =================================================
+
+        rtlContainer.innerHTML = "";
+
+
+        // =================================================
+        // LOOP DATA
+        // =================================================
+
+        result.data.forEach(
+          (item) => {
+
+
+            // =============================================
+            // JUMLAH PELAKSANAAN
+            // =============================================
+
+            const jumlahPelaksanaan =
+              Number(
+                item.jumlah_pelaksanaan || 0
+              );
+
+
+            // =============================================
+            // CARD
+            // =============================================
+
+            const card =
+              document.createElement(
+                "article"
+              );
+
+
+            card.className = `
+
+              group
+
+              relative
+
+              flex
+
+              min-w-0
+
+              min-h-[250px]
+
+              cursor-pointer
+
+              flex-col
+
+              justify-between
+
+              overflow-hidden
+
+              rounded-[20px]
+
+              border
+
+              border-slate-200
+
+              border-l-[4px]
+
+              border-l-primary
+
+              bg-white
+
+              p-4
+
+              shadow-[0_4px_15px_rgba(15,23,42,0.04)]
+
+              transition-all
+
+              duration-200
+
+              hover:-translate-y-1
+
+              hover:border-slate-300
+
+              hover:border-l-primary
+
+              hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)]
+
+              active:translate-y-0
+
+              sm:min-h-[265px]
+
+              sm:p-5
+
+            `;
+
+
+            // =============================================
+            // CLICK CARD
+            // =============================================
+
+            card.addEventListener(
+              "click",
+              function () {
+
+                pilihRTL(
+                  item.id_kegiatan
+                );
+
+              }
+            );
+
+
+            // =============================================
+            // HEADER CARD
+            // =============================================
+
+            const header =
+              document.createElement(
+                "div"
+              );
+
+
+            header.className = `
+
+              mb-4
+
+              flex
+
+              min-w-0
+
+              items-start
+
+              justify-between
+
+              gap-3
+
+            `;
+
+
+            // =============================================
+            // HEADER CONTENT
+            // =============================================
+
+            const headerContent =
+              document.createElement(
+                "div"
+              );
+
+
+            headerContent.className =
+              "min-w-0 flex-1";
+
+
+            // =============================================
+            // LABEL
+            // =============================================
+
+            const labelRTL =
+              document.createElement(
+                "span"
+              );
+
+
+            labelRTL.className = `
+
+              mb-2
+
+              inline-flex
+
+              max-w-full
+
+              items-center
+
+              gap-1.5
+
+              rounded-lg
+
+              bg-blue-50
+
+              px-2.5
+
+              py-1.5
+
+              text-[9px]
+
+              font-extrabold
+
+              uppercase
+
+              tracking-[0.4px]
+
+              text-skala-primary
+
+              sm:text-[10px]
+
+            `;
+
+
+            labelRTL.innerHTML = `
+
+              <i
+                class="fa-solid fa-list-check"
+              ></i>
+
+              <span>
+                Rencana Tindak Lanjut
+              </span>
+
+            `;
+
+
+            // =============================================
+            // RTL TEXT
+            // =============================================
+
+            const rtlText =
+              document.createElement(
+                "h4"
+              );
+
+
+            rtlText.className = `
+
+              mb-2
+
+              break-words
+
+              text-[14px]
+
+              font-extrabold
+
+              leading-[1.55]
+
+              text-slate-800
+
+              sm:text-[15px]
+
+              sm:leading-[1.6]
+
+            `;
+
+
+            rtlText.textContent =
+              item.rtl ||
+              "Rencana tindak lanjut tidak tersedia.";
+
+
+            // =============================================
+            // KEGIATAN
+            // =============================================
+
+            const kegiatan =
+              document.createElement(
+                "p"
+              );
+
+
+            kegiatan.className = `
+
+              break-words
+
+              text-[11px]
+
+              leading-[1.6]
+
+              text-slate-500
+
+              sm:text-[12px]
+
+            `;
+
+
+            kegiatan.innerHTML = `
+
+              <span
+                class="font-extrabold text-slate-600"
+              >
+                Kegiatan:
+              </span>
+
+              ${escapeHTML(
+              item.kegiatan || "-"
+            )}
+
+            `;
+
+
+            // =============================================
+            // APPEND CONTENT
+            // =============================================
+
+            headerContent.appendChild(
+              labelRTL
+            );
+
+
+            headerContent.appendChild(
+              rtlText
+            );
+
+
+            headerContent.appendChild(
+              kegiatan
+            );
+
+
+            // =============================================
+            // ARROW
+            // =============================================
+
+            const arrow =
+              document.createElement(
+                "span"
+              );
+
+
+            arrow.className = `
+
+              flex
+
+              h-9
+
+              w-9
+
+              shrink-0
+
+              items-center
+
+              justify-center
+
+              rounded-xl
+
+              bg-blue-50
+
+              text-skala-primary
+
+              transition-all
+
+              duration-200
+
+              group-hover:translate-x-1
+
+              group-hover:bg-skala-primary-dark
+
+              group-hover:text-white
+
+            `;
+
+
+            arrow.innerHTML = `
+
+              <i
+                class="fa-solid fa-chevron-right text-[10px]"
+              ></i>
+
+            `;
+
+
+            // =============================================
+            // HEADER APPEND
+            // =============================================
+
+            header.appendChild(
+              headerContent
+            );
+
+
+            header.appendChild(
+              arrow
+            );
+
+
+            // =============================================
+            // BODY
+            // =============================================
+
+            const body =
+              document.createElement(
+                "div"
+              );
+
+
+            body.className = `
+
+              mt-auto
+
+              grid
+
+              grid-cols-2
+
+              gap-2
+
+              border-t
+
+              border-slate-100
+
+              pt-3
+
+              sm:gap-3
+
+            `;
+
+
+            // =============================================
+            // TANGGAL KEGIATAN
+            // =============================================
+
+            const dateContainer =
+              document.createElement(
+                "div"
+              );
+
+
+            dateContainer.className =
+              "min-w-0";
+
+
+            const dateLabel =
+              document.createElement(
+                "span"
+              );
+
+
+            dateLabel.className = `
+
+              mb-1
+
+              block
+
+              text-[9px]
+
+              font-bold
+
+              text-slate-400
+
+              sm:text-[10px]
+
+            `;
+
+
+            dateLabel.textContent =
+              "Tanggal Kegiatan";
+
+
+            const dateText =
+              document.createElement(
+                "p"
+              );
+
+
+            dateText.className = `
+
+              truncate
+
+              text-[11px]
+
+              font-extrabold
+
+              text-slate-700
+
+              sm:text-[12px]
+
+            `;
+
+
+            dateText.innerHTML = `
+
+              <i
+                class="fa-regular fa-calendar mr-1 text-[9px] text-skala-primary"
+              ></i>
+
+              ${escapeHTML(
+              item.tanggal_format ||
+              formatTanggal(
+                item.tanggal
+              )
+            )}
+
+            `;
+
+
+            dateContainer.appendChild(
+              dateLabel
+            );
+
+
+            dateContainer.appendChild(
+              dateText
+            );
+
+
+            // =============================================
+            // BATAS RTL
+            // =============================================
+
+            const batasContainer =
+              document.createElement(
+                "div"
+              );
+
+
+            batasContainer.className =
+              "min-w-0";
+
+
+            const batasLabel =
+              document.createElement(
+                "span"
+              );
+
+
+            batasLabel.className = `
+
+              mb-1
+
+              block
+
+              text-[9px]
+
+              font-bold
+
+              text-slate-400
+
+              sm:text-[10px]
+
+            `;
+
+
+            batasLabel.textContent =
+              "Batas RTL";
+
+
+            const batasText =
+              document.createElement(
+                "p"
+              );
+
+
+            batasText.className = `
+
+              truncate
+
+              text-[11px]
+
+              font-extrabold
+
+              text-red-600
+
+              sm:text-[12px]
+
+            `;
+
+
+            batasText.innerHTML = `
+
+              <i
+                class="fa-regular fa-clock mr-1 text-[9px]"
+              ></i>
+
+              ${escapeHTML(
+              formatTanggal(
+                item.batas_rtl
+              )
+            )}
+
+            `;
+
+
+            batasContainer.appendChild(
+              batasLabel
+            );
+
+
+            batasContainer.appendChild(
+              batasText
+            );
+
+
+            // =============================================
+            // BADGE PELAKSANAAN
+            // =============================================
+
+            const badge =
+              document.createElement(
+                "div"
+              );
+
+
+            badge.className = `
+
+              col-span-2
+
+              flex
+
+              items-center
+
+              justify-center
+
+              rounded-xl
+
+              px-3
+
+              py-2
+
+              text-[10px]
+
+              font-extrabold
+
+              sm:text-[11px]
+
+            `;
+
+
+            // =============================================
+            // BELUM DITINDAKLANJUTI
+            // =============================================
+
+            if (
+              jumlahPelaksanaan === 0
+            ) {
+
+              badge.classList.add(
+                "bg-red-50",
+                "text-red-600"
+              );
+
+
+              badge.innerHTML = `
+
+                <i
+                  class="fa-solid fa-circle-exclamation mr-1.5"
+                ></i>
+
+                Tindak Lanjut 0
+
+              `;
+
+            }
+
+
+            // =============================================
+            // SUDAH DITINDAKLANJUTI
+            // =============================================
+
+            else {
+
+              badge.classList.add(
+                "bg-blue-50",
+                "text-skala-primary"
+              );
+
+
+              badge.innerHTML = `
+
+                <i
+                  class="fa-solid fa-circle-check mr-1.5"
+                ></i>
+
+                Tindak Lanjuti ${jumlahPelaksanaan}
+
+              `;
+
+            }
+
+
+            // =============================================
+            // APPEND BODY
+            // =============================================
+
+            body.appendChild(
+              dateContainer
+            );
+
+
+            body.appendChild(
+              batasContainer
+            );
+
+
+            body.appendChild(
+              badge
+            );
+
+
+            // =============================================
+            // APPEND CARD
+            // =============================================
+
+            card.appendChild(
+              header
+            );
+
+
+            card.appendChild(
+              body
+            );
+
+
+            rtlContainer.appendChild(
+              card
+            );
+
+          }
+        );
+
+
+      } catch (err) {
+
+        console.error(
+          "ERROR LOAD KEGIATAN RTL:",
+          err
+        );
+
+
+        tampilkanEmpty(
+          "fa-solid fa-triangle-exclamation",
+          "Gagal Memuat Data",
+          "Terjadi kesalahan saat mengambil data kegiatan."
+        );
+
+      }
+
+    }
+
+
+    // =====================================================
+    // ESCAPE HTML
+    // =====================================================
+
+    function escapeHTML(
+      value
+    ) {
+
+      return String(value)
+
+        .replace(
+          /&/g,
+          "&amp;"
+        )
+
+        .replace(
+          /</g,
+          "&lt;"
+        )
+
+        .replace(
+          />/g,
+          "&gt;"
+        )
+
+        .replace(
+          /"/g,
+          "&quot;"
+        )
+
+        .replace(
+          /'/g,
+          "&#039;"
+        );
+
+    }
+
+
+    // =====================================================
+    // SELECT EVENT
+    // =====================================================
+
+    indikator.addEventListener(
+      "change",
+      loadKegiatan
+    );
+
+
+    // =====================================================
+    // ESCAPE KEY
+    // =====================================================
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeSheet();
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+    // =====================================================
+    // INIT
+    // =====================================================
+
+    loadIndikator();
+
+  </script>
+
+</body>
+
+</html>

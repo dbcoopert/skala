@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bps-blue: #2c599d;
+    --bps-light-blue: #5a87c7;
+    --bg-content: #e6eef5; 
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --input-bg: #4b74b5; 
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    box-sizing: border-box; 
+}
+
+body { 
+    display: flex; 
+    background-color: var(--bg-content); 
+    height: 100vh; 
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* =========================================
+   MAIN CONTENT & HEADER
+========================================= */
+.main-content { 
+    flex-grow: 1; 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    position: relative; 
+}
+
+.top-bar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 30px; 
+}
+
+.header-title { 
+    color: #003366; 
+    font-size: 24px; 
+    font-weight: 800; 
+    text-transform: uppercase;
+}
+
+.top-right-actions { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 10px; 
+}
+
+.user-info { 
+    display: flex; 
+    align-items: center; 
+    background: white; 
+    padding: 6px 16px; 
+    border-radius: 30px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    border: 1px solid #ccc; 
+}
+
+.btn-kembali { 
+    background-color: #c4c4c4; 
+    color: #333; 
+    padding: 6px 20px; 
+    border-radius: 6px; 
+    border: 1px solid #999; 
+    font-size: 13px; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+
+/* =========================================
+   FORM DOWNLOAD LAYOUT
+========================================= */
+.download-form-container { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    max-width: 800px; 
+}
+
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+.form-group label { 
+    font-size: 15px; 
+    font-weight: 700; 
+    color: #000; 
+}
+
+.input-group { 
+    display: flex; 
+    gap: 15px; 
+    width: 100%; 
+}
+
+.form-input {
+    background-color: var(--input-bg);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.form-input:focus { 
+    background-color: var(--bps-light-blue); 
+}
+
+.form-input::placeholder { 
+    color: rgba(255,255,255,0.7); 
+}
+
+.input-short { 
+    width: 150px; 
+    cursor: pointer; 
+}
+
+.input-long { 
+    flex-grow: 1; 
+}
+
+select.form-input option { 
+    background-color: white; 
+    color: black; 
+}
+
+/* PRINT BUTTON */
+.print-action { 
+    position: absolute; 
+    bottom: 40px; 
+    right: 40px; 
+}
+
+.btn-print { 
+    background: none; 
+    border: none; 
+    color: #44546A; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
+}
+
+.btn-print:hover { 
+    transform: scale(1.1); 
+    color: #2c599d; 
+}
+
+/* =========================================
+   TAMPILAN PRINT RAPI & RESMI BPS
+========================================= */
+#printArea { 
+    display: none; 
+}
+
+@media print {
+    @page {
+        margin: 20mm; 
+        size: A4 portrait;
+    }
+
+    /* Sembunyikan semua elemen UI Web */
+    .sidebar, 
+    .top-bar, 
+    .download-form-container, 
+    .print-action, 
+    .btn-kembali {
+        display: none !important;
+    }
+    
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-family: 'Times New Roman', Times, serif !important;
+    }
+    
+    .main-content { 
+        padding: 0 !important; 
+    }
+    
+    #printArea { 
+        display: block !important; 
+        width: 100%; 
+    }
+    
+    /* Styling Kop Surat BPS dengan Logo Kiri (LEBIH RAPIH MENGGUNAKAN FLEXBOX) */
+    .print-header {
+        display: flex;
+        align-items: center;
+        border-bottom: 3px double #000000;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .print-logo {
+        width: 85px; 
+        height: auto;
+        flex-shrink: 0; 
+    }
+
+    .print-header-text {
+        flex-grow: 1;
+        text-align: center;
+        padding-right: 85px; /* Menyeimbangkan lebar logo agar teks benar-benar di tengah */
+    }
+
+    .print-header-text h1 { 
+        font-size: 18pt; 
+        font-weight: bold; 
+        margin-bottom: 5px; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+    }
+    
+    .print-header-text p { 
+        font-size: 12pt; 
+        margin: 0; 
+    }
+    
+    .print-title {
+        font-size: 14pt;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    
+    /* Styling Tabel Laporan */
+    .print-table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-bottom: 30px; 
+    }
+    
+    .print-table th, 
+    .print-table td {
+        border: 1px solid #000000;
+        padding: 12px 15px;
+        font-size: 12pt;
+        text-align: left;
+        vertical-align: top;
+        line-height: 1.5;
+    }
+    
+    .print-table th {
+        background-color: #e2e8f0 !important;
+        font-weight: bold;
+        width: 30%;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

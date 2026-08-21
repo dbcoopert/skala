@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Master Kegiatan | SKALA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../../assets/css/output.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] font-[Nunito] text-[#172033]">
+    <div class="flex h-screen w-full">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 z-50 flex w-70 -translate-x-full flex-col overflow-hidden bg-gradient-to-b from-[#173b75] via-[#3264b5] to-[#2b77c5] text-white shadow-[8px_0_30px_rgba(23,59,117,.16)] transition-transform duration-300 lg:relative lg:translate-x-0 lg:shadow-none">
+
+            <!-- LOGO -->
+            <div class="shrink-0 px-6 pb-5 pt-6">
+
+                <div class="flex items-center gap-3.5">
+
+                    <div
+                        class="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15">
+                        <img src="../../asset/folder.png" alt="Logo SKALA" class="h-13 w-13 object-contain" />
+                    </div>
+
+                    <div>
+
+                        <h1 class="text-[26px] font-black tracking-tight">
+                            SKALA
+                        </h1>
+
+                        <p class="mt-1 text-[9px] font-bold leading-3.5 tracking-[.12em] text-white/75">
+                            SISTEM KELOLA<br />
+                            ARSIP DAN LAPORAN
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+            <!-- NAV -->
+            <nav class="flex-1 overflow-y-auto px-4 py-5">
+
+                <p class="mb-3 px-3 text-[9px] font-extrabold uppercase tracking-[.2em] text-white/55">
+                    Menu Utama
+                </p>
+
+                <ul class="space-y-1.5">
+
+                    <li>
+
+                        <a href="../../dashboard/dashboard.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-house w-5 text-center"></i>
+
+                            Dashboard
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="../../user/user.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-user w-5 text-center"></i>
+
+                            Pengguna
+                        </a>
+
+                    </li>
+
+                    <!-- MASTER -->
+                    <li>
+
+                        <a href="../../master/master-tahun/tahun.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-calendar w-5 text-center"></i>
+
+                            Master Tahun
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="../../master/master-teknis/teknis.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-users-gear w-5 text-center"></i>
+
+                            Master Teknis
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="kegiatan.html"
+                            class="flex items-center gap-3.5 rounded-xl bg-white/15 px-4 py-3 text-[13px] font-extrabold text-white">
+                            <i class="fa-solid fa-list-check w-5 text-center"></i>
+
+                            Master Kegiatan
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="../../download/download.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-download w-5 text-center"></i>
+
+                            Download
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- FOOTER -->
+            <div class="shrink-0 border-t border-white/15 p-4">
+
+                <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3">
+
+                    <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white">
+
+                        <img src="../../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain" />
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-[9px] font-black tracking-wide">
+                            BADAN PUSAT STATISTIK
+                        </p>
+
+                        <p class="text-[9px] font-semibold text-white/70">
+                            KOTA SUKABUMI
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- OVERLAY -->
+        <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden bg-slate-950/50 lg:hidden"></div>
+
+        <!-- MAIN -->
+        <main class="flex min-w-0 flex-1 flex-col">
+
+            <!-- HEADER -->
+            <header
+                class="flex min-h-22 items-center justify-between border-b border-[#dce5ee] bg-white px-4 shadow-sm sm:px-6 lg:px-8">
+
+                <div class="flex items-center gap-3">
+
+                    <button id="openSidebar" type="button"
+                        class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-700 lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+
+                        <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+                            Sistem Kelola Arsip & Laporan
+                        </p>
+
+                        <h2 class="mt-0.5 text-xl font-black text-[#0d4fa6] sm:text-2xl">
+                            Master Kegiatan
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <!-- PROFILE -->
+                <div class="ml-4 flex items-center gap-3">
+
+                    <div class="flex items-center gap-3 rounded-2xl border border-[#dce5ee] bg-[#fbfdff] px-3 py-2">
+
+                        <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6]">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="hidden min-w-0 sm:block">
+
+                            <p id="teknisAdmin" data-admin-teknis
+                                class="text-[8px] font-extrabold uppercase tracking-[.15em] text-[#71839a]">
+                                Memuat...
+                            </p>
+
+                            <p id="namaAdmin" data-admin-nama
+                                class="mt-0.5 max-w-40 truncate text-xs font-black text-[#172033]">
+                                Memuat...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" onclick="logout()" title="Logout"
+                        class="group flex h-10 w-10 items-center justify-center rounded-xl border border-red-100 bg-red-50 text-red-500 transition hover:bg-red-500 hover:text-white">
+                        <i class="fa-solid fa-right-from-bracket text-sm transition group-hover:translate-x-0.5"></i>
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- CONTENT -->
+            <div class="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-7">
+
+                <section
+                    class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dce5ee] bg-white shadow-[0_8px_30px_rgba(15,23,42,.06)]">
+
+                    <!-- LIST -->
+                    <div id="view-list" class="flex min-h-0 flex-1 flex-col">
+
+                        <div
+                            class="flex items-center justify-between gap-4 border-b border-[#edf1f5] px-5 py-4 sm:px-6 sm:py-5">
+
+                            <div>
+
+                                <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+                                    Master Data
+                                </p>
+
+                                <h2 class="mt-1 text-lg font-black text-[#0d4fa6] sm:text-xl">
+                                    Data Kegiatan
+                                </h2>
+
+                            </div>
+
+                            <button id="btnTambah" type="button"
+                                class="flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#0d4fa6] to-[#1769c2] px-4 py-2.5 text-xs font-extrabold text-white shadow-md transition hover:-translate-y-0.5 sm:px-5">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                                Tambah Kegiatan
+
+                            </button>
+
+                        </div>
+
+                        <div class="min-h-0 flex-1 overflow-auto p-4 sm:p-6">
+
+                            <div class="overflow-hidden rounded-2xl border border-[#dce5ee]">
+
+                                <table class="w-full min-w-[600px]">
+
+                                    <thead class="bg-[#f7faff]">
+
+                                        <tr>
+
+                                            <th
+                                                class="w-[10%] px-5 py-4 text-left text-[10px] font-black uppercase tracking-wider text-[#71839a]">
+                                                No
+                                            </th>
+
+                                            <th
+                                                class="w-[70%] px-5 py-4 text-left text-[10px] font-black uppercase tracking-wider text-[#71839a]">
+                                                Kegiatan
+                                            </th>
+
+                                            <th
+                                                class="w-[20%] px-5 py-4 text-center text-[10px] font-black uppercase tracking-wider text-[#71839a]">
+                                                Aksi
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody id="tableBody" class="divide-y divide-[#edf1f5]"></tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- FORM -->
+                    <div id="view-form" class="hidden min-h-0 flex-1 overflow-auto">
+
+                        <div class="border-b border-[#edf1f5] px-5 py-4 sm:px-6">
+
+                            <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+                                Master Data
+                            </p>
+
+                            <h2 class="mt-1 text-lg font-black text-[#0d4fa6]">
+                                Form Kegiatan
+                            </h2>
+
+                        </div>
+
+                        <div class="p-5 sm:p-8">
+
+                            <div
+                                class="mx-auto max-w-3xl rounded-[20px] border border-[#dce5ee] bg-[#fbfdff] p-5 sm:p-7">
+
+                                <div class="mb-6 flex items-center gap-4">
+
+                                    <div
+                                        class="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
+                                        <i class="fa-solid fa-list-check text-lg"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <h3 class="font-black text-[#172033]">
+                                            Data Kegiatan
+                                        </h3>
+
+                                        <p class="text-xs font-semibold text-[#71839a]">
+                                            Isi nama kegiatan dengan lengkap.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="space-y-2">
+
+                                    <label for="inputNamaKegiatan" class="text-xs font-extrabold text-[#172033]">
+                                        Nama Kegiatan
+                                    </label>
+
+                                    <input type="text" id="inputNamaKegiatan" placeholder="Masukkan nama kegiatan..."
+                                        class="w-full rounded-xl border border-[#dce5ee] bg-white px-4 py-3 text-sm font-semibold outline-none transition placeholder:text-slate-400 focus:border-[#0d4fa6] focus:ring-4 focus:ring-blue-100" />
+
+                                </div>
+
+                                <div class="mt-7 flex flex-col-reverse justify-end gap-3 sm:flex-row">
+
+                                    <button id="btnBatal" type="button"
+                                        class="rounded-xl border border-[#dce5ee] bg-white px-5 py-2.5 text-xs font-extrabold text-slate-500 transition hover:bg-slate-50">
+                                        Batal
+                                    </button>
+
+                                    <button id="btnSimpan" type="button"
+                                        class="rounded-xl bg-[#0d4fa6] px-5 py-2.5 text-xs font-extrabold text-white transition hover:bg-[#0a3b7c]">
+
+                                        <i class="fa-solid fa-floppy-disk mr-1"></i>
+
+                                        Simpan Data
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- DELETE MODAL -->
+    <div id="deleteModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-950/55 p-4 backdrop-blur-sm">
+
+        <div class="w-full max-w-md rounded-[20px] border border-slate-200 bg-white p-6 shadow-2xl">
+
+            <div class="flex items-center gap-3">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-red-50 text-red-500">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+
+                <div>
+
+                    <h3 class="font-black text-[#172033]">
+                        Hapus Data?
+                    </h3>
+
+                    <p class="text-xs font-semibold text-slate-500">
+                        Konfirmasi penghapusan data.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p class="mt-5 text-sm font-semibold leading-relaxed text-slate-500">
+                Data yang sudah dihapus tidak dapat dikembalikan.
+            </p>
+
+            <div class="mt-6 flex justify-end gap-3">
+
+                <button id="btnModalBatal" type="button"
+                    class="rounded-xl border border-slate-200 px-5 py-2.5 text-xs font-extrabold text-slate-500 hover:bg-slate-50">
+                    Batal
+                </button>
+
+                <button id="btnModalHapus" type="button"
+                    class="rounded-xl bg-red-500 px-5 py-2.5 text-xs font-extrabold text-white transition hover:bg-red-600">
+                    Hapus
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- NOTIFIKASI -->
+    <div id="notifikasiKontainer" class="fixed right-5 top-5 z-[200] flex flex-col gap-3"></div>
+
+    <!-- SCRIPT -->
+    <script src="../../../assets/js/authAdmin.js" defer></script>
+
+    <script src="kegiatan.js" defer></script>
+
+</body>
+
+</html>

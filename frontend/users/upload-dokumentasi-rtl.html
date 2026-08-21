@@ -1,0 +1,2573 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SKALA - Dokumentasi Tindak Lanjut</title>
+
+
+  <!-- =====================================================
+       TAILWIND CSS
+  ====================================================== -->
+
+  <link rel="stylesheet" href="../assets/css/output.css" />
+
+
+  <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</head>
+
+
+<body class="m-0 min-h-screen w-full max-w-full overflow-x-hidden bg-[#f4f7fb] font-sans text-[#172033]">
+
+
+  <!-- =====================================================
+       MAIN WRAPPER
+  ====================================================== -->
+
+  <div class="mx-auto min-h-screen w-full max-w-[1400px] overflow-x-hidden pb-[78px] lg:pb-0">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+      class="relative z-[200] w-full max-w-full overflow-visible rounded-b-[24px] bg-gradient-to-br from-[#082f61] via-[#0b3d7a] to-[#1458a6] text-white shadow-[0_8px_30px_rgba(8,47,97,0.18)] sm:rounded-b-[30px]">
+
+      <!-- DECORATION -->
+
+      <div class="pointer-events-none absolute -right-20 -top-28 h-56 w-56 rounded-full bg-white/[0.04]"></div>
+
+      <div class="pointer-events-none absolute -bottom-20 left-[35%] h-36 w-36 rounded-full bg-white/[0.025]"></div>
+
+
+      <!-- =================================================
+           HEADER INNER
+      ================================================== -->
+
+      <div
+        class="relative flex min-h-[78px] w-full max-w-full min-w-0 items-center gap-2 px-3 py-2.5 sm:min-h-[92px] sm:px-6 sm:py-4 lg:px-10">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div
+          class="flex min-w-0 max-w-[calc(100%-115px)] shrink items-center gap-2 sm:max-w-[calc(100%-180px)] sm:gap-3 lg:max-w-none">
+
+          <!-- ICON -->
+
+          <div
+            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.08] sm:h-14 sm:w-14 sm:rounded-[16px]">
+
+            <i class="fa-solid fa-folder-open text-[15px] sm:text-[24px]"></i>
+
+          </div>
+
+
+          <!-- TITLE -->
+
+          <div class="min-w-0 max-w-full">
+
+            <h1 class="truncate text-[19px] font-black leading-none tracking-[-0.5px] sm:text-[29px]">
+              SKALA
+            </h1>
+
+
+            <p
+              class="mt-[3px] max-w-full truncate text-[6.5px] font-semibold uppercase leading-[1.3] tracking-[0.1px] text-white/65 sm:mt-1 sm:text-[9px] sm:tracking-[0.2px]">
+              SISTEM KELOLA ARSIP DAN LAPORAN
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             USER AREA
+        ================================================== -->
+
+        <div class="relative ml-auto flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2">
+
+
+          <!-- =================================================
+               DESKTOP USER
+          ================================================== -->
+
+          <div
+            class="hidden h-[58px] max-w-[250px] items-center rounded-[16px] border border-white/10 bg-white/[0.08] px-3 backdrop-blur-md lg:flex">
+
+            <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.10]">
+
+              <i class="fa-solid fa-user text-[12px]"></i>
+
+            </div>
+
+
+            <div class="ml-2.5 min-w-0">
+
+              <span id="namaUser" class="block max-w-[180px] truncate text-[13px] font-extrabold leading-[1.2]">
+                Loading...
+              </span>
+
+
+              <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                <span id="roleUser" class="max-w-[70px] truncate text-[9px] font-semibold text-white/55">
+                  ...
+                </span>
+
+
+                <span class="text-[9px] text-white/25">
+                  •
+                </span>
+
+
+                <span id="teknisUser" class="max-w-[100px] truncate text-[9px] font-extrabold text-white">
+                  Loading...
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               MOBILE USER
+          ================================================== -->
+
+          <div
+            class="flex h-[44px] w-[105px] min-w-0 shrink-0 items-center rounded-[11px] border border-white/10 bg-white/[0.08] px-1.5 sm:h-[50px] sm:w-[145px] sm:px-2.5 md:w-[170px] lg:hidden">
+
+            <div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/[0.10] sm:h-8 sm:w-8">
+
+              <i class="fa-solid fa-user text-[8px] sm:text-[9px]"></i>
+
+            </div>
+
+
+            <div class="ml-1.5 min-w-0 flex-1 overflow-hidden sm:ml-2">
+
+              <span id="mobileNamaUser"
+                class="block w-full truncate text-[8.5px] font-black leading-[1.1] sm:text-[10px] md:text-[10.5px]">
+                Loading...
+              </span>
+
+
+              <span id="mobileRoleUser"
+                class="mt-[2px] block w-full truncate text-[6.5px] font-semibold leading-[1.1] text-white/55 sm:text-[7.5px] md:text-[8px]">
+                ...
+              </span>
+
+
+              <span id="mobileTeknisUser"
+                class="mt-[2px] block w-full truncate text-[6.5px] font-extrabold leading-[1.1] text-white/90 sm:text-[7.5px] md:text-[8px]">
+                Loading...
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               DESKTOP BURGER
+          ================================================== -->
+
+          <button type="button" id="menuButton" aria-label="Menu" aria-expanded="false"
+            class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-[13px] border border-white/10 bg-white/[0.08] text-white transition hover:bg-white/[0.15] active:scale-95 lg:flex">
+
+            <i id="menuIcon" class="fa-solid fa-bars text-[16px]"></i>
+
+          </button>
+
+
+          <!-- =================================================
+               DESKTOP DROPDOWN MENU
+          ================================================== -->
+
+          <div id="headerMenu"
+            class="absolute right-0 top-[62px] hidden w-[260px] max-w-[calc(100vw-20px)] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+
+            <!-- PROFILE -->
+
+            <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+              <div class="flex items-center gap-3">
+
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                  <i class="fa-solid fa-user text-sm"></i>
+
+                </div>
+
+
+                <div class="min-w-0">
+
+                  <p id="menuUserName" class="truncate text-[13px] font-extrabold text-slate-800">
+                    Pengguna
+                  </p>
+
+
+                  <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                    <span id="menuUserRole" class="max-w-[75px] truncate text-[10px] font-semibold text-slate-400">
+                      User
+                    </span>
+
+
+                    <span class="text-[9px] text-slate-300">
+                      •
+                    </span>
+
+
+                    <span id="menuUserTeknis" class="max-w-[110px] truncate text-[10px] font-extrabold text-[#1458a6]">
+                      -
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <div class="p-2">
+
+              <!-- ARSIP -->
+
+              <a href="arsip.html"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-[12px] font-bold text-slate-700 transition hover:bg-blue-50 hover:text-[#1458a6]">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                  <i class="fa-solid fa-folder-open text-xs"></i>
+
+                </span>
+
+
+                <span>
+                  Arsip
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-slate-300"></i>
+
+              </a>
+
+
+              <!-- SEPARATOR -->
+
+              <div class="my-1 h-px bg-slate-100"></div>
+
+
+              <!-- LOGOUT -->
+
+              <button type="button" id="menuLogoutButton"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+                  <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+                </span>
+
+
+                <span>
+                  Logout
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENT
+    ====================================================== -->
+
+    <main class="mx-auto w-full max-w-[1050px] min-w-0 px-5 py-7 md:px-8 lg:px-10 lg:py-9">
+
+
+      <!-- =================================================
+           PAGE TITLE
+      ================================================== -->
+
+      <div
+        class="mb-6 flex w-fit max-w-full items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm sm:px-5">
+
+        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0d4fa6]">
+
+          <i class="fa-solid fa-camera text-sm sm:text-base"></i>
+
+        </div>
+
+
+        <span class="truncate text-[16px] font-extrabold tracking-wide text-[#172033] sm:text-[20px]">
+          DOKUMENTASI TINDAK LANJUT
+        </span>
+
+      </div>
+
+
+      <!-- =================================================
+           INFORMASI RTL
+      ================================================== -->
+
+      <section class="mb-5 w-full min-w-0 overflow-hidden rounded-2xl border border-red-100 bg-white shadow-sm">
+
+        <!-- HEADER -->
+
+        <div
+          class="flex items-center gap-3 border-b border-red-100 bg-gradient-to-r from-red-50 to-rose-50 px-5 py-4 md:px-6">
+
+          <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
+
+            <i class="fa-solid fa-circle-info text-sm"></i>
+
+          </div>
+
+
+          <div class="min-w-0">
+
+            <h3 class="text-[15px] font-extrabold text-red-600 sm:text-base">
+              Informasi RTL
+            </h3>
+
+
+            <p class="mt-0.5 text-[10px] font-medium text-red-400 sm:text-[11px]">
+              Informasi tindak lanjut yang akan dilaksanakan.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- BODY -->
+
+        <div class="grid grid-cols-1 gap-0 px-5 py-2 md:grid-cols-2 md:gap-x-8 md:px-6">
+
+          <!-- RTL -->
+
+          <div class="min-w-0 border-b border-red-50 py-4 md:border-b-0">
+
+            <span class="mb-1.5 block text-[10px] font-extrabold uppercase tracking-[.6px] text-slate-500">
+              Rencana Tindak Lanjut
+            </span>
+
+
+            <p id="rtlNama" class="break-words text-[13px] font-bold leading-[1.6] text-red-600 sm:text-[14px]">
+              Memuat...
+            </p>
+
+          </div>
+
+
+          <!-- PIC -->
+
+          <div class="min-w-0 border-b border-red-50 py-4 md:border-b-0">
+
+            <span class="mb-1.5 block text-[10px] font-extrabold uppercase tracking-[.6px] text-slate-500">
+              PIC RTL
+            </span>
+
+
+            <p id="rtlPIC" class="break-words text-[13px] font-bold leading-[1.6] text-red-600 sm:text-[14px]">
+              Memuat...
+            </p>
+
+          </div>
+
+
+          <!-- DEADLINE -->
+
+          <div class="min-w-0 border-b border-red-50 py-4 md:border-b-0">
+
+            <span class="mb-1.5 block text-[10px] font-extrabold uppercase tracking-[.6px] text-slate-500">
+              Batas Waktu
+            </span>
+
+
+            <p id="rtlDeadline" class="break-words text-[13px] font-bold leading-[1.6] text-red-600 sm:text-[14px]">
+              Memuat...
+            </p>
+
+          </div>
+
+
+          <!-- PELAKSANAAN -->
+
+          <div class="min-w-0 py-4">
+
+            <span class="mb-1.5 block text-[10px] font-extrabold uppercase tracking-[.6px] text-slate-500">
+              Pelaksanaan
+            </span>
+
+
+            <p id="pelaksanaanInfo" class="break-words text-[13px] font-bold leading-[1.6] text-red-600 sm:text-[14px]">
+              Memuat...
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           UPLOAD CARD
+      ================================================== -->
+
+      <section class="mb-5 w-full min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+        <!-- HEADER -->
+
+        <div class="flex items-center gap-3 border-b border-slate-100 bg-[#f8fafc] px-5 py-4 md:px-6">
+
+          <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#0d4fa6]">
+
+            <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+
+          </div>
+
+
+          <div>
+
+            <h3 class="text-[15px] font-extrabold text-[#0d4fa6] sm:text-base">
+              Dokumentasi
+            </h3>
+
+
+            <p class="mt-0.5 text-[10px] text-slate-400 sm:text-[11px]">
+              Upload foto atau dokumen pelaksanaan RTL.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- BODY -->
+
+        <div class="p-5 md:p-6">
+
+          <!-- =================================================
+               UPLOAD OPTIONS
+          ================================================== -->
+
+          <div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+
+            <!-- FILE -->
+
+            <button type="button" id="fileChoice"
+              class="group flex min-h-[145px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[#0d4fa6] bg-white p-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-50 hover:shadow-md active:translate-y-0 md:min-h-[170px]">
+
+              <div
+                class="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-[#0d4fa6] transition group-hover:scale-105">
+
+                <i class="fa-solid fa-folder-open text-2xl"></i>
+
+              </div>
+
+
+              <h4 class="mb-1 text-[14px] font-extrabold text-slate-800 sm:text-base">
+                Pilih File
+              </h4>
+
+
+              <p class="text-[11px] text-slate-500 sm:text-xs">
+                JPG, JPEG, PNG atau PDF
+              </p>
+
+            </button>
+
+
+            <!-- CAMERA -->
+
+            <button type="button" id="cameraChoice"
+              class="group flex min-h-[145px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-[#0d4fa6] bg-white p-6 text-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-50 hover:shadow-md active:translate-y-0 md:min-h-[170px]">
+
+              <div
+                class="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-[#0d4fa6] transition group-hover:scale-105">
+
+                <i class="fa-solid fa-camera text-2xl"></i>
+
+              </div>
+
+
+              <h4 class="mb-1 text-[14px] font-extrabold text-slate-800 sm:text-base">
+                Ambil Gambar
+              </h4>
+
+
+              <p class="text-[11px] text-slate-500 sm:text-xs">
+                Gunakan kamera perangkat
+              </p>
+
+            </button>
+
+          </div>
+
+
+          <!-- =================================================
+               INPUT
+          ================================================== -->
+
+          <input type="file" id="fileInput" accept="image/jpeg,image/png,image/jpg,application/pdf" multiple
+            class="hidden" />
+
+
+          <input type="file" id="cameraInput" accept="image/*" capture="environment" class="hidden" />
+
+
+          <!-- =================================================
+               JUMLAH FILE
+          ================================================== -->
+
+          <p id="jumlahFoto"
+            class="mb-4 block rounded-lg border-l-4 border-[#0d4fa6] bg-blue-50 px-4 py-3 text-[12px] font-semibold text-[#0d4fa6] sm:text-sm">
+            Belum ada file dipilih
+          </p>
+
+
+          <!-- =================================================
+               PREVIEW
+          ================================================== -->
+
+          <div id="previewContainer" class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"></div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =================================================
+           SEND BUTTON
+           DESKTOP = RIGHT
+           MOBILE = FULL WIDTH
+      ================================================== -->
+
+      <div class="flex w-full justify-end">
+
+        <button
+          class="flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-[#0d4fa6] px-7 py-3.5 text-[14px] font-extrabold text-white shadow-[0_5px_15px_rgba(13,79,166,.12)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0a3b7c] hover:shadow-[0_8px_20px_rgba(13,79,166,.18)] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 sm:text-[15px] md:w-auto"
+          id="btnSend" type="button">
+
+          <i class="fa-solid fa-paper-plane"></i>
+
+
+          <span>
+            Kirim Dokumentasi
+          </span>
+
+        </button>
+
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =====================================================
+       MOBILE BOTTOM NAVIGATION
+  ====================================================== -->
+
+  <nav
+    class="fixed inset-x-0 bottom-0 z-[9000] block h-[70px] w-full max-w-full border-t border-slate-200 bg-white/95 shadow-[0_-8px_30px_rgba(15,23,42,0.10)] backdrop-blur-xl lg:hidden">
+
+    <div class="mx-auto flex h-full w-full max-w-[520px] items-center justify-between px-4 sm:px-6">
+
+      <!-- DASHBOARD -->
+
+      <a href="dashboard.html" aria-label="Dashboard"
+        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#1458a6] text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95">
+
+        <i class="fa-solid fa-house"></i>
+
+      </a>
+
+
+      <!-- BURGER -->
+
+      <button type="button" id="bottomMenuButton" aria-label="Menu" aria-expanded="false"
+        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#1458a6] text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95">
+
+        <i id="bottomMenuIcon" class="fa-solid fa-bars"></i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       PROFILE + ARSIP + LOGOUT
+  ====================================================== -->
+
+  <div id="mobileMenu"
+    class="fixed bottom-[80px] left-3 right-3 z-[10000] hidden overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.20)] lg:hidden sm:left-auto sm:right-5 sm:w-[300px]">
+
+    <!-- PROFILE -->
+
+    <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+      <div class="flex items-center gap-3">
+
+        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+          <i class="fa-solid fa-user text-sm"></i>
+
+        </div>
+
+
+        <div class="min-w-0">
+
+          <p id="mobileMenuUserName" class="truncate text-[13px] font-extrabold text-slate-800">
+            Pengguna
+          </p>
+
+
+          <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+            <span id="mobileMenuUserRole" class="max-w-[80px] truncate text-[10px] font-semibold text-slate-400">
+              User
+            </span>
+
+
+            <span class="text-[9px] text-slate-300">
+              •
+            </span>
+
+
+            <span id="mobileMenuUserTeknis" class="max-w-[130px] truncate text-[10px] font-extrabold text-[#1458a6]">
+              -
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- MENU ITEMS -->
+
+    <div class="p-2">
+
+      <!-- ARSIP -->
+
+      <a href="arsip.html"
+        class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-[12px] font-bold text-slate-700 transition hover:bg-blue-50 hover:text-[#1458a6]">
+
+        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+          <i class="fa-solid fa-folder-open text-xs"></i>
+
+        </span>
+
+
+        <span>
+          Arsip
+        </span>
+
+
+        <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-slate-300"></i>
+
+      </a>
+
+
+      <!-- SEPARATOR -->
+
+      <div class="my-1 h-px bg-slate-100"></div>
+
+
+      <!-- LOGOUT -->
+
+      <button type="button" id="mobileMenuLogoutButton"
+        class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+        <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+          <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+        </span>
+
+
+        <span>
+          Logout
+        </span>
+
+
+        <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       LOADING
+  ====================================================== -->
+
+  <div id="loadingScreen"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-slate-950/80 px-5 backdrop-blur-sm">
+
+    <div class="w-full max-w-sm rounded-2xl bg-white p-7 text-center shadow-2xl">
+
+      <div class="mx-auto mb-5 h-12 w-12 animate-spin rounded-full border-4 border-blue-100 border-t-[#0d4fa6]"></div>
+
+
+      <h3 class="mb-2 text-lg font-bold text-slate-800">
+        Mengirim Dokumentasi...
+      </h3>
+
+
+      <p class="text-sm text-slate-500">
+        Mohon tunggu sebentar
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       AUTH
+  ====================================================== -->
+
+  <script src="../assets/js/auth.js"></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+    // =========================================================
+    // LOAD USER
+    // =========================================================
+
+    loadUser("user");
+
+
+    // =========================================================
+    // AMBIL ID PELAKSANAAN
+    // =========================================================
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const idPelaksanaan =
+      params.get("id");
+
+
+    // =========================================================
+    // CEK ID
+    // =========================================================
+
+    if (!idPelaksanaan) {
+
+      alert(
+        "ID pelaksanaan RTL tidak ditemukan."
+      );
+
+
+      window.location.href =
+        "pilih-tindakLanjut.html";
+
+    }
+
+
+    // =========================================================
+    // ELEMENT
+    // =========================================================
+
+    const fileInput =
+      document.getElementById(
+        "fileInput"
+      );
+
+
+    const cameraInput =
+      document.getElementById(
+        "cameraInput"
+      );
+
+
+    const fileChoice =
+      document.getElementById(
+        "fileChoice"
+      );
+
+
+    const cameraChoice =
+      document.getElementById(
+        "cameraChoice"
+      );
+
+
+    const previewContainer =
+      document.getElementById(
+        "previewContainer"
+      );
+
+
+    const jumlahFoto =
+      document.getElementById(
+        "jumlahFoto"
+      );
+
+
+    const btnSend =
+      document.getElementById(
+        "btnSend"
+      );
+
+
+    const loadingScreen =
+      document.getElementById(
+        "loadingScreen"
+      );
+
+
+    // =========================================================
+    // CONFIG
+    // =========================================================
+
+    const MAX_FILES = 10;
+
+
+    const MAX_FILE_SIZE =
+      5 * 1024 * 1024;
+
+
+    const ALLOWED_TYPES = [
+      "image/jpeg",
+      "image/png",
+      "image/jpg",
+      "application/pdf"
+    ];
+
+
+    // =========================================================
+    // FILE TERPILIH
+    // =========================================================
+
+    let selectedFiles = [];
+
+
+    // =========================================================
+    // LOAD DETAIL PELAKSANAAN
+    // =========================================================
+
+    async function loadPelaksanaan() {
+
+      try {
+
+        const response =
+          await fetch(
+            `${BASE_URL}/api/rtl/detail-pelaksanaan/${encodeURIComponent(idPelaksanaan)}`,
+            {
+              method:
+                "GET",
+
+              credentials:
+                "include",
+
+              headers: {
+                "Accept":
+                  "application/json"
+              }
+            }
+          );
+
+
+        const contentType =
+          response.headers.get(
+            "content-type"
+          );
+
+
+        if (
+          !contentType ||
+          !contentType.includes(
+            "application/json"
+          )
+        ) {
+
+          const text =
+            await response.text();
+
+
+          console.error(
+            "RESPONSE DETAIL RTL BUKAN JSON:",
+            text
+          );
+
+
+          throw new Error(
+            `Server tidak mengembalikan JSON. Status: ${response.status}`
+          );
+
+        }
+
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "DETAIL PELAKSANAAN RTL:",
+          result
+        );
+
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          throw new Error(
+            result.message ||
+            "Data pelaksanaan tidak ditemukan."
+          );
+
+        }
+
+
+        const data =
+          result.data || {};
+
+
+        // =====================================================
+        // INFORMASI RTL
+        // =====================================================
+
+        document.getElementById(
+          "rtlNama"
+        ).textContent =
+          data.rtl ||
+          data.nama_rtl ||
+          "-";
+
+
+        document.getElementById(
+          "rtlPIC"
+        ).textContent =
+          data.pic_rtl ||
+          "-";
+
+
+        document.getElementById(
+          "rtlDeadline"
+        ).textContent =
+          formatTanggal(
+            data.batas_rtl ||
+            data.deadline
+          );
+
+
+        // =====================================================
+        // PELAKSANAAN
+        // =====================================================
+
+        document.getElementById(
+          "pelaksanaanInfo"
+        ).textContent =
+          data.judul ||
+          data.kegiatan ||
+          "Pelaksanaan RTL";
+
+      } catch (err) {
+
+        console.error(
+          "ERROR LOAD PELAKSANAAN:",
+          err
+        );
+
+
+        alert(
+          "Gagal memuat data pelaksanaan RTL: " +
+          err.message
+        );
+
+
+        window.location.href =
+          "pilih-tindakLanjut.html";
+
+      }
+
+    }
+
+
+    // =========================================================
+    // FORMAT TANGGAL
+    // =========================================================
+
+    function formatTanggal(
+      tanggal
+    ) {
+
+      if (!tanggal) {
+
+        return "-";
+
+      }
+
+
+      const date =
+        new Date(tanggal);
+
+
+      if (
+        Number.isNaN(
+          date.getTime()
+        )
+      ) {
+
+        return tanggal;
+
+      }
+
+
+      return date.toLocaleDateString(
+        "id-ID",
+        {
+          day:
+            "numeric",
+
+          month:
+            "long",
+
+          year:
+            "numeric"
+        }
+      );
+
+    }
+
+
+    // =========================================================
+    // FILE BUTTON
+    // =========================================================
+
+    fileChoice.addEventListener(
+      "click",
+      function () {
+
+        fileInput.click();
+
+      }
+    );
+
+
+    // =========================================================
+    // CAMERA BUTTON
+    // =========================================================
+
+    cameraChoice.addEventListener(
+      "click",
+      function () {
+
+        cameraInput.click();
+
+      }
+    );
+
+
+    // =========================================================
+    // FILE CHANGE
+    // =========================================================
+
+    fileInput.addEventListener(
+      "change",
+      function () {
+
+        tambahFile(
+          Array.from(
+            fileInput.files
+          )
+        );
+
+
+        fileInput.value =
+          "";
+
+      }
+    );
+
+
+    // =========================================================
+    // CAMERA CHANGE
+    // =========================================================
+
+    cameraInput.addEventListener(
+      "change",
+      function () {
+
+        tambahFile(
+          Array.from(
+            cameraInput.files
+          )
+        );
+
+
+        cameraInput.value =
+          "";
+
+      }
+    );
+
+
+    // =========================================================
+    // TAMBAH FILE
+    // =========================================================
+
+    function tambahFile(
+      files
+    ) {
+
+      if (
+        !files ||
+        files.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      for (
+        const file of files
+      ) {
+
+        // =====================================================
+        // MAX FILE
+        // =====================================================
+
+        if (
+          selectedFiles.length >=
+          MAX_FILES
+        ) {
+
+          alert(
+            `Maksimal ${MAX_FILES} file.`
+          );
+
+          break;
+
+        }
+
+
+        // =====================================================
+        // FORMAT
+        // =====================================================
+
+        if (
+          !ALLOWED_TYPES.includes(
+            file.type
+          )
+        ) {
+
+          alert(
+            `File "${file.name}" tidak didukung.\n\n` +
+            "Format yang diperbolehkan: JPG, JPEG, PNG, PDF."
+          );
+
+          continue;
+
+        }
+
+
+        // =====================================================
+        // SIZE
+        // =====================================================
+
+        if (
+          file.size >
+          MAX_FILE_SIZE
+        ) {
+
+          alert(
+            `File "${file.name}" terlalu besar.\n\n` +
+            "Maksimal ukuran file adalah 5 MB."
+          );
+
+          continue;
+
+        }
+
+
+        // =====================================================
+        // DUPLICATE
+        // =====================================================
+
+        const duplicate =
+          selectedFiles.some(
+            function (item) {
+
+              return (
+                item.name ===
+                file.name &&
+                item.size ===
+                file.size &&
+                item.lastModified ===
+                file.lastModified
+              );
+
+            }
+          );
+
+
+        if (duplicate) {
+
+          continue;
+
+        }
+
+
+        // =====================================================
+        // PUSH
+        // =====================================================
+
+        selectedFiles.push(
+          file
+        );
+
+      }
+
+
+      renderPreview();
+
+    }
+
+
+    // =========================================================
+    // RENDER PREVIEW
+    // =========================================================
+
+    function renderPreview() {
+
+      previewContainer.innerHTML =
+        "";
+
+
+      if (
+        selectedFiles.length === 0
+      ) {
+
+        jumlahFoto.textContent =
+          "Belum ada file dipilih";
+
+        return;
+
+      }
+
+
+      jumlahFoto.textContent =
+        `${selectedFiles.length} file dipilih dari maksimal ${MAX_FILES} file`;
+
+
+      selectedFiles.forEach(
+        function (
+          file,
+          index
+        ) {
+
+          const item =
+            document.createElement(
+              "div"
+            );
+
+
+          item.className =
+            "relative min-h-[145px] overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm";
+
+
+          // ===================================================
+          // REMOVE BUTTON
+          // ===================================================
+
+          const removeButton =
+            document.createElement(
+              "button"
+            );
+
+
+          removeButton.type =
+            "button";
+
+
+          removeButton.className =
+            "absolute right-2 top-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-red-600 text-white shadow-md transition hover:bg-red-700";
+
+
+          removeButton.innerHTML =
+            '<i class="fa-solid fa-xmark text-xs"></i>';
+
+
+          removeButton.title =
+            "Hapus file";
+
+
+          removeButton.addEventListener(
+            "click",
+            function () {
+
+              hapusFile(
+                index
+              );
+
+            }
+          );
+
+
+          item.appendChild(
+            removeButton
+          );
+
+
+          // ===================================================
+          // IMAGE
+          // ===================================================
+
+          if (
+            file.type.startsWith(
+              "image/"
+            )
+          ) {
+
+            const img =
+              document.createElement(
+                "img"
+              );
+
+
+            const url =
+              URL.createObjectURL(
+                file
+              );
+
+
+            img.src =
+              url;
+
+
+            img.alt =
+              file.name;
+
+
+            img.className =
+              "block h-[145px] w-full object-cover";
+
+
+            img.onload =
+              function () {
+
+                URL.revokeObjectURL(
+                  url
+                );
+
+              };
+
+
+            item.appendChild(
+              img
+            );
+
+          }
+
+
+          // ===================================================
+          // PDF
+          // ===================================================
+
+          else if (
+            file.type ===
+            "application/pdf"
+          ) {
+
+            const pdf =
+              document.createElement(
+                "div"
+              );
+
+
+            pdf.className =
+              "flex h-[145px] w-full flex-col items-center justify-center p-4 text-center";
+
+
+            const icon =
+              document.createElement(
+                "i"
+              );
+
+
+            icon.className =
+              "fa-solid fa-file-pdf mb-2 text-4xl text-red-600";
+
+
+            pdf.appendChild(
+              icon
+            );
+
+
+            const strong =
+              document.createElement(
+                "strong"
+              );
+
+
+            strong.className =
+              "block max-w-full truncate text-xs text-slate-800";
+
+
+            strong.textContent =
+              file.name;
+
+
+            pdf.appendChild(
+              strong
+            );
+
+
+            const span =
+              document.createElement(
+                "span"
+              );
+
+
+            span.className =
+              "mt-1 text-[11px] text-slate-500";
+
+
+            span.textContent =
+              "Dokumen PDF";
+
+
+            pdf.appendChild(
+              span
+            );
+
+
+            item.appendChild(
+              pdf
+            );
+
+          }
+
+
+          // ===================================================
+          // FILE NAME
+          // ===================================================
+
+          const fileName =
+            document.createElement(
+              "div"
+            );
+
+
+          fileName.className =
+            "absolute bottom-0 left-0 right-0 bg-slate-900/80 px-2.5 py-2 text-[11px] text-white";
+
+
+          fileName.textContent =
+            file.name;
+
+
+          item.appendChild(
+            fileName
+          );
+
+
+          previewContainer.appendChild(
+            item
+          );
+
+        }
+      );
+
+    }
+
+
+    // =========================================================
+    // HAPUS FILE
+    // =========================================================
+
+    function hapusFile(
+      index
+    ) {
+
+      selectedFiles.splice(
+        index,
+        1
+      );
+
+
+      renderPreview();
+
+    }
+
+
+    // =========================================================
+    // BUTTON KIRIM
+    // =========================================================
+
+    btnSend.addEventListener(
+      "click",
+      kirimData
+    );
+
+
+    // =========================================================
+    // UPLOAD
+    // =========================================================
+
+    async function kirimData() {
+
+      // =======================================================
+      // CEK FILE
+      // =======================================================
+
+      if (
+        selectedFiles.length === 0
+      ) {
+
+        alert(
+          "Silakan pilih file atau ambil gambar terlebih dahulu."
+        );
+
+        return;
+
+      }
+
+
+      // =======================================================
+      // CEK JUMLAH
+      // =======================================================
+
+      if (
+        selectedFiles.length >
+        MAX_FILES
+      ) {
+
+        alert(
+          `Maksimal ${MAX_FILES} file.`
+        );
+
+        return;
+
+      }
+
+
+      // =======================================================
+      // VALIDASI ULANG
+      // =======================================================
+
+      for (
+        const file of selectedFiles
+      ) {
+
+        if (
+          !ALLOWED_TYPES.includes(
+            file.type
+          )
+        ) {
+
+          alert(
+            `Format file "${file.name}" tidak diperbolehkan.`
+          );
+
+          return;
+
+        }
+
+
+        if (
+          file.size >
+          MAX_FILE_SIZE
+        ) {
+
+          alert(
+            `File "${file.name}" melebihi ukuran maksimal 5 MB.`
+          );
+
+          return;
+
+        }
+
+      }
+
+
+      // =======================================================
+      // DISABLE
+      // =======================================================
+
+      btnSend.disabled =
+        true;
+
+
+      loadingScreen.classList.remove(
+        "hidden"
+      );
+
+
+      loadingScreen.classList.add(
+        "flex"
+      );
+
+
+      try {
+
+        // =====================================================
+        // CEK ID
+        // =====================================================
+
+        if (!idPelaksanaan) {
+
+          throw new Error(
+            "ID pelaksanaan tidak ditemukan."
+          );
+
+        }
+
+
+        // =====================================================
+        // FORMDATA
+        // =====================================================
+
+        const formData =
+          new FormData();
+
+
+        // =====================================================
+        // ID PELAKSANAAN
+        // =====================================================
+
+        formData.append(
+          "id_pelaksanaan",
+          idPelaksanaan
+        );
+
+
+        // =====================================================
+        // FOTO
+        // =====================================================
+
+        selectedFiles.forEach(
+          function (file) {
+
+            formData.append(
+              "foto",
+              file
+            );
+
+          }
+        );
+
+
+        // =====================================================
+        // DEBUG
+        // =====================================================
+
+        console.log(
+          "ID PELAKSANAAN:",
+          idPelaksanaan
+        );
+
+
+        console.log(
+          "JUMLAH FILE:",
+          selectedFiles.length
+        );
+
+
+        for (
+          const [
+            key,
+            value
+          ] of formData.entries()
+        ) {
+
+          console.log(
+            "FORMDATA:",
+            key,
+            value
+          );
+
+        }
+
+
+        // =====================================================
+        // REQUEST
+        // =====================================================
+
+        const response =
+          await fetch(
+            `${BASE_URL}/api/rtl/dokumentasi`,
+            {
+              method:
+                "POST",
+
+              credentials:
+                "include",
+
+              body:
+                formData
+            }
+          );
+
+
+        // =====================================================
+        // RESPONSE
+        // =====================================================
+
+        const contentType =
+          response.headers.get(
+            "content-type"
+          );
+
+
+        let result;
+
+
+        if (
+          contentType &&
+          contentType.includes(
+            "application/json"
+          )
+        ) {
+
+          result =
+            await response.json();
+
+        } else {
+
+          const text =
+            await response.text();
+
+
+          console.error(
+            "RESPONSE NON JSON:",
+            text
+          );
+
+
+          throw new Error(
+            `Server mengembalikan response tidak valid (${response.status}).`
+          );
+
+        }
+
+
+        console.log(
+          "UPLOAD DOKUMENTASI RTL:",
+          result
+        );
+
+
+        // =====================================================
+        // ERROR SERVER
+        // =====================================================
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          throw new Error(
+            result.message ||
+            "Dokumentasi gagal diupload."
+          );
+
+        }
+
+
+        // =====================================================
+        // BERHASIL
+        // =====================================================
+
+        alert(
+          "Dokumentasi berhasil dikirim."
+        );
+
+
+        window.location.href =
+          `sukses-tindakLanjut.html?id=${encodeURIComponent(idPelaksanaan)}`;
+
+
+      } catch (err) {
+
+        console.error(
+          "ERROR UPLOAD RTL:",
+          err
+        );
+
+
+        alert(
+          "Upload gagal: " +
+          err.message
+        );
+
+      } finally {
+
+        loadingScreen.classList.remove(
+          "flex"
+        );
+
+
+        loadingScreen.classList.add(
+          "hidden"
+        );
+
+
+        btnSend.disabled =
+          false;
+
+      }
+
+    }
+
+
+    // =========================================================
+    // DESKTOP MENU
+    // =========================================================
+
+    const menuButton =
+      document.getElementById(
+        "menuButton"
+      );
+
+
+    const headerMenu =
+      document.getElementById(
+        "headerMenu"
+      );
+
+
+    const menuIcon =
+      document.getElementById(
+        "menuIcon"
+      );
+
+
+    // =========================================================
+    // MOBILE MENU
+    // =========================================================
+
+    const bottomMenuButton =
+      document.getElementById(
+        "bottomMenuButton"
+      );
+
+
+    const bottomMenuIcon =
+      document.getElementById(
+        "bottomMenuIcon"
+      );
+
+
+    const mobileMenu =
+      document.getElementById(
+        "mobileMenu"
+      );
+
+
+    // =========================================================
+    // OPEN MENU
+    // =========================================================
+
+    function openMenu() {
+
+      if (
+        window.innerWidth >= 1024
+      ) {
+
+        if (headerMenu) {
+
+          headerMenu.classList.remove(
+            "hidden"
+          );
+
+        }
+
+      } else {
+
+        if (mobileMenu) {
+
+          mobileMenu.classList.remove(
+            "hidden"
+          );
+
+        }
+
+      }
+
+
+      // DESKTOP ICON
+
+      if (menuIcon) {
+
+        menuIcon.classList.remove(
+          "fa-bars"
+        );
+
+        menuIcon.classList.add(
+          "fa-xmark"
+        );
+
+      }
+
+
+      // MOBILE ICON
+
+      if (bottomMenuIcon) {
+
+        bottomMenuIcon.classList.remove(
+          "fa-bars"
+        );
+
+        bottomMenuIcon.classList.add(
+          "fa-xmark"
+        );
+
+      }
+
+
+      if (menuButton) {
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+
+      if (bottomMenuButton) {
+
+        bottomMenuButton.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+    }
+
+
+    // =========================================================
+    // CLOSE MENU
+    // =========================================================
+
+    function closeMenu() {
+
+      if (headerMenu) {
+
+        headerMenu.classList.add(
+          "hidden"
+        );
+
+      }
+
+
+      if (mobileMenu) {
+
+        mobileMenu.classList.add(
+          "hidden"
+        );
+
+      }
+
+
+      if (menuIcon) {
+
+        menuIcon.classList.remove(
+          "fa-xmark"
+        );
+
+        menuIcon.classList.add(
+          "fa-bars"
+        );
+
+      }
+
+
+      if (bottomMenuIcon) {
+
+        bottomMenuIcon.classList.remove(
+          "fa-xmark"
+        );
+
+        bottomMenuIcon.classList.add(
+          "fa-bars"
+        );
+
+      }
+
+
+      if (menuButton) {
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+
+      if (bottomMenuButton) {
+
+        bottomMenuButton.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+
+
+    // =========================================================
+    // TOGGLE MENU
+    // =========================================================
+
+    function toggleMenu() {
+
+      const isMobile =
+        window.innerWidth < 1024;
+
+
+      if (isMobile) {
+
+        if (
+          mobileMenu &&
+          mobileMenu.classList.contains(
+            "hidden"
+          )
+        ) {
+
+          openMenu();
+
+        } else {
+
+          closeMenu();
+
+        }
+
+      } else {
+
+        if (
+          headerMenu &&
+          headerMenu.classList.contains(
+            "hidden"
+          )
+        ) {
+
+          openMenu();
+
+        } else {
+
+          closeMenu();
+
+        }
+
+      }
+
+    }
+
+
+    // =========================================================
+    // DESKTOP BURGER
+    // =========================================================
+
+    if (menuButton) {
+
+      menuButton.addEventListener(
+        "click",
+        function (event) {
+
+          event.stopPropagation();
+
+          toggleMenu();
+
+        }
+      );
+
+    }
+
+
+    // =========================================================
+    // MOBILE BURGER
+    // =========================================================
+
+    if (bottomMenuButton) {
+
+      bottomMenuButton.addEventListener(
+        "click",
+        function (event) {
+
+          event.stopPropagation();
+
+          toggleMenu();
+
+        }
+      );
+
+    }
+
+
+    // =========================================================
+    // CLICK OUTSIDE
+    // =========================================================
+
+    document.addEventListener(
+      "click",
+      function (event) {
+
+        const clickedDesktopButton =
+          menuButton &&
+          menuButton.contains(
+            event.target
+          );
+
+
+        const clickedDesktopMenu =
+          headerMenu &&
+          headerMenu.contains(
+            event.target
+          );
+
+
+        const clickedMobileButton =
+          bottomMenuButton &&
+          bottomMenuButton.contains(
+            event.target
+          );
+
+
+        const clickedMobileMenu =
+          mobileMenu &&
+          mobileMenu.contains(
+            event.target
+          );
+
+
+        if (
+          !clickedDesktopButton &&
+          !clickedDesktopMenu &&
+          !clickedMobileButton &&
+          !clickedMobileMenu
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+    // =========================================================
+    // ESC
+    // =========================================================
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+    // =========================================================
+    // USER MENU SYNC
+    // =========================================================
+
+    function syncUserMenu() {
+
+      const namaElement =
+        document.getElementById(
+          "namaUser"
+        );
+
+
+      const roleElement =
+        document.getElementById(
+          "roleUser"
+        );
+
+
+      const teknisElement =
+        document.getElementById(
+          "teknisUser"
+        );
+
+
+      const nama =
+        namaElement?.textContent?.trim() ||
+        "Pengguna";
+
+
+      const role =
+        roleElement?.textContent?.trim() ||
+        "User";
+
+
+      const teknis =
+        teknisElement?.textContent?.trim() ||
+        "-";
+
+
+      // =====================================================
+      // MOBILE HEADER
+      // =====================================================
+
+      const mobileNama =
+        document.getElementById(
+          "mobileNamaUser"
+        );
+
+
+      const mobileRole =
+        document.getElementById(
+          "mobileRoleUser"
+        );
+
+
+      const mobileTeknis =
+        document.getElementById(
+          "mobileTeknisUser"
+        );
+
+
+      if (
+        mobileNama &&
+        nama !== "Loading..."
+      ) {
+
+        mobileNama.textContent =
+          nama;
+
+      }
+
+
+      if (
+        mobileRole &&
+        role !== "..."
+      ) {
+
+        mobileRole.textContent =
+          role;
+
+      }
+
+
+      if (
+        mobileTeknis &&
+        teknis !== "Loading..."
+      ) {
+
+        mobileTeknis.textContent =
+          teknis;
+
+      }
+
+
+      // =====================================================
+      // DESKTOP MENU
+      // =====================================================
+
+      const menuNama =
+        document.getElementById(
+          "menuUserName"
+        );
+
+
+      const menuRole =
+        document.getElementById(
+          "menuUserRole"
+        );
+
+
+      const menuTeknis =
+        document.getElementById(
+          "menuUserTeknis"
+        );
+
+
+      if (menuNama) {
+
+        menuNama.textContent =
+          nama;
+
+      }
+
+
+      if (menuRole) {
+
+        menuRole.textContent =
+          role;
+
+      }
+
+
+      if (menuTeknis) {
+
+        menuTeknis.textContent =
+          teknis;
+
+      }
+
+
+      // =====================================================
+      // MOBILE MENU
+      // =====================================================
+
+      const mobileMenuNama =
+        document.getElementById(
+          "mobileMenuUserName"
+        );
+
+
+      const mobileMenuRole =
+        document.getElementById(
+          "mobileMenuUserRole"
+        );
+
+
+      const mobileMenuTeknis =
+        document.getElementById(
+          "mobileMenuUserTeknis"
+        );
+
+
+      if (mobileMenuNama) {
+
+        mobileMenuNama.textContent =
+          nama;
+
+      }
+
+
+      if (mobileMenuRole) {
+
+        mobileMenuRole.textContent =
+          role;
+
+      }
+
+
+      if (mobileMenuTeknis) {
+
+        mobileMenuTeknis.textContent =
+          teknis;
+
+      }
+
+    }
+
+
+    // =========================================================
+    // INITIAL SYNC
+    // =========================================================
+
+    syncUserMenu();
+
+
+    // =========================================================
+    // SYNC SETELAH AUTH
+    // =========================================================
+
+    const userSyncInterval =
+      setInterval(
+        syncUserMenu,
+        500
+      );
+
+
+    setTimeout(
+      function () {
+
+        clearInterval(
+          userSyncInterval
+        );
+
+      },
+      5000
+    );
+
+
+    // =========================================================
+    // LOGOUT
+    // =========================================================
+
+    async function prosesLogout() {
+
+      closeMenu();
+
+
+      try {
+
+        if (
+          typeof logout ===
+          "function"
+        ) {
+
+          await logout();
+
+          return;
+
+        }
+
+
+        await fetch(
+          `${BASE_URL}/logout`,
+          {
+            method:
+              "POST",
+
+            credentials:
+              "include"
+          }
+        );
+
+
+      } catch (err) {
+
+        console.error(
+          "ERROR LOGOUT:",
+          err
+        );
+
+      }
+
+
+      window.location.href =
+        "login.html";
+
+    }
+
+
+    // =========================================================
+    // DESKTOP LOGOUT
+    // =========================================================
+
+    const menuLogoutButton =
+      document.getElementById(
+        "menuLogoutButton"
+      );
+
+
+    if (menuLogoutButton) {
+
+      menuLogoutButton.addEventListener(
+        "click",
+        prosesLogout
+      );
+
+    }
+
+
+    // =========================================================
+    // MOBILE LOGOUT
+    // =========================================================
+
+    const mobileMenuLogoutButton =
+      document.getElementById(
+        "mobileMenuLogoutButton"
+      );
+
+
+    if (
+      mobileMenuLogoutButton
+    ) {
+
+      mobileMenuLogoutButton.addEventListener(
+        "click",
+        prosesLogout
+      );
+
+    }
+
+
+    // =========================================================
+    // HANDLE RESIZE
+    // =========================================================
+
+    window.addEventListener(
+      "resize",
+      function () {
+
+        closeMenu();
+
+      }
+    );
+
+
+    // =========================================================
+    // INIT
+    // =========================================================
+
+    if (
+      idPelaksanaan
+    ) {
+
+      loadPelaksanaan();
+
+    }
+
+  </script>
+
+</body>
+
+</html>

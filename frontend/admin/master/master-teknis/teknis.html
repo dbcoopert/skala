@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Master Teknis | SKALA</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- TAILWIND -->
+    <link rel="stylesheet" href="../../../assets/css/output.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- MATERIAL SYMBOLS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <style>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        body {
+            font-family: "Nunito", sans-serif;
+        }
+
+        .sidebar-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+
+        /* =====================================================
+           SIDEBAR ACCORDION
+        ===================================================== */
+
+        .has-submenu>.submenu {
+            display: none;
+        }
+
+        .has-submenu.open>.submenu {
+            display: block;
+        }
+
+        .has-submenu>.menu-toggle .arrow-icon {
+            transition: transform .2s ease;
+        }
+
+        .has-submenu.open>.menu-toggle .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+
+        /* =====================================================
+           MAIN CARD
+        ===================================================== */
+
+        .main-card {
+            width: 100%;
+
+            overflow: hidden;
+
+            border: 1px solid #dce5ee;
+
+            border-radius: 22px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 30px rgba(15, 23, 42, .06);
+        }
+
+
+        /* =====================================================
+           HEADER CARD
+        ===================================================== */
+
+        .main-card-header {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 20px 24px;
+
+            border-bottom: 1px solid #edf1f5;
+        }
+
+
+        /* =====================================================
+           ACTION CARD TAMBAH
+        ===================================================== */
+
+        .add-teknis-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            min-width: 205px;
+
+            padding: 12px 16px;
+
+            border: 1px solid rgba(255, 255, 255, .18);
+
+            border-radius: 15px;
+
+            background:
+                linear-gradient(135deg,
+                    #0d4fa6 0%,
+                    #1769c5 55%,
+                    #2580d5 100%);
+
+            color: #ffffff;
+
+            box-shadow:
+                0 8px 20px rgba(13, 79, 166, .20);
+
+            cursor: pointer;
+
+            font-family: "Nunito", sans-serif;
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .add-teknis-card:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(13, 79, 166, .28);
+        }
+
+        .add-teknis-icon {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 42px;
+
+            height: 42px;
+
+            flex-shrink: 0;
+
+            border-radius: 13px;
+
+            background: rgba(255, 255, 255, .16);
+
+            border: 1px solid rgba(255, 255, 255, .14);
+        }
+
+        .add-teknis-icon i {
+            font-size: 15px;
+        }
+
+        .add-teknis-text {
+            display: flex;
+
+            flex-direction: column;
+
+            min-width: 0;
+
+            text-align: left;
+        }
+
+        .add-teknis-text small {
+            font-size: 8px;
+
+            font-weight: 800;
+
+            letter-spacing: .15em;
+
+            text-transform: uppercase;
+
+            color: rgba(255, 255, 255, .68);
+        }
+
+        .add-teknis-text span {
+            margin-top: 2px;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            color: #ffffff;
+        }
+
+        .add-teknis-arrow {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 28px;
+
+            height: 28px;
+
+            margin-left: auto;
+
+            border-radius: 9px;
+
+            background: rgba(255, 255, 255, .10);
+        }
+
+        .add-teknis-arrow i {
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           TABLE
+        ===================================================== */
+
+        .table-wrapper {
+            width: 100%;
+
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+
+            min-width: 650px;
+
+            border-collapse: collapse;
+        }
+
+        .data-table thead tr {
+            background: #f8fbff;
+
+            border-bottom: 1px solid #dce5ee;
+        }
+
+        .data-table th {
+            padding: 14px 20px;
+
+            text-align: left;
+
+            white-space: nowrap;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: .08em;
+
+            text-transform: uppercase;
+
+            color: #71839a;
+        }
+
+        .data-table td {
+            padding: 15px 20px;
+
+            border-bottom: 1px solid #edf1f5;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            color: #52657d;
+
+            vertical-align: middle;
+        }
+
+        .data-table tbody tr {
+            transition: background .18s ease;
+        }
+
+        .data-table tbody tr:hover {
+            background: #f8fbff;
+        }
+
+
+        /* =====================================================
+           ACTION BUTTON TABLE
+        ===================================================== */
+
+        .action-buttons {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 7px;
+        }
+
+        .btn-icon {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 32px;
+
+            height: 32px;
+
+            border: none;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            transition:
+                background .2s ease,
+                transform .2s ease;
+        }
+
+        .btn-icon.edit {
+            background: #eff6ff;
+
+            color: #2563eb;
+        }
+
+        .btn-icon.edit:hover {
+            background: #dbeafe;
+
+            transform: translateY(-1px);
+        }
+
+        .btn-icon.delete {
+            background: #fff1f2;
+
+            color: #ef4444;
+        }
+
+        .btn-icon.delete:hover {
+            background: #ffe4e6;
+
+            transform: translateY(-1px);
+        }
+
+        .btn-icon .material-symbols-outlined {
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        #formView {
+            display: none;
+        }
+
+        .form-header {
+            padding: 21px 24px;
+
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .form-body {
+            padding: 24px;
+        }
+
+        .form-field {
+            max-width: 700px;
+        }
+
+        .form-label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            color: #52657d;
+        }
+
+        .form-input {
+            width: 100%;
+
+            height: 44px;
+
+            padding: 0 14px;
+
+            border: 1px solid #dce5ee;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            background: #fbfdff;
+
+            color: #172033;
+
+            font-family: "Nunito", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition:
+                border-color .2s ease,
+                background .2s ease,
+                box-shadow .2s ease;
+        }
+
+        .form-input:focus {
+            border-color: #0d4fa6;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 0 0 4px rgba(13, 79, 166, .08);
+        }
+
+
+        /* =====================================================
+           ERROR
+        ===================================================== */
+
+        .input-error {
+            border-color: #ef4444 !important;
+
+            background: #fff5f5 !important;
+
+            animation: inputShake .35s ease;
+        }
+
+        @keyframes inputShake {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-4px);
+            }
+
+            50% {
+                transform: translateX(4px);
+            }
+
+            75% {
+                transform: translateX(-4px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+
+        }
+
+        .text-error {
+            margin-top: 8px;
+
+            color: #ef4444;
+
+            font-size: 11px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FORM BUTTONS
+        ===================================================== */
+
+        .form-actions {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 25px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid #edf1f5;
+        }
+
+        .btn-simpan {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding: 0 18px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background: #0d4fa6;
+
+            color: white;
+
+            font-family: "Nunito", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 12px rgba(13, 79, 166, .14);
+
+            transition:
+                background .2s ease,
+                transform .2s ease;
+        }
+
+        .btn-simpan:hover {
+            background: #0a3b7c;
+
+            transform: translateY(-1px);
+        }
+
+        .btn-batal {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding: 0 18px;
+
+            border: 1px solid #dce5ee;
+
+            border-radius: 11px;
+
+            background: #ffffff;
+
+            color: #52657d;
+
+            font-family: "Nunito", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: background .2s ease;
+        }
+
+        .btn-batal:hover {
+            background: #f8fbff;
+        }
+
+
+        /* =====================================================
+           MODAL
+        ===================================================== */
+
+        .modal-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 80;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            background: rgba(15, 23, 42, .55);
+
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            width: 100%;
+
+            max-width: 400px;
+
+            padding: 25px;
+
+            border: 1px solid #dce5ee;
+
+            border-radius: 22px;
+
+            background: white;
+
+            box-shadow:
+                0 20px 60px rgba(15, 23, 42, .18);
+        }
+
+        .modal-title {
+            margin: 0;
+
+            text-align: center;
+
+            color: #172033;
+
+            font-size: 18px;
+
+            font-weight: 900;
+        }
+
+        .modal-text {
+            margin-top: 8px;
+
+            text-align: center;
+
+            color: #71839a;
+
+            font-size: 12px;
+
+            font-weight: 600;
+        }
+
+        .modal-buttons {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+        .btn-modal-batal,
+        .btn-modal-hapus {
+            min-height: 40px;
+
+            padding: 0 18px;
+
+            border-radius: 11px;
+
+            font-family: "Nunito", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+        }
+
+        .btn-modal-batal {
+            border: 1px solid #dce5ee;
+
+            background: white;
+
+            color: #52657d;
+        }
+
+        .btn-modal-batal:hover {
+            background: #f8fbff;
+        }
+
+        .btn-modal-hapus {
+            border: none;
+
+            background: #ef4444;
+
+            color: white;
+        }
+
+        .btn-modal-hapus:hover {
+            background: #dc2626;
+        }
+
+
+        /* =====================================================
+           NOTIFIKASI
+        ===================================================== */
+
+        #notifikasiKontainer {
+            position: fixed;
+
+            top: 24px;
+
+            right: 24px;
+
+            z-index: 100;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .notifikasi-sukses {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            min-width: 280px;
+
+            padding: 12px 16px;
+
+            border: 1px solid #a7f3d0;
+
+            border-radius: 12px;
+
+            background: #ecfdf5;
+
+            color: #047857;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 30px rgba(15, 23, 42, .12);
+
+            animation: notifMasuk .3s ease;
+
+            transition:
+                opacity .4s ease,
+                transform .4s ease;
+        }
+
+        .notifikasi-sukses.hapus {
+            opacity: 0;
+
+            transform: translateY(-10px);
+        }
+
+        @keyframes notifMasuk {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .main-card-header {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .add-teknis-card {
+                width: 100%;
+            }
+
+            .form-body {
+                padding: 18px;
+            }
+
+            .form-actions {
+                flex-direction: column-reverse;
+
+                align-items: stretch;
+            }
+
+            .btn-simpan,
+            .btn-batal {
+                width: 100%;
+            }
+
+        }
+
+        @media (max-width: 640px) {
+
+            #notifikasiKontainer {
+                top: 16px;
+
+                left: 16px;
+
+                right: 16px;
+            }
+
+            .notifikasi-sukses {
+                min-width: 0;
+
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] text-[#172033]">
+
+
+    <div class="flex h-screen w-full">
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 z-50 flex w-70 -translate-x-full flex-col overflow-hidden bg-gradient-to-b from-[#173b75] via-[#3264b5] to-[#2b77c5] text-white shadow-[8px_0_30px_rgba(23,59,117,.16)] transition-transform duration-300 lg:relative lg:w-70 lg:translate-x-0 lg:shadow-none">
+
+
+            <!-- LOGO -->
+
+            <div class="shrink-0 px-6 pt-6 pb-5">
+
+                <div class="flex items-center gap-3.5">
+
+                    <div
+                        class="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15 shadow-sm">
+
+                        <img src="../../asset/folder.png" alt="Logo SKALA" class="h-13 w-13 object-contain">
+
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <h1 class="text-[26px] font-black leading-none tracking-tight text-white">
+
+                            SKALA
+
+                        </h1>
+
+                        <p class="mt-1.5 text-[9px] font-bold leading-3.5 tracking-[.12em] text-white/75">
+
+                            SISTEM KELOLA<br>
+                            ARSIP DAN LAPORAN
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-scroll flex-1 overflow-y-auto px-4 py-5">
+
+                <p class="mb-3 px-3 text-[9px] font-extrabold uppercase tracking-[.2em] text-white/55">
+
+                    Menu Utama
+
+                </p>
+
+
+                <ul class="space-y-1.5">
+
+
+                    <!-- DASHBOARD -->
+
+                    <li>
+
+                        <a href="../../dashboard/dashboard.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-house w-5 text-center text-[14px]"></i>
+
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PENGGUNA -->
+
+                    <li>
+
+                        <a href="../../user/user.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-user w-5 text-center text-[14px]"></i>
+
+                            <span>Pengguna</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- MASTER -->
+
+                    <li class="has-submenu open">
+
+                        <a href="#"
+                            class="menu-toggle flex w-full items-center justify-between rounded-xl bg-white/17 px-4 py-3 text-[13px] font-extrabold text-white shadow-sm ring-1 ring-white/10">
+
+                            <span class="flex items-center gap-3.5">
+
+                                <i class="fa-solid fa-database w-5 text-center text-[14px]"></i>
+
+                                <span>Kelola Master</span>
+
+                            </span>
+
+                            <i class="fa-solid fa-chevron-down arrow-icon text-[9px]"></i>
+
+                        </a>
+
+
+                        <ul class="submenu overflow-hidden pl-4 pt-1.5">
+
+                            <div class="space-y-1 border-l border-white/20 pl-3">
+
+
+                                <!-- TAHUN -->
+
+                                <li>
+
+                                    <a href="../../master/master-tahun/tahun.html"
+                                        class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                        Master Tahun
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- TEKNIS -->
+
+                                <li>
+
+                                    <a href="../../master/master-teknis/teknis.html"
+                                        class="block rounded-lg bg-white/10 px-3 py-2.5 text-[12px] font-extrabold text-white">
+
+                                        Master Teknis
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- KOMPONEN -->
+
+                                <li class="has-submenu">
+
+                                    <a href="#"
+                                        class="menu-toggle flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                        <span>Master Komponen</span>
+
+                                        <i class="fa-solid fa-chevron-down arrow-icon text-[8px]"></i>
+
+                                    </a>
+
+
+                                    <ul class="submenu overflow-hidden pl-3 pt-1">
+
+                                        <div class="space-y-1 border-l border-white/15 pl-3">
+
+
+                                            <li>
+
+                                                <a href="../../master/master-komponen/tujuan.html"
+                                                    class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+
+                                                    Tujuan
+
+                                                </a>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <a href="../../master/master-komponen/sasaran.html"
+                                                    class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+
+                                                    Sasaran
+
+                                                </a>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <a href="../../master/master-komponen/indikator.html"
+                                                    class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+
+                                                    Indikator
+
+                                                </a>
+
+                                            </li>
+
+
+                                        </div>
+
+                                    </ul>
+
+                                </li>
+
+
+                                <!-- KEGIATAN -->
+
+                                <li>
+
+                                    <a href="../../master/master-kegiatan/kegiatan.html"
+                                        class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                        Master Kegiatan
+
+                                    </a>
+
+                                </li>
+
+
+                            </div>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- DOWNLOAD -->
+
+                    <li>
+
+                        <a href="../../download/download.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-download w-5 text-center text-[14px]"></i>
+
+                            <span>Download</span>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="shrink-0 border-t border-white/15 p-4">
+
+                <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3 ring-1 ring-white/5">
+
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+
+                        <img src="../../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain">
+
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <p class="truncate text-[9px] font-black tracking-wide text-white">
+
+                            BADAN PUSAT STATISTIK
+
+                        </p>
+
+                        <p class="mt-0.5 text-[9px] font-semibold text-white/70">
+
+                            KOTA SUKABUMI
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MOBILE OVERLAY -->
+
+        <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden bg-[#0f172a]/55 backdrop-blur-[3px] lg:hidden">
+        </div>
+
+
+        <!-- =====================================================
+             MAIN
+        ====================================================== -->
+
+        <main class="flex min-w-0 flex-1 flex-col">
+
+
+            <!-- HEADER -->
+
+            <header
+                class="z-30 flex min-h-22 shrink-0 items-center justify-between border-b border-[#dce5ee] bg-white/95 px-4 shadow-[0_3px_18px_rgba(15,23,42,.05)] backdrop-blur-md sm:px-6 lg:px-8">
+
+
+                <div class="flex min-w-0 items-center gap-3.5">
+
+                    <button type="button" id="openSidebar"
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6] transition hover:bg-[#dcecfb] lg:hidden">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="min-w-0">
+
+                        <p class="truncate text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+
+                            Sistem Kelola Arsip & Laporan
+
+                        </p>
+
+                        <h2
+                            class="mt-0.5 truncate text-[21px] font-black tracking-[-.025em] text-[#0d4fa6] sm:text-[23px]">
+
+                            Master Teknis
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="ml-4 flex shrink-0 items-center gap-2.5 sm:gap-3">
+
+
+                    <!-- ADMIN PROFILE -->
+
+                    <div
+                        class="flex items-center gap-2.5 rounded-2xl border border-[#dce5ee] bg-[#fbfdff] px-2.5 py-2 shadow-sm sm:px-3">
+
+                        <div
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6]">
+
+                            <i class="fa-solid fa-user text-[12px]"></i>
+
+                        </div>
+
+
+                        <div class="hidden min-w-0 sm:block">
+
+                            <p class="text-[8px] font-extrabold uppercase tracking-[.15em] text-[#71839a]">
+
+                                Administrator
+
+                            </p>
+
+                            <p id="namaAdmin"
+                                class="mt-0.5 max-w-32 truncate text-xs font-black text-[#172033] lg:max-w-44">
+
+                                Admin
+
+                            </p>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chevron-down hidden text-[8px] text-[#71839a] sm:block">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LOGOUT -->
+
+                    <button type="button" onclick="logout()" title="Logout"
+                        class="group flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f0d5d5] bg-[#fff8f8] text-[#c63a3a] transition-all duration-200 hover:border-[#c63a3a] hover:bg-[#c63a3a] hover:text-white">
+
+                        <i
+                            class="fa-solid fa-right-from-bracket text-[12px] transition-transform duration-200 group-hover:translate-x-0.5">
+                        </i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 CONTENT
+            ====================================================== -->
+
+            <div class="flex min-h-0 flex-1 flex-col overflow-y-auto p-4 sm:p-5 lg:p-7">
+
+
+                <!-- =================================================
+                     TABLE VIEW
+                ================================================== -->
+
+                <div id="tableView" class="main-card">
+
+
+                    <!-- CARD HEADER -->
+
+                    <div class="main-card-header">
+
+
+                        <div class="min-w-0">
+
+                            <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+
+                                Kelola Master
+
+                            </p>
+
+                            <h2 class="mt-1 text-lg font-black tracking-[-.02em] text-[#0d4fa6] sm:text-xl">
+
+                                Data Teknis
+
+                            </h2>
+
+                            <p class="mt-0.5 text-[11px] font-semibold text-[#71839a]">
+
+                                Kelola daftar teknis yang digunakan dalam aplikasi SKALA.
+
+                            </p>
+
+                        </div>
+
+
+                        <!--
+                            ID TIDAK DIUBAH
+                            onclick tetap showForm()
+                        -->
+
+                        <button type="button" class="add-teknis-card" onclick="showForm()">
+
+
+                            <span class="add-teknis-icon">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </span>
+
+
+                            <span class="add-teknis-text">
+
+                                <small>
+                                    Master Data
+                                </small>
+
+                                <span>
+                                    Tambah Teknis
+                                </span>
+
+                            </span>
+
+
+                            <span class="add-teknis-arrow">
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- TABLE -->
+
+                    <div class="table-wrapper">
+
+                        <table class="data-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th width="10%">
+                                        No
+                                    </th>
+
+                                    <th width="70%">
+                                        Teknis
+                                    </th>
+
+                                    <th width="20%">
+                                        Aksi
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tableBody">
+
+                                <!--
+                                    DATA DARI teknis.js
+                                -->
+
+                            </tbody>
+
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FORM VIEW
+                ================================================== -->
+
+                <section id="formView" class="main-card mt-0">
+
+
+                    <!-- FORM HEADER -->
+
+                    <div class="form-header">
+
+                        <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+
+                            Kelola Master
+
+                        </p>
+
+                        <h2 id="formTitle" class="mt-1 text-lg font-black tracking-[-.02em] text-[#0d4fa6] sm:text-xl">
+
+                            Tambah Data Teknis
+
+                        </h2>
+
+                        <p class="mt-0.5 text-[11px] font-semibold text-[#71839a]">
+
+                            Masukkan data teknis yang akan digunakan dalam aplikasi.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- FORM BODY -->
+
+                    <div class="form-body">
+
+
+                        <div class="form-field">
+
+
+                            <label class="form-label" for="inputTeknis">
+
+                                Teknis
+
+                            </label>
+
+
+                            <input type="text" id="inputTeknis" class="form-input" placeholder="Masukkan teknis...">
+
+
+                            <div id="errorMsg" class="text-error" style="display:none;">
+
+                                * Form teknis tidak boleh kosong!
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- FORM ACTION -->
+
+                        <div class="form-actions">
+
+
+                            <button type="button" class="btn-batal" onclick="hideForm()">
+
+                                <i class="fa-solid fa-arrow-left"></i>
+
+                                Batal
+
+                            </button>
+
+
+                            <button type="button" class="btn-simpan" onclick="simpanData()">
+
+                                <i class="fa-solid fa-floppy-disk"></i>
+
+                                Simpan Data
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         DELETE MODAL
+    ====================================================== -->
+
+    <div id="deleteModal" class="modal-overlay" style="display:none;">
+
+
+        <div class="modal-content">
+
+
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-red-500">
+
+                <i class="fa-solid fa-trash text-lg"></i>
+
+            </div>
+
+
+            <h3 class="modal-title mt-4">
+
+                Hapus Data?
+
+            </h3>
+
+
+            <p class="modal-text">
+
+                Data yang sudah dihapus tidak dapat dikembalikan.
+
+            </p>
+
+
+            <div class="modal-buttons">
+
+
+                <button type="button" class="btn-modal-batal" onclick="closeDeleteModal()">
+
+                    Batal
+
+                </button>
+
+
+                <button type="button" class="btn-modal-hapus" onclick="konfirmasiHapus()">
+
+                    <i class="fa-solid fa-trash mr-1"></i>
+
+                    Hapus
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFIKASI -->
+
+    <div id="notifikasiKontainer"></div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../../../assets/js/authAdmin.js"></script>
+
+    <script src="teknis.js"></script>
+
+
+</body>
+
+</html>

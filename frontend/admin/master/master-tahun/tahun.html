@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKALA - Master Tahun</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="../../../assets/css/output.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] font-['Nunito'] text-[#172033]">
+    <div class="flex h-screen w-full">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 z-50 flex w-70 -translate-x-full flex-col overflow-hidden bg-gradient-to-b from-[#173b75] via-[#3264b5] to-[#2b77c5] text-white shadow-[8px_0_30px_rgba(23,59,117,.16)] transition-transform duration-300 lg:relative lg:w-70 lg:translate-x-0 lg:shadow-none">
+            <!-- LOGO -->
+            <div class="shrink-0 px-6 pt-6 pb-5">
+                <div class="flex items-center gap-3.5">
+                    <div
+                        class="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15 shadow-sm">
+                        <img src="../../asset/folder.png" alt="Logo SKALA" class="h-13 w-13 object-contain">
+                    </div>
+
+                    <div class="min-w-0">
+                        <h1 class="text-[26px] font-black leading-none tracking-tight text-white">
+                            SKALA
+                        </h1>
+
+                        <p class="mt-1.5 text-[9px] font-bold leading-3.5 tracking-[.12em] text-white/75">
+                            SISTEM KELOLA<br>
+                            ARSIP DAN LAPORAN
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+            <!-- NAVIGATION -->
+            <nav class="flex-1 overflow-y-auto px-4 py-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <p class="mb-3 px-3 text-[9px] font-extrabold uppercase tracking-[.2em] text-white/55">
+                    Menu Utama
+                </p>
+
+                <ul class="space-y-1.5">
+                    <!-- DASHBOARD -->
+                    <li>
+                        <a href="../../dashboard/dashboard.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-house w-5 text-center text-[14px]"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <!-- PENGGUNA -->
+                    <li>
+                        <a href="../../user/user.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-user w-5 text-center text-[14px]"></i>
+                            <span>Pengguna</span>
+                        </a>
+                    </li>
+
+                    <!-- KELOLA MASTER -->
+                    <li>
+                        <button type="button" id="btnKelolaMaster"
+                            class="flex w-full items-center justify-between rounded-xl bg-white/8 px-4 py-3 text-[13px] font-extrabold text-white transition hover:bg-white/15">
+                            <span class="flex items-center gap-3.5">
+                                <i class="fa-solid fa-database w-5 text-center text-[14px]"></i>
+                                <span>Kelola Master</span>
+                            </span>
+
+                            <i id="iconDropdown"
+                                class="fa-solid fa-chevron-down rotate-180 text-[9px] transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- MASTER MENU -->
+                        <div id="menuKelolaMaster" class="overflow-hidden pt-1.5">
+                            <div class="space-y-1 border-l border-white/20 pl-4">
+
+                                <!-- MASTER TAHUN -->
+                                <a href="tahun.html"
+                                    class="flex items-center gap-2.5 rounded-lg bg-white/15 px-3 py-2.5 text-[12px] font-extrabold text-white ring-1 ring-white/10 transition">
+                                    <span
+                                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/15">
+                                        <i class="fa-solid fa-calendar-days text-[10px]"></i>
+                                    </span>
+
+                                    <span>Master Tahun</span>
+                                </a>
+
+                                <!-- MASTER TEKNIS -->
+                                <a href="../master-teknis/teknis.html"
+                                    class="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+                                    <span
+                                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10">
+                                        <i class="fa-solid fa-user-gear text-[10px]"></i>
+                                    </span>
+
+                                    <span>Master Teknis</span>
+                                </a>
+
+                                <!-- MASTER KOMPONEN -->
+                                <div>
+                                    <button type="button" id="btnKomponenKinerja"
+                                        class="flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-left text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+                                        <span class="flex items-center gap-2.5">
+                                            <span
+                                                class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10">
+                                                <i class="fa-solid fa-layer-group text-[10px]"></i>
+                                            </span>
+
+                                            <span>Master Komponen</span>
+                                        </span>
+
+                                        <i id="iconDropKomponen"
+                                            class="fa-solid fa-chevron-down text-[8px] transition-transform duration-200"></i>
+                                    </button>
+
+                                    <!-- SUB MENU KOMPONEN -->
+                                    <div id="menuKomponen" class="hidden overflow-hidden pt-1 pl-3">
+                                        <div class="space-y-1 border-l border-white/15 pl-3">
+                                            <!-- TUJUAN -->
+                                            <a href="../master-komponen/tujuan.html"
+                                                class="flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+                                                <i class="fa-solid fa-bullseye w-4 text-center text-[9px]"></i>
+                                                <span>Tujuan</span>
+                                            </a>
+
+                                            <!-- SASARAN -->
+                                            <a href="../master-komponen/sasaran.html"
+                                                class="flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+                                                <i class="fa-solid fa-crosshairs w-4 text-center text-[9px]"></i>
+                                                <span>Sasaran</span>
+                                            </a>
+
+                                            <!-- INDIKATOR -->
+                                            <a href="../master-komponen/indikator.html"
+                                                class="flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+                                                <i class="fa-solid fa-chart-line w-4 text-center text-[9px]"></i>
+                                                <span>Indikator</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- MASTER KEGIATAN -->
+                                <a href="../master-kegiatan/kegiatan.html"
+                                    class="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+                                    <span
+                                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white/10">
+                                        <i class="fa-solid fa-list-check text-[10px]"></i>
+                                    </span>
+
+                                    <span>Master Kegiatan</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- DOWNLOAD -->
+                    <li>
+                        <a href="../../download/download.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-download w-5 text-center text-[14px]"></i>
+                            <span>Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- SIDEBAR FOOTER -->
+            <div class="shrink-0 border-t border-white/15 p-4">
+                <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3 ring-1 ring-white/5">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                        <img src="../../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain">
+                    </div>
+
+                    <div class="min-w-0">
+                        <p class="truncate text-[9px] font-black tracking-wide text-white">
+                            BADAN PUSAT STATISTIK
+                        </p>
+
+                        <p class="mt-0.5 text-[9px] font-semibold text-white/70">
+                            KOTA SUKABUMI
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MOBILE OVERLAY -->
+        <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden bg-[#0f172a]/55 backdrop-blur-[3px] lg:hidden"></div>
+
+        <!-- MAIN -->
+        <main class="flex min-w-0 flex-1 flex-col">
+
+            <!-- HEADER -->
+            <header
+                class="z-30 flex min-h-22 shrink-0 items-center justify-between border-b border-[#dce5ee] bg-white/95 px-4 shadow-[0_3px_18px_rgba(15,23,42,.05)] backdrop-blur-md sm:px-6 lg:px-8">
+                <!-- LEFT -->
+                <div class="flex min-w-0 items-center gap-3.5">
+                    <button type="button" id="openSidebar"
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6] transition hover:bg-[#dcecfb] lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="min-w-0">
+                        <p class="truncate text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+                            Sistem Kelola Arsip & Laporan
+                        </p>
+
+                        <h2
+                            class="mt-0.5 truncate text-[21px] font-black tracking-[-.025em] text-[#0d4fa6] sm:text-[23px]">
+                            Master Tahun
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="ml-4 flex shrink-0 items-center gap-2.5 sm:gap-3">
+
+                    <!-- ADMIN -->
+                    <div
+                        class="flex items-center gap-2.5 rounded-2xl border border-[#dce5ee] bg-[#fbfdff] px-2.5 py-2 shadow-sm sm:px-3">
+                        <div
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6]">
+                            <i class="fa-solid fa-user text-[12px]"></i>
+                        </div>
+
+                        <div class="hidden min-w-0 sm:block">
+                            <p class="text-[8px] font-extrabold uppercase tracking-[.15em] text-[#71839a]">
+                                Administrator
+                            </p>
+
+                            <p id="namaAdmin"
+                                class="mt-0.5 max-w-32 truncate text-xs font-black text-[#172033] lg:max-w-44">
+                                Admin
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down hidden text-[8px] text-[#71839a] sm:block"></i>
+                    </div>
+
+                    <!-- LOGOUT -->
+                    <button type="button" onclick="logout()" title="Logout"
+                        class="group flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f0d5d5] bg-[#fff8f8] text-[#c63a3a] transition-all duration-200 hover:border-[#c63a3a] hover:bg-[#c63a3a] hover:text-white">
+                        <i
+                            class="fa-solid fa-right-from-bracket text-[12px] transition-transform duration-200 group-hover:translate-x-0.5"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <div class="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-7">
+                <section
+                    class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dce5ee] bg-white shadow-[0_8px_30px_rgba(15,23,42,.06)]">
+                    <!-- SECTION HEADER -->
+                    <div
+                        class="flex shrink-0 items-center justify-between gap-4 border-b border-[#edf1f5] px-5 py-4 sm:px-6 sm:py-5">
+                        <div class="min-w-0">
+                            <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+                                Kelola Master
+                            </p>
+
+                            <h2 class="mt-1 text-lg font-black tracking-[-.02em] text-[#0d4fa6] sm:text-xl">
+                                Data Tahun
+                            </h2>
+
+                            <p class="mt-0.5 hidden text-[11px] font-semibold text-[#71839a] sm:block">
+                                Kelola periode tahun dan triwulan dalam sistem SKALA.
+                            </p>
+                        </div>
+
+                        <div
+                            class="hidden shrink-0 items-center rounded-xl bg-[#e8f2fc] px-4 py-2 text-[10px] font-black uppercase tracking-[.12em] text-[#0d4fa6] sm:flex">
+                            TAHUN
+                        </div>
+                    </div>
+
+                    <!-- ACTION -->
+                    <div class="flex shrink-0 justify-end px-5 py-4 sm:px-6">
+                        <a href="tambah.html"
+                            class="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-[#0d4fa6] to-[#2b77c5] px-4 py-3 text-white shadow-[0_8px_20px_rgba(13,79,166,.18)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(13,79,166,.25)]">
+                            <span
+                                class="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/15">
+                                <i class="fa-solid fa-calendar-plus text-sm"></i>
+                            </span>
+
+                            <span class="text-left">
+                                <span class="block text-[9px] font-bold uppercase tracking-[.12em] text-white/70">
+                                    Master Tahun
+                                </span>
+
+                                <span class="mt-0.5 block text-sm font-black">
+                                    Tambah Tahun
+                                </span>
+                            </span>
+
+                            <span
+                                class="ml-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 transition-transform duration-200 group-hover:translate-x-0.5">
+                                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- TABLE -->
+                    <div class="min-h-0 flex-1 overflow-auto px-5 pb-5 sm:px-6">
+                        <div class="overflow-auto rounded-2xl border border-[#e2e8f0]">
+                            <table class="w-full min-w-[750px] border-collapse text-left">
+                                <thead>
+                                    <tr class="bg-[#f6f9fc]">
+                                        <th
+                                            class="w-[60px] border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+                                            No
+                                        </th>
+
+                                        <th
+                                            class="w-[130px] border-b border-[#e2e8f0] px-5 py-4 text-left text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+                                            Tahun
+                                        </th>
+
+                                        <th
+                                            class="w-[180px] border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+                                            Triwulan
+                                        </th>
+
+                                        <th
+                                            class="border-b border-[#e2e8f0] px-5 py-4 text-left text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+                                            Keterangan
+                                        </th>
+
+                                        <th
+                                            class="w-[150px] border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+                                            Aksi
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="tableBody" class="divide-y divide-[#edf1f5] text-sm"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    <!-- DELETE MODAL -->
+    <div id="deleteModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-[#0f172a]/55 px-4 backdrop-blur-[3px]">
+    
+        <div
+            class="w-full max-w-md rounded-3xl border border-[#dce5ee] bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,.18)] sm:p-7">
+    
+            <!-- ICON -->
+            <div
+                class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-red-500 ring-8 ring-red-50/60">
+                <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+            </div>
+    
+            <!-- STEP 1 -->
+            <div id="deleteStepWarning">
+    
+                <h3 class="mt-5 text-center text-xl font-black text-[#172033]">
+                    Hapus Tahun?
+                </h3>
+    
+                <p class="mt-3 text-center text-xs font-semibold leading-6 text-[#71839a]">
+                    Anda akan menghapus data tahun
+                    <span id="deleteTahunText" class="font-black text-red-500">
+                    </span>.
+                </p>
+    
+                <div class="mt-5 rounded-2xl border border-red-100 bg-red-50 px-4 py-4">
+    
+                    <div class="flex items-start gap-3">
+    
+                        <div
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-red-500 shadow-sm">
+                            <i class="fa-solid fa-triangle-exclamation text-sm"></i>
+                        </div>
+    
+                        <div>
+                            <p class="text-xs font-black text-red-600">
+                                Perhatian!
+                            </p>
+    
+                            <p class="mt-1 text-[11px] font-semibold leading-5 text-red-500/90">
+                                Menghapus tahun dapat menghapus seluruh data
+                                kegiatan, tindak lanjut, dan data terkait
+                                pada tahun tersebut.
+                            </p>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <p class="mt-4 text-center text-[11px] font-semibold text-[#94a3b8]">
+                    Tindakan ini tidak dapat dikembalikan.
+                </p>
+    
+                <div class="mt-6 flex justify-center gap-3">
+    
+                    <button type="button" onclick="closeDeleteModal()"
+                        class="rounded-xl border border-[#dce5ee] bg-white px-5 py-3 text-xs font-extrabold text-[#64748b] transition hover:bg-[#f6f9fc]">
+                        Batal
+                    </button>
+    
+                    <button type="button" onclick="lanjutKonfirmasiHapus()"
+                        class="rounded-xl bg-red-500 px-5 py-3 text-xs font-extrabold text-white shadow-sm transition hover:bg-red-600">
+                        Lanjutkan
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+    
+            <!-- STEP 2 -->
+            <div id="deleteStepConfirm" class="hidden">
+    
+                <h3 class="mt-5 text-center text-xl font-black text-[#172033]">
+                    Konfirmasi Terakhir
+                </h3>
+    
+                <p class="mt-3 text-center text-xs font-semibold leading-6 text-[#71839a]">
+                    Anda benar-benar yakin ingin menghapus tahun
+                    <span id="deleteTahunConfirm" class="font-black text-red-500">
+                    </span>?
+                </p>
+    
+                <div class="mt-5 rounded-2xl border border-amber-100 bg-amber-50 px-4 py-4 text-center">
+    
+                    <i class="fa-solid fa-circle-exclamation text-lg text-amber-500"></i>
+    
+                    <p class="mt-2 text-[11px] font-bold leading-5 text-amber-700">
+                        Setelah tombol hapus ditekan, seluruh data terkait
+                        dapat ikut terhapus secara permanen.
+                    </p>
+    
+                </div>
+    
+                <div class="mt-6 flex justify-center gap-3">
+    
+                    <button type="button" onclick="kembaliPeringatanHapus()"
+                        class="rounded-xl border border-[#dce5ee] bg-white px-5 py-3 text-xs font-extrabold text-[#64748b] transition hover:bg-[#f6f9fc]">
+                        Kembali
+                    </button>
+    
+                    <button type="button" id="btnKonfirmasiHapus" onclick="konfirmasiHapus()"
+                        class="flex min-w-[145px] items-center justify-center gap-2 rounded-xl bg-red-500 px-5 py-3 text-xs font-extrabold text-white shadow-sm transition hover:bg-red-600 disabled:cursor-not-allowed disabled:opacity-70">
+    
+                        <span id="deleteButtonText">
+                            Ya, Hapus
+                        </span>
+    
+                        <span id="deleteButtonLoading" class="hidden">
+    
+                            <i class="fa-solid fa-spinner animate-spin"></i>
+    
+                        </span>
+    
+                    </button>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
+
+        <!-- NOTIFICATION -->
+        <div id="notifikasiKontainer"
+            class="fixed right-5 top-5 z-[200] flex w-[calc(100%-40px)] max-w-sm flex-col gap-3"></div>
+    </div>
+
+    <!-- SIDEBAR SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+            const openBtn = document.getElementById("openSidebar");
+
+            const btnMaster = document.getElementById("btnKelolaMaster");
+            const masterMenu = document.getElementById("menuKelolaMaster");
+            const masterIcon = document.getElementById("iconDropdown");
+
+            const btnKomponen = document.getElementById("btnKomponenKinerja");
+            const komponenMenu = document.getElementById("menuKomponen");
+            const komponenIcon = document.getElementById("iconDropKomponen");
+
+            function openSidebar() {
+                if (!sidebar) return;
+
+                sidebar.classList.remove("-translate-x-full");
+
+                if (overlay) {
+                    overlay.classList.remove("hidden");
+                }
+
+                document.body.classList.add("overflow-hidden");
+            }
+
+            function closeSidebar() {
+                if (!sidebar) return;
+
+                sidebar.classList.add("-translate-x-full");
+
+                if (overlay) {
+                    overlay.classList.add("hidden");
+                }
+
+                document.body.classList.remove("overflow-hidden");
+            }
+
+            function openMaster() {
+                if (!masterMenu) return;
+
+                masterMenu.classList.remove("hidden");
+
+                if (masterIcon) {
+                    masterIcon.classList.add("rotate-180");
+                }
+            }
+
+            function closeMaster() {
+                if (!masterMenu) return;
+
+                masterMenu.classList.add("hidden");
+
+                if (masterIcon) {
+                    masterIcon.classList.remove("rotate-180");
+                }
+            }
+
+            function openKomponen() {
+                if (!komponenMenu) return;
+
+                komponenMenu.classList.remove("hidden");
+
+                if (komponenIcon) {
+                    komponenIcon.classList.add("rotate-180");
+                }
+            }
+
+            function closeKomponen() {
+                if (!komponenMenu) return;
+
+                komponenMenu.classList.add("hidden");
+
+                if (komponenIcon) {
+                    komponenIcon.classList.remove("rotate-180");
+                }
+            }
+
+            /* Master Tahun aktif, maka Kelola Master terbuka */
+            openMaster();
+
+            if (openBtn) {
+                openBtn.addEventListener("click", openSidebar);
+            }
+
+            if (overlay) {
+                overlay.addEventListener("click", closeSidebar);
+            }
+
+            if (btnMaster && masterMenu) {
+                btnMaster.addEventListener("click", () => {
+                    const isClosed = masterMenu.classList.contains("hidden");
+
+                    if (isClosed) {
+                        openMaster();
+                    } else {
+                        closeMaster();
+                    }
+                });
+            }
+
+            if (btnKomponen && komponenMenu) {
+                btnKomponen.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const isClosed = komponenMenu.classList.contains("hidden");
+
+                    if (isClosed) {
+                        openKomponen();
+                    } else {
+                        closeKomponen();
+                    }
+                });
+            }
+
+            document.querySelectorAll("#sidebar a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth < 1024) {
+                        closeSidebar();
+                    }
+                });
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth >= 1024) {
+                    if (overlay) {
+                        overlay.classList.add("hidden");
+                    }
+
+                    document.body.classList.remove("overflow-hidden");
+                }
+            });
+        });
+    </script>
+
+    <!-- AUTH ADMIN -->
+    <script src="../../../assets/js/authAdmin.js"></script>
+
+    <!-- TAHUN JS -->
+    <script src="tahun.js"></script>
+</body>
+
+</html>

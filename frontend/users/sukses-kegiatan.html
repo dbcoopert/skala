@@ -1,0 +1,1692 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SKALA - Dokumentasi Kegiatan Berhasil</title>
+
+
+    <!-- =====================================================
+       TAILWIND CSS
+  ====================================================== -->
+
+    <link rel="stylesheet" href="../assets/css/output.css" />
+
+
+    <!-- =====================================================
+       FONT AWESOME
+  ====================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</head>
+
+
+<body class="m-0 min-h-screen w-full max-w-full overflow-x-hidden bg-[#f4f7fb] font-sans text-[#172033]">
+
+
+    <!-- =====================================================
+       MAIN WRAPPER
+  ====================================================== -->
+
+    <div class="mx-auto min-h-screen w-full max-w-[1400px] overflow-x-hidden pb-[78px] lg:pb-0">
+
+
+        <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+        <header
+            class="relative z-[200] w-full max-w-full overflow-visible rounded-b-[24px] bg-gradient-to-br from-[#082f61] via-[#0b3d7a] to-[#1458a6] text-white shadow-[0_8px_30px_rgba(8,47,97,0.18)] sm:rounded-b-[30px]">
+
+            <!-- DECORATION -->
+
+            <div class="pointer-events-none absolute -right-20 -top-28 h-56 w-56 rounded-full bg-white/[0.04]"></div>
+
+            <div class="pointer-events-none absolute -bottom-20 left-[35%] h-36 w-36 rounded-full bg-white/[0.025]">
+            </div>
+
+
+            <!-- =================================================
+           HEADER INNER
+      ================================================== -->
+
+            <div
+                class="relative flex min-h-[78px] w-full max-w-full min-w-0 items-center gap-2 px-3 py-2.5 sm:min-h-[92px] sm:px-6 sm:py-4 lg:px-10">
+
+
+                <!-- =================================================
+             LOGO
+        ================================================== -->
+
+                <div
+                    class="flex min-w-0 max-w-[calc(100%-145px)] shrink items-center gap-2 sm:max-w-[calc(100%-210px)] sm:gap-3 lg:max-w-none lg:shrink-0">
+
+                    <!-- ICON -->
+
+                    <div
+                        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border border-white/10 bg-white/[0.08] sm:h-14 sm:w-14 sm:rounded-[16px]">
+
+                        <i class="fa-solid fa-folder-open text-[15px] sm:text-[24px]"></i>
+
+                    </div>
+
+
+                    <!-- TITLE -->
+
+                    <div class="min-w-0 max-w-full">
+
+                        <h1 class="truncate text-[19px] font-black leading-none tracking-[-0.5px] sm:text-[29px]">
+                            SKALA
+                        </h1>
+
+
+                        <p
+                            class="mt-[3px] max-w-full truncate text-[6.5px] font-semibold uppercase leading-[1.3] tracking-[0.1px] text-white/65 sm:mt-1 sm:text-[9px] sm:tracking-[0.2px]">
+                            SISTEM KELOLA ARSIP DAN LAPORAN
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+             DASHBOARD DESKTOP
+             HANYA DESKTOP
+        ================================================== -->
+
+                <div class="absolute left-1/2 hidden -translate-x-1/2 lg:block">
+
+                    <a href="dashboard.html"
+                        class="flex min-h-[46px] items-center justify-center gap-2.5 rounded-[13px] border border-white/15 bg-white/[0.10] px-5 text-[13px] font-extrabold text-white no-underline shadow-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/[0.18] active:translate-y-0">
+
+                        <i class="fa-solid fa-house text-[14px]"></i>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+             USER AREA
+        ================================================== -->
+
+                <div class="relative ml-auto flex min-w-0 shrink-0 items-center gap-1.5 sm:gap-2">
+
+
+                    <!-- =================================================
+               DESKTOP USER
+          ================================================== -->
+
+                    <div
+                        class="hidden h-[58px] max-w-[250px] items-center rounded-[16px] border border-white/10 bg-white/[0.08] px-3 backdrop-blur-md lg:flex">
+
+                        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/[0.10]">
+
+                            <i class="fa-solid fa-user text-[12px]"></i>
+
+                        </div>
+
+
+                        <div class="ml-2.5 min-w-0">
+
+                            <span id="namaUser"
+                                class="block max-w-[180px] truncate text-[13px] font-extrabold leading-[1.2]">
+                                Loading...
+                            </span>
+
+
+                            <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                                <span id="roleUser"
+                                    class="max-w-[70px] truncate text-[9px] font-semibold text-white/55">
+                                    ...
+                                </span>
+
+
+                                <span class="text-[9px] text-white/25">
+                                    •
+                                </span>
+
+
+                                <span id="teknisUser"
+                                    class="max-w-[100px] truncate text-[9px] font-extrabold text-white">
+                                    Loading...
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+               MOBILE USER
+          ================================================== -->
+
+                    <div
+                        class="flex h-[44px] w-[105px] min-w-0 shrink-0 items-center rounded-[11px] border border-white/10 bg-white/[0.08] px-1.5 sm:h-[50px] sm:w-[145px] sm:px-2.5 md:w-[170px] lg:hidden">
+
+                        <!-- USER ICON -->
+
+                        <div
+                            class="flex h-7 w-7 shrink-0 items-center justify-center rounded-[8px] bg-white/[0.10] sm:h-8 sm:w-8">
+
+                            <i class="fa-solid fa-user text-[8px] sm:text-[9px]"></i>
+
+                        </div>
+
+
+                        <!-- USER TEXT -->
+
+                        <div class="ml-1.5 min-w-0 flex-1 overflow-hidden sm:ml-2">
+
+                            <span id="mobileNamaUser"
+                                class="block w-full truncate text-[8.5px] font-black leading-[1.1] sm:text-[10px] md:text-[10.5px]">
+                                Loading...
+                            </span>
+
+
+                            <span id="mobileRoleUser"
+                                class="mt-[2px] block w-full truncate text-[6.5px] font-semibold leading-[1.1] text-white/55 sm:text-[7.5px] md:text-[8px]">
+                                ...
+                            </span>
+
+
+                            <span id="mobileTeknisUser"
+                                class="mt-[2px] block w-full truncate text-[6.5px] font-extrabold leading-[1.1] text-white/90 sm:text-[7.5px] md:text-[8px]">
+                                Loading...
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+               DESKTOP BURGER
+          ================================================== -->
+
+                    <button type="button" id="menuButton" aria-label="Menu" aria-expanded="false"
+                        class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-[13px] border border-white/10 bg-white/[0.08] text-white transition hover:bg-white/[0.15] active:scale-95 lg:flex">
+
+                        <i id="menuIcon" class="fa-solid fa-bars text-[16px]"></i>
+
+                    </button>
+
+
+                    <!-- =================================================
+               DESKTOP MENU
+          ================================================== -->
+
+                    <div id="headerMenu"
+                        class="absolute right-0 top-[62px] hidden w-[260px] max-w-[calc(100vw-20px)] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+
+                        <!-- PROFILE -->
+
+                        <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div
+                                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                                    <i class="fa-solid fa-user text-sm"></i>
+
+                                </div>
+
+
+                                <div class="min-w-0">
+
+                                    <p id="menuUserName" class="truncate text-[13px] font-extrabold text-slate-800">
+                                        Pengguna
+                                    </p>
+
+
+                                    <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                                        <span id="menuUserRole"
+                                            class="max-w-[75px] truncate text-[10px] font-semibold text-slate-400">
+                                            User
+                                        </span>
+
+
+                                        <span class="text-[9px] text-slate-300">
+                                            •
+                                        </span>
+
+
+                                        <span id="menuUserTeknis"
+                                            class="max-w-[110px] truncate text-[10px] font-extrabold text-[#1458a6]">
+                                            -
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MENU -->
+
+                        <div class="p-2">
+
+                            <!-- ARSIP -->
+
+                            <a href="arsip.html"
+                                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-[12px] font-bold text-slate-700 transition hover:bg-blue-50 hover:text-[#1458a6]">
+
+                                <span
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                                    <i class="fa-solid fa-folder-open text-xs"></i>
+
+                                </span>
+
+
+                                <span>
+                                    Arsip
+                                </span>
+
+
+                                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-slate-300"></i>
+
+                            </a>
+
+
+                            <!-- SEPARATOR -->
+
+                            <div class="my-1 h-px bg-slate-100"></div>
+
+
+                            <!-- LOGOUT -->
+
+                            <button type="button" id="menuLogoutButton"
+                                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+                                <span
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+                                    <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+                                </span>
+
+
+                                <span>
+                                    Logout
+                                </span>
+
+
+                                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+        <main
+            class="mx-auto flex w-full max-w-[1000px] flex-col px-12 py-12 max-[1100px]:px-[30px] max-[768px]:px-4 max-[768px]:py-7">
+
+
+            <!-- =================================================
+           SUCCESS HEADER
+      ================================================== -->
+
+            <section class="mb-10 text-center max-[768px]:mb-7">
+
+                <!-- SUCCESS ICON -->
+
+                <div
+                    class="mx-auto mb-6 flex h-[125px] w-[125px] items-center justify-center rounded-full border-[3px] border-emerald-500 bg-emerald-50 text-emerald-500 shadow-[0_8px_25px_rgba(16,185,129,.12)] max-[768px]:mb-5 max-[768px]:h-[105px] max-[768px]:w-[105px] max-[768px]:border-2 max-[480px]:h-[92px] max-[480px]:w-[92px]">
+
+                    <i class="fa-solid fa-circle-check text-[64px] max-[768px]:text-[54px] max-[480px]:text-[45px]"></i>
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <h2
+                    class="mb-2 text-[30px] font-extrabold tracking-[.3px] text-[#172033] max-[768px]:text-[24px] max-[480px]:text-[21px]">
+                    Dokumentasi Kegiatan Berhasil
+                </h2>
+
+
+                <!-- SUBTITLE -->
+
+                <p
+                    class="mx-auto max-w-[650px] text-[15px] leading-6 text-[#64748b] max-[768px]:text-[13px] max-[768px]:leading-5">
+                    Dokumentasi kegiatan telah berhasil dikirim
+                    dan tersimpan pada server.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+           DETAIL CARD
+      ================================================== -->
+
+            <section
+                class="overflow-hidden rounded-[20px] border border-[#e5eaf1] bg-white shadow-[0_6px_20px_rgba(15,23,42,.07)] max-[768px]:rounded-[18px]">
+
+                <!-- CARD HEADER -->
+
+                <div
+                    class="flex items-center gap-3 border-b border-[#e5eaf1] bg-[#f8fafc] px-7 py-5 max-[768px]:px-4 max-[768px]:py-4">
+
+                    <div
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0d4fa6]/10 text-[#0d4fa6]">
+
+                        <i class="fa-solid fa-circle-info text-[17px]"></i>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h3 class="text-[16px] font-bold text-[#0d4fa6] max-[768px]:text-[15px]">
+                            Ringkasan Pengiriman
+                        </h3>
+
+
+                        <p class="mt-0.5 truncate text-[11px] text-[#64748b]">
+                            Informasi kegiatan yang telah dikirim.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+             DETAIL
+        ================================================== -->
+
+                <div
+                    class="grid grid-cols-2 gap-x-10 px-7 py-2 max-[900px]:gap-x-7 max-[768px]:grid-cols-1 max-[768px]:px-4 max-[768px]:py-1">
+
+
+                    <!-- INDIKATOR -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-chart-line shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Indikator Kinerja
+                            </span>
+
+                        </div>
+
+
+                        <p id="sIndikator"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- JUDUL -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-heading shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Judul
+                            </span>
+
+                        </div>
+
+
+                        <p id="sJudul"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- KEGIATAN -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-briefcase shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Kegiatan
+                            </span>
+
+                        </div>
+
+
+                        <p id="sKegiatan"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- TANGGAL -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-calendar shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Tanggal
+                            </span>
+
+                        </div>
+
+
+                        <p id="sTanggal"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- WAKTU -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-clock shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Waktu
+                            </span>
+
+                        </div>
+
+
+                        <p id="sWaktu"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- TEMPAT -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-map-pin shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Tempat
+                            </span>
+
+                        </div>
+
+
+                        <p id="sTempat"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- JUMLAH FOTO -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-camera shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Jumlah Foto
+                            </span>
+
+                        </div>
+
+
+                        <p id="sJumlahFoto"
+                            class="text-[14px] font-bold leading-[1.5] text-emerald-600 max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+
+                    <!-- WAKTU UPLOAD -->
+
+                    <div class="min-w-0 border-b border-[#eef2f7] py-4 max-[768px]:py-3">
+
+                        <div class="mb-1.5 flex items-center gap-2">
+
+                            <i class="fa-solid fa-clock-rotate-left shrink-0 text-[12px] text-[#0d4fa6]"></i>
+
+                            <span class="text-[10px] font-extrabold uppercase tracking-[.6px] text-[#64748b]">
+                                Waktu Upload
+                            </span>
+
+                        </div>
+
+
+                        <p id="sWaktuUpload"
+                            class="break-words text-[14px] font-bold leading-[1.5] text-[#172033] max-[768px]:text-[13px]">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+       MOBILE BOTTOM NAVIGATION
+  ====================================================== -->
+
+    <nav
+        class="fixed inset-x-0 bottom-0 z-[9000] block h-[70px] w-full max-w-full border-t border-slate-200 bg-white/95 shadow-[0_-8px_30px_rgba(15,23,42,0.10)] backdrop-blur-xl lg:hidden">
+
+        <div class="mx-auto flex h-full w-full max-w-[520px] items-center justify-between px-4 sm:px-6">
+
+            <!-- DASHBOARD -->
+
+            <a href="dashboard.html" aria-label="Dashboard"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#1458a6] text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95">
+
+                <i class="fa-solid fa-house"></i>
+
+            </a>
+
+
+            <!-- BURGER -->
+
+            <button type="button" id="bottomMenuButton" aria-label="Menu" aria-expanded="false"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#1458a6] text-[16px] text-white shadow-[0_5px_14px_rgba(20,88,166,0.20)] transition active:scale-95">
+
+                <i id="bottomMenuIcon" class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+       MOBILE MENU
+       PROFILE + ARSIP + LOGOUT
+  ====================================================== -->
+
+    <div id="mobileMenu"
+        class="fixed bottom-[80px] left-3 right-3 z-[10000] hidden overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.20)] lg:hidden sm:left-auto sm:right-5 sm:w-[300px]">
+
+        <!-- PROFILE -->
+
+        <div class="border-b border-slate-100 bg-slate-50 p-4">
+
+            <div class="flex items-center gap-3">
+
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                    <i class="fa-solid fa-user text-sm"></i>
+
+                </div>
+
+
+                <div class="min-w-0">
+
+                    <p id="mobileMenuUserName" class="truncate text-[13px] font-extrabold text-slate-800">
+                        Pengguna
+                    </p>
+
+
+                    <div class="mt-1 flex min-w-0 items-center gap-1.5">
+
+                        <span id="mobileMenuUserRole"
+                            class="max-w-[80px] truncate text-[10px] font-semibold text-slate-400">
+                            User
+                        </span>
+
+
+                        <span class="text-[9px] text-slate-300">
+                            •
+                        </span>
+
+
+                        <span id="mobileMenuUserTeknis"
+                            class="max-w-[130px] truncate text-[10px] font-extrabold text-[#1458a6]">
+                            -
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU ITEMS -->
+
+        <div class="p-2">
+
+            <!-- ARSIP -->
+
+            <a href="arsip.html"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-[12px] font-bold text-slate-700 transition hover:bg-blue-50 hover:text-[#1458a6]">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-[#1458a6]">
+
+                    <i class="fa-solid fa-folder-open text-xs"></i>
+
+                </span>
+
+
+                <span>
+                    Arsip
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-slate-300"></i>
+
+            </a>
+
+
+            <!-- SEPARATOR -->
+
+            <div class="my-1 h-px bg-slate-100"></div>
+
+
+            <!-- LOGOUT -->
+
+            <button type="button" id="mobileMenuLogoutButton"
+                class="flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-[12px] font-bold text-red-600 transition hover:bg-red-50">
+
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-red-500">
+
+                    <i class="fa-solid fa-right-from-bracket text-xs"></i>
+
+                </span>
+
+
+                <span>
+                    Logout
+                </span>
+
+
+                <i class="fa-solid fa-chevron-right ml-auto text-[9px] text-red-200"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+       AUTH
+  ====================================================== -->
+
+    <script src="../assets/js/auth.js"></script>
+
+
+    <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+    <script>
+
+        // =====================================================
+        // LOAD USER
+        // =====================================================
+
+        loadUser("user");
+
+
+        // =====================================================
+        // AMBIL ID KEGIATAN
+        // =====================================================
+
+        const params =
+            new URLSearchParams(
+                location.search
+            );
+
+        const idKegiatan =
+            params.get("id");
+
+
+        // =====================================================
+        // CEK ID
+        // =====================================================
+
+        if (!idKegiatan) {
+
+            alert(
+                "ID Kegiatan tidak ditemukan"
+            );
+
+            location.href =
+                "dashboard.html";
+
+        }
+
+
+        // =====================================================
+        // DESKTOP MENU
+        // =====================================================
+
+        const menuButton =
+            document.getElementById(
+                "menuButton"
+            );
+
+        const headerMenu =
+            document.getElementById(
+                "headerMenu"
+            );
+
+        const menuIcon =
+            document.getElementById(
+                "menuIcon"
+            );
+
+
+        // =====================================================
+        // MOBILE MENU
+        // =====================================================
+
+        const bottomMenuButton =
+            document.getElementById(
+                "bottomMenuButton"
+            );
+
+        const bottomMenuIcon =
+            document.getElementById(
+                "bottomMenuIcon"
+            );
+
+        const mobileMenu =
+            document.getElementById(
+                "mobileMenu"
+            );
+
+
+        // =====================================================
+        // OPEN MENU
+        // =====================================================
+
+        function openMenu() {
+
+            // Desktop
+
+            if (
+                window.innerWidth >= 1024
+            ) {
+
+                if (headerMenu) {
+
+                    headerMenu.classList.remove(
+                        "hidden"
+                    );
+
+                }
+
+            }
+
+
+            // Mobile
+
+            else {
+
+                if (mobileMenu) {
+
+                    mobileMenu.classList.remove(
+                        "hidden"
+                    );
+
+                }
+
+            }
+
+
+            // Desktop icon
+
+            if (menuIcon) {
+
+                menuIcon.classList.remove(
+                    "fa-bars"
+                );
+
+                menuIcon.classList.add(
+                    "fa-xmark"
+                );
+
+            }
+
+
+            // Mobile icon
+
+            if (bottomMenuIcon) {
+
+                bottomMenuIcon.classList.remove(
+                    "fa-bars"
+                );
+
+                bottomMenuIcon.classList.add(
+                    "fa-xmark"
+                );
+
+            }
+
+
+            // Accessibility
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+
+            if (bottomMenuButton) {
+
+                bottomMenuButton.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+            }
+
+        }
+
+
+        // =====================================================
+        // CLOSE MENU
+        // =====================================================
+
+        function closeMenu() {
+
+            if (headerMenu) {
+
+                headerMenu.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            if (mobileMenu) {
+
+                mobileMenu.classList.add(
+                    "hidden"
+                );
+
+            }
+
+
+            // Desktop icon
+
+            if (menuIcon) {
+
+                menuIcon.classList.remove(
+                    "fa-xmark"
+                );
+
+                menuIcon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
+
+            // Mobile icon
+
+            if (bottomMenuIcon) {
+
+                bottomMenuIcon.classList.remove(
+                    "fa-xmark"
+                );
+
+                bottomMenuIcon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
+
+            if (menuButton) {
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+
+            if (bottomMenuButton) {
+
+                bottomMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        // =====================================================
+        // TOGGLE MENU
+        // =====================================================
+
+        function toggleMenu() {
+
+            const isMobile =
+                window.innerWidth < 1024;
+
+
+            if (isMobile) {
+
+                if (
+                    mobileMenu &&
+                    mobileMenu.classList.contains(
+                        "hidden"
+                    )
+                ) {
+
+                    openMenu();
+
+                } else {
+
+                    closeMenu();
+
+                }
+
+            } else {
+
+                if (
+                    headerMenu &&
+                    headerMenu.classList.contains(
+                        "hidden"
+                    )
+                ) {
+
+                    openMenu();
+
+                } else {
+
+                    closeMenu();
+
+                }
+
+            }
+
+        }
+
+
+        // =====================================================
+        // DESKTOP BURGER
+        // =====================================================
+
+        if (menuButton) {
+
+            menuButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    toggleMenu();
+
+                }
+            );
+
+        }
+
+
+        // =====================================================
+        // MOBILE BURGER
+        // =====================================================
+
+        if (bottomMenuButton) {
+
+            bottomMenuButton.addEventListener(
+                "click",
+                function (event) {
+
+                    event.stopPropagation();
+
+                    toggleMenu();
+
+                }
+            );
+
+        }
+
+
+        // =====================================================
+        // CLICK OUTSIDE
+        // =====================================================
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                const clickedDesktopButton =
+                    menuButton &&
+                    menuButton.contains(
+                        event.target
+                    );
+
+
+                const clickedDesktopMenu =
+                    headerMenu &&
+                    headerMenu.contains(
+                        event.target
+                    );
+
+
+                const clickedMobileButton =
+                    bottomMenuButton &&
+                    bottomMenuButton.contains(
+                        event.target
+                    );
+
+
+                const clickedMobileMenu =
+                    mobileMenu &&
+                    mobileMenu.contains(
+                        event.target
+                    );
+
+
+                if (
+                    !clickedDesktopButton &&
+                    !clickedDesktopMenu &&
+                    !clickedMobileButton &&
+                    !clickedMobileMenu
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        // =====================================================
+        // ESC
+        // =====================================================
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        // =====================================================
+        // USER MENU SYNC
+        // =====================================================
+
+        function syncUserMenu() {
+
+            const namaElement =
+                document.getElementById(
+                    "namaUser"
+                );
+
+            const roleElement =
+                document.getElementById(
+                    "roleUser"
+                );
+
+            const teknisElement =
+                document.getElementById(
+                    "teknisUser"
+                );
+
+
+            const nama =
+                namaElement?.textContent?.trim() ||
+                "Pengguna";
+
+
+            const role =
+                roleElement?.textContent?.trim() ||
+                "User";
+
+
+            const teknis =
+                teknisElement?.textContent?.trim() ||
+                "-";
+
+
+            // =================================================
+            // MOBILE HEADER
+            // =================================================
+
+            const mobileNama =
+                document.getElementById(
+                    "mobileNamaUser"
+                );
+
+            const mobileRole =
+                document.getElementById(
+                    "mobileRoleUser"
+                );
+
+            const mobileTeknis =
+                document.getElementById(
+                    "mobileTeknisUser"
+                );
+
+
+            if (
+                mobileNama &&
+                nama !== "Loading..."
+            ) {
+
+                mobileNama.textContent =
+                    nama;
+
+            }
+
+
+            if (
+                mobileRole &&
+                role !== "..."
+            ) {
+
+                mobileRole.textContent =
+                    role;
+
+            }
+
+
+            if (
+                mobileTeknis &&
+                teknis !== "Loading..."
+            ) {
+
+                mobileTeknis.textContent =
+                    teknis;
+
+            }
+
+
+            // =================================================
+            // DESKTOP MENU
+            // =================================================
+
+            const menuNama =
+                document.getElementById(
+                    "menuUserName"
+                );
+
+            const menuRole =
+                document.getElementById(
+                    "menuUserRole"
+                );
+
+            const menuTeknis =
+                document.getElementById(
+                    "menuUserTeknis"
+                );
+
+
+            if (menuNama) {
+
+                menuNama.textContent =
+                    nama;
+
+            }
+
+
+            if (menuRole) {
+
+                menuRole.textContent =
+                    role;
+
+            }
+
+
+            if (menuTeknis) {
+
+                menuTeknis.textContent =
+                    teknis;
+
+            }
+
+
+            // =================================================
+            // MOBILE MENU
+            // =================================================
+
+            const mobileMenuNama =
+                document.getElementById(
+                    "mobileMenuUserName"
+                );
+
+            const mobileMenuRole =
+                document.getElementById(
+                    "mobileMenuUserRole"
+                );
+
+            const mobileMenuTeknis =
+                document.getElementById(
+                    "mobileMenuUserTeknis"
+                );
+
+
+            if (mobileMenuNama) {
+
+                mobileMenuNama.textContent =
+                    nama;
+
+            }
+
+
+            if (mobileMenuRole) {
+
+                mobileMenuRole.textContent =
+                    role;
+
+            }
+
+
+            if (mobileMenuTeknis) {
+
+                mobileMenuTeknis.textContent =
+                    teknis;
+
+            }
+
+        }
+
+
+        // =====================================================
+        // INITIAL SYNC
+        // =====================================================
+
+        syncUserMenu();
+
+
+        // =====================================================
+        // SYNC SETELAH AUTH SELESAI
+        // =====================================================
+
+        const userSyncInterval =
+            setInterval(
+                syncUserMenu,
+                500
+            );
+
+
+        setTimeout(
+            function () {
+
+                clearInterval(
+                    userSyncInterval
+                );
+
+            },
+            5000
+        );
+
+
+        // =====================================================
+        // LOGOUT FUNCTION
+        // =====================================================
+
+        async function prosesLogout() {
+
+            closeMenu();
+
+
+            try {
+
+                if (
+                    typeof logout ===
+                    "function"
+                ) {
+
+                    await logout();
+
+                    return;
+
+                }
+
+
+                await fetch(
+                    `${BASE_URL}/logout`,
+                    {
+                        method: "POST",
+                        credentials: "include"
+                    }
+                );
+
+
+            } catch (err) {
+
+                console.error(
+                    "ERROR LOGOUT:",
+                    err
+                );
+
+            }
+
+
+            location.href =
+                "login.html";
+
+        }
+
+
+        // =====================================================
+        // DESKTOP LOGOUT
+        // =====================================================
+
+        const menuLogoutButton =
+            document.getElementById(
+                "menuLogoutButton"
+            );
+
+
+        if (menuLogoutButton) {
+
+            menuLogoutButton.addEventListener(
+                "click",
+                prosesLogout
+            );
+
+        }
+
+
+        // =====================================================
+        // MOBILE LOGOUT
+        // =====================================================
+
+        const mobileMenuLogoutButton =
+            document.getElementById(
+                "mobileMenuLogoutButton"
+            );
+
+
+        if (mobileMenuLogoutButton) {
+
+            mobileMenuLogoutButton.addEventListener(
+                "click",
+                prosesLogout
+            );
+
+        }
+
+
+        // =====================================================
+        // LOAD DATA KEGIATAN
+        // =====================================================
+
+        async function loadData() {
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${BASE_URL}/api/kegiatan/sukses/${idKegiatan}`,
+                        {
+                            credentials: "include"
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                console.log(
+                    "DATA SUKSES KEGIATAN:",
+                    result
+                );
+
+
+                if (
+                    !response.ok ||
+                    !result.success
+                ) {
+
+                    alert(
+                        result.message ||
+                        "Data kegiatan tidak ditemukan."
+                    );
+
+                    return;
+
+                }
+
+
+                const data =
+                    result.data;
+
+
+                // =================================================
+                // FORMAT TANGGAL
+                // =================================================
+
+                const tanggal =
+                    data.tanggal
+                        ? new Date(
+                            data.tanggal
+                        ).toLocaleDateString(
+                            "id-ID",
+                            {
+                                weekday: "long",
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric"
+                            }
+                        )
+                        : "-";
+
+
+                // =================================================
+                // INDIKATOR
+                // =================================================
+
+                document.getElementById(
+                    "sIndikator"
+                ).innerText =
+                    data.uraian_indikator ||
+                    data.indikator ||
+                    "-";
+
+
+                // =================================================
+                // JUDUL
+                // =================================================
+
+                document.getElementById(
+                    "sJudul"
+                ).innerText =
+                    data.judul ||
+                    "-";
+
+
+                // =================================================
+                // KEGIATAN
+                // =================================================
+
+                document.getElementById(
+                    "sKegiatan"
+                ).innerText =
+                    data.kegiatan ||
+                    "-";
+
+
+                // =================================================
+                // TANGGAL
+                // =================================================
+
+                document.getElementById(
+                    "sTanggal"
+                ).innerText =
+                    tanggal;
+
+
+                // =================================================
+                // WAKTU
+                // =================================================
+
+                document.getElementById(
+                    "sWaktu"
+                ).innerText =
+                    `${data.jam_mulai || "-"} - ${data.jam_selesai || "-"
+                    }`;
+
+
+                // =================================================
+                // TEMPAT
+                // =================================================
+
+                document.getElementById(
+                    "sTempat"
+                ).innerText =
+                    data.tempat ||
+                    "-";
+
+
+                // =================================================
+                // JUMLAH FOTO
+                // =================================================
+
+                document.getElementById(
+                    "sJumlahFoto"
+                ).innerText =
+                    `${data.jumlah_foto || "0"} Foto`;
+
+
+                // =================================================
+                // WAKTU UPLOAD
+                // =================================================
+
+                document.getElementById(
+                    "sWaktuUpload"
+                ).innerText =
+                    new Date().toLocaleString(
+                        "id-ID",
+                        {
+                            year: "numeric",
+                            month: "numeric",
+                            day: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit"
+                        }
+                    );
+
+            } catch (err) {
+
+                console.error(
+                    "ERROR LOAD DATA SUKSES:",
+                    err
+                );
+
+
+                alert(
+                    "Gagal mengambil data."
+                );
+
+            }
+
+        }
+
+
+        // =====================================================
+        // HANDLE RESIZE
+        // =====================================================
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                closeMenu();
+
+            }
+        );
+
+
+        // =====================================================
+        // INIT
+        // =====================================================
+
+        if (idKegiatan) {
+
+            loadData();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

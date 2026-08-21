@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary-blue: #3264b5;
+    --dark-blue: #173b75;
+    --light-bg: #e6eef5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex-grow: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-header h2 {
+    color: var(--dark-blue);
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.admin-btn {
+    background: white;
+    border: 1px solid #b3b3b3;
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+}
+
+.admin-btn .material-symbols-outlined {
+    font-size: 20px;
+    margin-right: 0;
+}
+
+.admin-btn .material-symbols-outlined:first-child {
+    margin-right: 8px;
+}
+
+.admin-btn .material-symbols-outlined:last-child {
+    margin-left: 8px;
+}
+
+.logout-btn {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d4d4d4;
+}
+
+/* CHART SECTION & CONTROLS */
+.chart-section {
+    flex-grow: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#btnBackToYearly {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+#btnBackToYearly .material-symbols-outlined {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+#btnBackToYearly:hover {
+    background: var(--dark-blue);
+}
+
+.chart-container {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+}

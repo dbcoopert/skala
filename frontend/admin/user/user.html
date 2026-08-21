@@ -1,0 +1,2002 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pengguna | SKALA</title>
+
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- TAILWIND CSS -->
+
+    <link rel="stylesheet" href="../../assets/css/output.css">
+
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- MATERIAL SYMBOLS -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+
+    <!-- STYLE TAMBAHAN -->
+
+    <style>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        body {
+            font-family: "Nunito", sans-serif;
+        }
+
+
+        /* =====================================================
+           SIDEBAR SCROLL
+        ===================================================== */
+
+        .sidebar-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+
+        /* =====================================================
+           VIEW SECTION
+        ===================================================== */
+
+        .view-section {
+            display: none;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+
+        /* =====================================================
+           SIDEBAR SUBMENU
+        ===================================================== */
+
+        .has-submenu>.submenu {
+            display: none;
+        }
+
+        .has-submenu.open>.submenu {
+            display: block;
+        }
+
+        .has-submenu>.menu-toggle .arrow-icon {
+            transition: transform 0.2s ease;
+        }
+
+        .has-submenu.open>.menu-toggle .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+
+        /* =====================================================
+           INPUT ERROR
+        ===================================================== */
+
+        .input-error {
+            border-color: #ef4444 !important;
+            background-color: #fff5f5 !important;
+            animation: inputShake 0.35s ease;
+        }
+
+        @keyframes inputShake {
+
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-4px);
+            }
+
+            50% {
+                transform: translateX(4px);
+            }
+
+            75% {
+                transform: translateX(-4px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+
+        }
+
+
+        /* =====================================================
+           NOTIFIKASI
+        ===================================================== */
+
+        #notifikasiKontainer {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 200;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        /* =====================================================
+           TABLE
+        ===================================================== */
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        #userTable {
+            width: 100%;
+            min-width: 850px;
+            border-collapse: collapse;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            #notifikasiKontainer {
+                top: 16px;
+                left: 16px;
+                right: 16px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] text-[#172033]">
+
+
+    <div class="flex h-screen w-full">
+
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+
+        <aside id="sidebar" class="
+                fixed
+                inset-y-0
+                left-0
+                z-50
+                flex
+                w-70
+                -translate-x-full
+                flex-col
+                overflow-hidden
+                bg-gradient-to-b
+                from-[#173b75]
+                via-[#3264b5]
+                to-[#2b77c5]
+                text-white
+                shadow-[8px_0_30px_rgba(23,59,117,.16)]
+                transition-transform
+                duration-300
+                lg:relative
+                lg:w-70
+                lg:translate-x-0
+                lg:shadow-none
+            ">
+
+
+            <!-- LOGO -->
+
+            <div class="shrink-0 px-6 pb-5 pt-6">
+
+                <div class="flex items-center gap-3.5">
+
+
+                    <div class="
+                            flex
+                            h-13
+                            w-13
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-2xl
+                            bg-white/12
+                            ring-1
+                            ring-white/15
+                            shadow-sm
+                        ">
+
+                        <img src="../asset/folder.png" alt="Logo SKALA" class="h-15 w-15 object-contain">
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <h1 class="
+                                text-[26px]
+                                font-black
+                                leading-none
+                                tracking-tight
+                                text-white
+                            ">
+                            SKALA
+                        </h1>
+
+
+                        <p class="
+                                mt-1.5
+                                text-[9px]
+                                font-bold
+                                leading-3.5
+                                tracking-[.12em]
+                                text-white/75
+                            ">
+                            SISTEM KELOLA<br>
+                            ARSIP DAN LAPORAN
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="
+                    sidebar-scroll
+                    flex-1
+                    overflow-y-auto
+                    px-4
+                    py-5
+                ">
+
+                <p class="
+                        mb-3
+                        px-3
+                        text-[9px]
+                        font-extrabold
+                        uppercase
+                        tracking-[.2em]
+                        text-white/55
+                    ">
+                    Menu Utama
+                </p>
+
+
+                <ul class="space-y-1.5">
+
+
+                    <!-- DASHBOARD -->
+
+                    <li>
+
+                        <a href="../dashboard/dashboard.html" class="
+                                flex
+                                items-center
+                                gap-3.5
+                                rounded-xl
+                                px-4
+                                py-3
+                                text-[13px]
+                                font-bold
+                                text-white/80
+                                transition
+                                hover:bg-white/12
+                                hover:text-white
+                            ">
+
+                            <i class="fa-solid fa-house w-5 text-center text-[14px]"></i>
+
+                            <span>
+                                Dashboard
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PENGGUNA -->
+
+                    <li>
+
+                        <a href="../user/user.html" class="
+                                flex
+                                items-center
+                                gap-3.5
+                                rounded-xl
+                                bg-white/17
+                                px-4
+                                py-3
+                                text-[13px]
+                                font-extrabold
+                                text-white
+                                shadow-sm
+                                ring-1
+                                ring-white/10
+                            ">
+
+                            <i class="fa-solid fa-user w-5 text-center text-[14px]"></i>
+
+                            <span>
+                                Pengguna
+                            </span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- KELOLA MASTER -->
+
+                    <li class="has-submenu">
+
+                        <a href="#" class="
+                                menu-toggle
+                                flex
+                                w-full
+                                items-center
+                                justify-between
+                                rounded-xl
+                                px-4
+                                py-3
+                                text-[13px]
+                                font-bold
+                                text-white/80
+                                transition
+                                hover:bg-white/12
+                                hover:text-white
+                            ">
+
+                            <span class="flex items-center gap-3.5">
+
+                                <i class="fa-solid fa-database w-5 text-center text-[14px]"></i>
+
+                                <span>
+                                    Kelola Master
+                                </span>
+
+                            </span>
+
+
+                            <i class="
+                                    fa-solid
+                                    fa-chevron-down
+                                    arrow-icon
+                                    text-[9px]
+                                "></i>
+
+                        </a>
+
+
+                        <ul class="submenu overflow-hidden pl-4 pt-1.5">
+
+                            <div class="space-y-1 border-l border-white/20 pl-3">
+
+
+                                <!-- MASTER TAHUN -->
+
+                                <li>
+
+                                    <a href="../master/master-tahun/tahun.html" class="
+                                            block
+                                            rounded-lg
+                                            px-3
+                                            py-2.5
+                                            text-[12px]
+                                            font-semibold
+                                            text-white/75
+                                            transition
+                                            hover:bg-white/10
+                                            hover:text-white
+                                        ">
+                                        Master Tahun
+                                    </a>
+
+                                </li>
+
+
+                                <!-- MASTER TEKNIS -->
+
+                                <li>
+
+                                    <a href="../master/master-teknis/teknis.html" class="
+                                            block
+                                            rounded-lg
+                                            px-3
+                                            py-2.5
+                                            text-[12px]
+                                            font-semibold
+                                            text-white/75
+                                            transition
+                                            hover:bg-white/10
+                                            hover:text-white
+                                        ">
+                                        Master Teknis
+                                    </a>
+
+                                </li>
+
+
+                                <!-- MASTER KOMPONEN -->
+
+                                <li class="has-submenu">
+
+                                    <a href="#" class="
+                                            menu-toggle
+                                            flex
+                                            w-full
+                                            items-center
+                                            justify-between
+                                            rounded-lg
+                                            px-3
+                                            py-2.5
+                                            text-[12px]
+                                            font-semibold
+                                            text-white/75
+                                            transition
+                                            hover:bg-white/10
+                                            hover:text-white
+                                        ">
+
+                                        <span>
+                                            Master Komponen
+                                        </span>
+
+
+                                        <i class="
+                                                fa-solid
+                                                fa-chevron-down
+                                                arrow-icon
+                                                text-[8px]
+                                            "></i>
+
+                                    </a>
+
+
+                                    <ul class="submenu overflow-hidden pl-3 pt-1">
+
+                                        <div class="space-y-1 border-l border-white/15 pl-3">
+
+
+                                            <li>
+
+                                                <a href="../master/master-komponen/tujuan.html" class="
+                                                        block
+                                                        rounded-lg
+                                                        px-3
+                                                        py-2
+                                                        text-[11px]
+                                                        font-semibold
+                                                        text-white/70
+                                                        transition
+                                                        hover:bg-white/10
+                                                        hover:text-white
+                                                    ">
+                                                    Tujuan
+                                                </a>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <a href="../master/master-komponen/sasaran.html" class="
+                                                        block
+                                                        rounded-lg
+                                                        px-3
+                                                        py-2
+                                                        text-[11px]
+                                                        font-semibold
+                                                        text-white/70
+                                                        transition
+                                                        hover:bg-white/10
+                                                        hover:text-white
+                                                    ">
+                                                    Sasaran
+                                                </a>
+
+                                            </li>
+
+
+                                            <li>
+
+                                                <a href="../master/master-komponen/indikator.html" class="
+                                                        block
+                                                        rounded-lg
+                                                        px-3
+                                                        py-2
+                                                        text-[11px]
+                                                        font-semibold
+                                                        text-white/70
+                                                        transition
+                                                        hover:bg-white/10
+                                                        hover:text-white
+                                                    ">
+                                                    Indikator
+                                                </a>
+
+                                            </li>
+
+                                        </div>
+
+                                    </ul>
+
+                                </li>
+
+
+                                <!-- MASTER KEGIATAN -->
+
+                                <li>
+
+                                    <a href="../master/master-kegiatan/kegiatan.html" class="
+                                            block
+                                            rounded-lg
+                                            px-3
+                                            py-2.5
+                                            text-[12px]
+                                            font-semibold
+                                            text-white/75
+                                            transition
+                                            hover:bg-white/10
+                                            hover:text-white
+                                        ">
+                                        Master Kegiatan
+                                    </a>
+
+                                </li>
+
+                            </div>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- DOWNLOAD -->
+
+                    <li>
+
+                        <a href="../download/download.html" class="
+                                flex
+                                items-center
+                                gap-3.5
+                                rounded-xl
+                                px-4
+                                py-3
+                                text-[13px]
+                                font-bold
+                                text-white/80
+                                transition
+                                hover:bg-white/12
+                                hover:text-white
+                            ">
+
+                            <i class="fa-solid fa-download w-5 text-center text-[14px]"></i>
+
+                            <span>
+                                Download
+                            </span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- FOOTER SIDEBAR -->
+
+            <div class="shrink-0 border-t border-white/15 p-4">
+
+                <div class="
+                        flex
+                        items-center
+                        gap-3
+                        rounded-xl
+                        bg-white/10
+                        p-3
+                        ring-1
+                        ring-white/5
+                    ">
+
+                    <div class="
+                            flex
+                            h-10
+                            w-10
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-xl
+                            bg-white
+                            shadow-sm
+                        ">
+
+                        <img src="../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain">
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <p class="
+                                truncate
+                                text-[9px]
+                                font-black
+                                tracking-wide
+                                text-white
+                            ">
+                            BADAN PUSAT STATISTIK
+                        </p>
+
+
+                        <p class="
+                                mt-0.5
+                                text-[9px]
+                                font-semibold
+                                text-white/70
+                            ">
+                            KOTA SUKABUMI
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================================
+             MOBILE SIDEBAR OVERLAY
+        ====================================================== -->
+
+        <div id="sidebarOverlay" class="
+                fixed
+                inset-0
+                z-40
+                hidden
+                bg-[#0f172a]/55
+                backdrop-blur-[3px]
+                lg:hidden
+            "></div>
+
+
+        <!-- =====================================================
+             MAIN CONTENT
+        ====================================================== -->
+
+        <main class="flex min-w-0 flex-1 flex-col">
+
+
+            <!-- =====================================================
+                 HEADER
+            ====================================================== -->
+
+            <header class="
+                    z-30
+                    flex
+                    min-h-22
+                    shrink-0
+                    items-center
+                    justify-between
+                    border-b
+                    border-[#dce5ee]
+                    bg-white/95
+                    px-4
+                    shadow-[0_3px_18px_rgba(15,23,42,.05)]
+                    backdrop-blur-md
+                    sm:px-6
+                    lg:px-8
+                ">
+
+                <div class="flex min-w-0 items-center gap-3.5">
+
+
+                    <!-- MOBILE MENU -->
+
+                    <button type="button" id="openSidebar" class="
+                            flex
+                            h-10
+                            w-10
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-xl
+                            bg-[#e8f2fc]
+                            text-[#0d4fa6]
+                            transition
+                            hover:bg-[#dcecfb]
+                            lg:hidden
+                        ">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="min-w-0">
+
+                        <p class="
+                                truncate
+                                text-[9px]
+                                font-extrabold
+                                uppercase
+                                tracking-[.2em]
+                                text-[#71839a]
+                            ">
+                            Sistem Kelola Arsip & Laporan
+                        </p>
+
+
+                        <h2 class="
+                                mt-0.5
+                                truncate
+                                text-[21px]
+                                font-black
+                                tracking-[-.025em]
+                                text-[#0d4fa6]
+                                sm:text-[23px]
+                            ">
+                            Pengguna
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADMIN PROFILE -->
+
+                <div class="ml-4 flex shrink-0 items-center gap-2.5 sm:gap-3">
+
+
+                    <div class="
+                            flex
+                            items-center
+                            gap-2.5
+                            rounded-2xl
+                            border
+                            border-[#dce5ee]
+                            bg-[#fbfdff]
+                            px-2.5
+                            py-2
+                            shadow-sm
+                            sm:px-3
+                        ">
+
+                        <div class="
+                                flex
+                                h-9
+                                w-9
+                                shrink-0
+                                items-center
+                                justify-center
+                                rounded-xl
+                                bg-[#e8f2fc]
+                                text-[#0d4fa6]
+                            ">
+
+                            <i class="fa-solid fa-user text-[12px]"></i>
+
+                        </div>
+
+
+                        <div class="hidden min-w-0 sm:block">
+
+                            <p class="
+                                    text-[8px]
+                                    font-extrabold
+                                    uppercase
+                                    tracking-[.15em]
+                                    text-[#71839a]
+                                ">
+                                Administrator
+                            </p>
+
+
+                            <p id="namaAdmin" class="
+                                    mt-0.5
+                                    max-w-32
+                                    truncate
+                                    text-xs
+                                    font-black
+                                    text-[#172033]
+                                    lg:max-w-44
+                                ">
+                                Memuat...
+                            </p>
+
+                        </div>
+
+
+                        <i class="
+                                fa-solid
+                                fa-chevron-down
+                                hidden
+                                text-[8px]
+                                text-[#71839a]
+                                sm:block
+                            "></i>
+
+                    </div>
+
+
+                    <!-- LOGOUT -->
+
+                    <button type="button" onclick="logout()" title="Logout" class="
+                            group
+                            flex
+                            h-10
+                            w-10
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-xl
+                            border
+                            border-[#f0d5d5]
+                            bg-[#fff8f8]
+                            text-[#c63a3a]
+                            transition-all
+                            duration-200
+                            hover:border-[#c63a3a]
+                            hover:bg-[#c63a3a]
+                            hover:text-white
+                        ">
+
+                        <i class="
+                                fa-solid
+                                fa-right-from-bracket
+                                text-[12px]
+                                transition-transform
+                                duration-200
+                                group-hover:translate-x-0.5
+                            "></i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =====================================================
+                 CONTENT
+            ====================================================== -->
+
+            <div class="
+                    flex
+                    min-h-0
+                    flex-1
+                    flex-col
+                    overflow-y-auto
+                    p-4
+                    sm:p-5
+                    lg:p-7
+                ">
+
+
+                <!-- =====================================================
+                     DATA PENGGUNA
+                ====================================================== -->
+
+                <section id="view-data" class="view-section active">
+
+                    <div class="
+                            overflow-hidden
+                            rounded-[22px]
+                            border
+                            border-[#dce5ee]
+                            bg-white
+                            shadow-[0_8px_30px_rgba(15,23,42,.06)]
+                        ">
+
+
+                        <!-- HEADER CARD -->
+
+                        <div class="
+                                flex
+                                items-center
+                                justify-between
+                                gap-5
+                                border-b
+                                border-[#edf1f5]
+                                p-5
+                                sm:p-6
+                            ">
+
+                            <div class="min-w-0">
+
+                                <p class="
+                                        text-[9px]
+                                        font-extrabold
+                                        uppercase
+                                        tracking-[.2em]
+                                        text-[#71839a]
+                                    ">
+                                    Manajemen Data
+                                </p>
+
+
+                                <h2 class="
+                                        mt-1
+                                        text-lg
+                                        font-black
+                                        tracking-[-.02em]
+                                        text-[#0d4fa6]
+                                        sm:text-xl
+                                    ">
+                                    Data Pengguna
+                                </h2>
+
+
+                                <p class="
+                                        mt-0.5
+                                        text-[11px]
+                                        font-semibold
+                                        text-[#71839a]
+                                    ">
+                                    Kelola akun pengguna aplikasi SKALA.
+                                </p>
+
+                            </div>
+
+
+                            <!-- TAMBAH USER -->
+
+                            <button type="button" id="btn-tambah" class="
+                                    group
+                                    flex
+                                    shrink-0
+                                    items-center
+                                    gap-3
+                                    rounded-2xl
+                                    bg-gradient-to-br
+                                    from-[#0d4fa6]
+                                    via-[#1769c5]
+                                    to-[#2580d5]
+                                    px-4
+                                    py-3
+                                    text-white
+                                    shadow-lg
+                                    shadow-blue-900/15
+                                    transition-all
+                                    duration-200
+                                    hover:-translate-y-0.5
+                                    hover:shadow-xl
+                                ">
+
+                                <span class="
+                                        flex
+                                        h-10
+                                        w-10
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        bg-white/15
+                                        ring-1
+                                        ring-white/10
+                                    ">
+
+                                    <i class="fa-solid fa-user-plus text-sm"></i>
+
+                                </span>
+
+
+                                <span class="
+                                        hidden
+                                        flex-col
+                                        text-left
+                                        sm:flex
+                                    ">
+
+                                    <small class="
+                                            text-[8px]
+                                            font-black
+                                            uppercase
+                                            tracking-[.15em]
+                                            text-white/70
+                                        ">
+                                        Manajemen Pengguna
+                                    </small>
+
+
+                                    <span class="
+                                            mt-0.5
+                                            text-xs
+                                            font-black
+                                        ">
+                                        Tambah Pengguna
+                                    </span>
+
+                                </span>
+
+
+                                <i class="
+                                        fa-solid
+                                        fa-arrow-right
+                                        text-[11px]
+                                        transition-transform
+                                        group-hover:translate-x-1
+                                    "></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+
+                        <div class="table-wrapper">
+
+                            <table id="userTable">
+
+                                <thead>
+
+                                    <tr class="
+                                            border-b
+                                            border-[#dce5ee]
+                                            bg-[#f8fbff]
+                                        ">
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            No
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Nama
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Teknis
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Username
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Password
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-left
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Role
+                                        </th>
+
+
+                                        <th class="
+                                                px-5
+                                                py-4
+                                                text-center
+                                                text-[10px]
+                                                font-black
+                                                uppercase
+                                                tracking-[.08em]
+                                                text-[#71839a]
+                                            ">
+                                            Aksi
+                                        </th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody>
+                                    <!-- DATA DIISI OLEH user.js -->
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =====================================================
+                     FORM PENGGUNA
+                ====================================================== -->
+
+                <section id="view-form" class="view-section">
+
+                    <div class="
+                            overflow-hidden
+                            rounded-[22px]
+                            border
+                            border-[#dce5ee]
+                            bg-white
+                            shadow-[0_8px_30px_rgba(15,23,42,.06)]
+                        ">
+
+
+                        <!-- FORM HEADER -->
+
+                        <div class="
+                                border-b
+                                border-[#edf1f5]
+                                px-5
+                                py-5
+                                sm:px-6
+                            ">
+
+                            <p class="
+                                    text-[9px]
+                                    font-extrabold
+                                    uppercase
+                                    tracking-[.2em]
+                                    text-[#71839a]
+                                ">
+                                Manajemen Data
+                            </p>
+
+
+                            <h2 class="
+                                    mt-1
+                                    text-lg
+                                    font-black
+                                    tracking-[-.02em]
+                                    text-[#0d4fa6]
+                                    sm:text-xl
+                                ">
+                                Form Pengguna
+                            </h2>
+
+
+                            <p class="
+                                    mt-0.5
+                                    text-[11px]
+                                    font-semibold
+                                    text-[#71839a]
+                                ">
+                                Tambahkan atau ubah data pengguna SKALA.
+                            </p>
+
+                        </div>
+
+
+                        <!-- FORM -->
+
+                        <form id="userForm" class="p-5 sm:p-6">
+
+
+                            <!-- ID -->
+
+                            <input type="hidden" id="in-index">
+
+
+                            <!-- GRID -->
+
+                            <div class="
+                                    grid
+                                    grid-cols-1
+                                    gap-5
+                                    md:grid-cols-2
+                                ">
+
+
+                                <!-- NAMA -->
+
+                                <div>
+
+                                    <label for="in-nama" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Nama
+                                    </label>
+
+
+                                    <input type="text" id="in-nama" placeholder="Masukkan nama lengkap" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                </div>
+
+
+                                <!-- NIP -->
+
+                                <div>
+
+                                    <label for="in-nip" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        NIP
+                                    </label>
+
+
+                                    <input type="text" id="in-nip" placeholder="Masukkan NIP" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                </div>
+
+
+                                <!-- TEKNIS -->
+
+                                <div>
+
+                                    <label for="in-teknis" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Teknis
+                                    </label>
+
+
+                                    <select id="in-teknis" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                        <option value="">
+                                            -- Pilih Teknis --
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- USERNAME -->
+
+                                <div>
+
+                                    <label for="in-username" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Username
+                                    </label>
+
+
+                                    <input type="text" id="in-username" placeholder="Masukkan username" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                </div>
+
+
+                                <!-- PASSWORD -->
+
+                                <div>
+
+                                    <label for="in-password" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Password
+                                    </label>
+
+
+                                    <input type="password" id="in-password" placeholder="Masukkan password" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                </div>
+
+
+                                <!-- ROLE -->
+
+                                <div>
+
+                                    <label for="in-role" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Role
+                                    </label>
+
+
+                                    <input type="text" id="in-role" placeholder="Masukkan role" class="
+                                            h-11
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            px-4
+                                            text-xs
+                                            font-bold
+                                            text-[#172033]
+                                            outline-none
+                                            transition
+                                            focus:border-[#0d4fa6]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#0d4fa6]/10
+                                        ">
+
+                                </div>
+
+
+                                <!-- UPLOAD TTD -->
+
+                                <div class="md:col-span-2">
+
+                                    <label for="in-ttd" class="
+                                            mb-2
+                                            block
+                                            text-[11px]
+                                            font-black
+                                            text-[#52657d]
+                                        ">
+                                        Upload TTD
+                                    </label>
+
+
+                                    <input type="file" id="in-ttd" class="
+                                            block
+                                            w-full
+                                            rounded-xl
+                                            border
+                                            border-[#dce5ee]
+                                            bg-[#fbfdff]
+                                            p-2
+                                            text-xs
+                                            font-bold
+                                            text-[#52657d]
+                                            file:mr-4
+                                            file:rounded-lg
+                                            file:border-0
+                                            file:bg-blue-50
+                                            file:px-4
+                                            file:py-2
+                                            file:text-xs
+                                            file:font-black
+                                            file:text-blue-600
+                                            hover:file:bg-blue-100
+                                        ">
+
+
+                                    <p class="
+                                            mt-2
+                                            text-[10px]
+                                            font-semibold
+                                            text-[#71839a]
+                                        ">
+                                        Upload file tanda tangan sesuai kebutuhan.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FORM ACTION -->
+
+                            <div class="
+                                    mt-7
+                                    flex
+                                    flex-col-reverse
+                                    gap-3
+                                    border-t
+                                    border-[#edf1f5]
+                                    pt-5
+                                    sm:flex-row
+                                    sm:justify-end
+                                ">
+
+
+                                <!-- BATAL -->
+
+                                <button type="button" id="btn-batal-form" class="
+                                        inline-flex
+                                        min-h-11
+                                        items-center
+                                        justify-center
+                                        gap-2
+                                        rounded-xl
+                                        border
+                                        border-[#dce5ee]
+                                        bg-white
+                                        px-5
+                                        text-xs
+                                        font-black
+                                        text-[#52657d]
+                                        transition
+                                        hover:bg-[#f8fbff]
+                                    ">
+
+                                    <i class="fa-solid fa-arrow-left"></i>
+
+                                    Batal
+
+                                </button>
+
+
+                                <!-- SIMPAN -->
+
+                                <button type="submit" class="
+                                        inline-flex
+                                        min-h-11
+                                        items-center
+                                        justify-center
+                                        gap-2
+                                        rounded-xl
+                                        bg-[#0d4fa6]
+                                        px-5
+                                        text-xs
+                                        font-black
+                                        text-white
+                                        shadow-lg
+                                        shadow-blue-900/15
+                                        transition
+                                        hover:-translate-y-0.5
+                                        hover:bg-[#0a3b7c]
+                                    ">
+
+                                    <i class="fa-solid fa-floppy-disk"></i>
+
+                                    Simpan Data
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         DELETE MODAL
+    ====================================================== -->
+
+    <div id="deleteModal" class="
+            fixed
+            inset-0
+            z-[100]
+            hidden
+            items-center
+            justify-center
+            bg-slate-950/60
+            p-4
+            backdrop-blur-sm
+        ">
+
+
+        <div id="deleteModalContent" class="
+                w-full
+                max-w-md
+                scale-95
+                rounded-3xl
+                border
+                border-slate-200
+                bg-white
+                p-6
+                opacity-0
+                shadow-2xl
+                transition-all
+                duration-200
+                sm:p-7
+            ">
+
+
+            <!-- ICON -->
+
+            <div class="flex justify-center">
+
+                <div class="
+                        flex
+                        h-16
+                        w-16
+                        items-center
+                        justify-center
+                        rounded-2xl
+                        bg-red-50
+                        text-red-500
+                        ring-8
+                        ring-red-50/60
+                    ">
+
+                    <span class="
+                            material-symbols-outlined
+                            text-[30px]
+                        ">
+                        delete_forever
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="mt-6 text-center">
+
+                <p class="
+                        text-[10px]
+                        font-black
+                        uppercase
+                        tracking-[0.2em]
+                        text-red-500
+                    ">
+                    Konfirmasi Penghapusan
+                </p>
+
+
+                <h3 class="
+                        mt-2
+                        text-xl
+                        font-black
+                        tracking-tight
+                        text-slate-800
+                    ">
+                    Hapus Pengguna?
+                </h3>
+
+            </div>
+
+
+            <!-- USER YANG AKAN DIHAPUS -->
+
+            <div class="
+                    mt-5
+                    rounded-2xl
+                    border
+                    border-slate-200
+                    bg-slate-50
+                    p-4
+                ">
+
+                <div class="flex items-center gap-3">
+
+
+                    <div class="
+                            flex
+                            h-11
+                            w-11
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-xl
+                            bg-blue-100
+                            text-blue-600
+                        ">
+
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+
+                    </div>
+
+
+                    <div class="min-w-0">
+
+                        <p class="
+                                text-[9px]
+                                font-extrabold
+                                uppercase
+                                tracking-wider
+                                text-slate-400
+                            ">
+                            Pengguna yang akan dihapus
+                        </p>
+
+
+                        <p id="deleteUserName" class="
+                                mt-1
+                                truncate
+                                text-sm
+                                font-black
+                                text-slate-700
+                            ">
+                            -
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WARNING -->
+
+            <div class="
+                    mt-4
+                    rounded-2xl
+                    border
+                    border-amber-200
+                    bg-amber-50
+                    p-4
+                ">
+
+                <div class="flex items-start gap-3">
+
+
+                    <div class="
+                            mt-0.5
+                            flex
+                            h-8
+                            w-8
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-xl
+                            bg-amber-100
+                            text-amber-600
+                        ">
+
+                        <span class="
+                                material-symbols-outlined
+                                text-[18px]
+                            ">
+                            warning
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="
+                                text-xs
+                                font-black
+                                text-amber-800
+                            ">
+                            Perhatian!
+                        </p>
+
+
+                        <p class="
+                                mt-1
+                                text-[11px]
+                                font-semibold
+                                leading-5
+                                text-amber-700
+                            ">
+                            Menghapus pengguna ini akan menghapus
+                            seluruh data yang berkaitan dengan pengguna,
+                            termasuk kegiatan, RTL, pelaksanaan RTL,
+                            dokumentasi, dan data terkait lainnya.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFO -->
+
+            <div class="
+                    mt-4
+                    flex
+                    items-center
+                    gap-2
+                    text-[10px]
+                    font-bold
+                    text-slate-400
+                ">
+
+                <span class="material-symbols-outlined text-[16px]">
+                    info
+                </span>
+
+                <span>
+                    Data yang telah dihapus tidak dapat dikembalikan.
+                </span>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <div class="
+                    mt-7
+                    flex
+                    flex-col-reverse
+                    gap-3
+                    sm:flex-row
+                    sm:justify-end
+                ">
+
+
+                <!-- BATAL -->
+
+                <button id="btnCancelDelete" type="button" onclick="closeDeleteModal()" class="
+                        inline-flex
+                        min-h-11
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        border
+                        border-slate-200
+                        bg-white
+                        px-5
+                        text-xs
+                        font-black
+                        text-slate-600
+                        transition
+                        hover:bg-slate-50
+                        disabled:pointer-events-none
+                    ">
+
+                    <span class="material-symbols-outlined text-[17px]">
+                        close
+                    </span>
+
+                    Batal
+
+                </button>
+
+
+                <!-- HAPUS -->
+
+                <button id="btnConfirmDelete" type="button" onclick="konfirmasiHapusPengguna()" class="
+                        inline-flex
+                        min-h-11
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-xl
+                        bg-red-500
+                        px-5
+                        text-xs
+                        font-black
+                        text-white
+                        shadow-lg
+                        shadow-red-500/20
+                        transition
+                        hover:bg-red-600
+                        disabled:pointer-events-none
+                    ">
+
+
+                    <!-- SPINNER -->
+
+                    <svg id="deleteSpinner" class="
+                            hidden
+                            h-4
+                            w-4
+                            animate-spin
+                        " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+
+                        <path class="opacity-75" fill="currentColor" d="
+                                M4 12a8 8 0 018-8v4
+                                a4 4 0 00-4 4H4z
+                            "></path>
+
+                    </svg>
+
+
+                    <span id="deleteButtonText">
+                        Hapus Permanen
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NOTIFIKASI
+    ====================================================== -->
+
+    <div id="notifikasiKontainer"></div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../../assets/js/authAdmin.js"></script>
+
+    <script src="user.js"></script>
+
+
+</body>
+
+</html>

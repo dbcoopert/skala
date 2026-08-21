@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --bps-blue: #2c599d;
+  --bg-belakang: #ffffff;
+  --bg-depan: #dce7f3;
+  --bg-input: #c4d6ea;
+  --text-white: #ffffff;
+  --text-dark: #333333;
+  --btn-simpan: #2c599d;
+  --btn-batal: #e74c3c;
+  /* Warna Notifikasi Sukses */
+  --notif-hijau: #2ecc71;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--bg-belakang);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* MAIN CONTENT (Pertahankan) */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 25px;
+  background-color: var(--bg-belakang);
+  overflow-y: auto;
+  height: 100vh;
+}
+.content-card {
+  background-color: var(--bg-depan);
+  padding: 40px 60px;
+  border-radius: 14px;
+  min-height: calc(100vh - 40px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* TOP BAR & USER INFO (Pertahankan) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+.header-title {
+  color: var(--bps-blue);
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: -5px;
+}
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  background: var(--text-white);
+  color: var(--bps-blue);
+  padding: 8px 18px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Tombol Kembali (Pertahankan) */
+.btn-kembali {
+  background-color: #d1d5db;
+  color: #1e3a8a;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid #9ca3af;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.btn-kembali:hover {
+  background-color: #9ca3af;
+  color: #fff;
+}
+
+.action-bar {
+  display: flex;
+  margin-bottom: 25px;
+}
+.btn-tambah {
+  background-color: var(--bps-blue);
+  color: var(--text-white);
+  padding: 11px 20px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE (Pertahankan) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+th {
+  background-color: var(--bps-blue);
+  color: var(--text-white);
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+td {
+  padding: 16px 20px;
+  color: #444;
+  font-size: 14.5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ACTION BUTTONS (Pertahankan) */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+.btn-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-icon:hover {
+  opacity: 0.8;
+}
+.btn-icon.edit {
+  background-color: #0d6efd;
+}
+.btn-icon.delete {
+  background-color: #ff3b30;
+}
+.btn-icon .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* FORM PENGISIAN (Pertahankan) */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.form-group label {
+  width: 145px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--bps-blue);
+  margin-bottom: 0;
+}
+.form-input {
+  flex: 1;
+  max-width: 600px;
+  padding: 13px 16px;
+  border: 1px solid #9fb9d6;
+  border-radius: 6px;
+  background-color: var(--bg-input);
+  color: #1e3a8a;
+  font-size: 14.5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.form-input::placeholder {
+  color: #6c8ebf;
+}
+.form-input:focus {
+  border-color: var(--bps-blue);
+  background-color: #b3c8de;
+  box-shadow: 0 0 0 3px rgba(44, 89, 157, 0.15);
+}
+
+/* Animasi Getar Peringatan Kosong (Pertahankan) */
+@keyframes getar {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+.input-error {
+  border: 2px solid #ef4444 !important;
+  background-color: #fee2e2 !important;
+  animation: getar 0.4s ease-in-out;
+}
+
+.btn-simpan,
+.btn-batal {
+  color: var(--text-white);
+  padding: 12px 35px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.btn-simpan {
+  background-color: var(--btn-simpan);
+  box-shadow: 0 2px 4px rgba(44, 89, 157, 0.2);
+}
+.btn-batal {
+  background-color: var(--btn-batal);
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.2);
+}
+.btn-simpan:hover,
+.btn-batal:hover {
+  opacity: 0.9;
+}
+
+/* Garis pembatas sidebar (Pertahankan) */
+.sidebar-divider {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 20px 10px 20px;
+}
+
+/* Modal Hapus (Pertahankan) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  max-width: 90%;
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+.modal-text {
+  font-size: 14.5px;
+  color: #333;
+  margin-bottom: 25px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn-modal-batal {
+  background-color: rgb(32, 36, 31);
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-modal-hapus {
+  background-color: #4d14d1;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-modal-batal:hover {
+  background-color: #362727;
+}
+.btn-modal-hapus:hover {
+  background-color: #4d14d1;
+}
+
+/* =========================================
+   PERUBAHAN: Animasi Baru untuk Sukses
+   ========================================= */
+
+@keyframes notifikasiMasuk {
+  0% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+  }
+}
+
+@keyframes notifikasiHapus {
+  0% {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+}
+
+.notifikasi-sukses {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--notif-hijau);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2000; /* Di atas segalanya */
+  opacity: 0; /* Awalnya tidak terlihat */
+  pointer-events: none; /* Jangan biarkan interaksi */
+  animation: notifikasiMasuk 0.5s ease forwards;
+}
+
+.notifikasi-sukses.hapus {
+  animation: notifikasiHapus 0.5s ease forwards;
+}

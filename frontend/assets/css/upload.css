@@ -1,0 +1,386 @@
+:root{
+    --primary:#0D4FA6;
+    --primary2:#3B82F6;
+    --success:#22C55E;
+    --bg:#F4F7FB;
+    --white:#FFFFFF;
+    --text:#1F2937;
+    --gray:#6B7280;
+    --border:#E5E7EB;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+}
+
+.wrapper,
+.success-wrapper{
+    max-width:420px;
+    margin:auto;
+    min-height:100vh;
+    background:#fff;
+}
+
+/*==============================
+HEADER
+==============================*/
+
+.header{
+    background:linear-gradient(135deg,#0D4FA6,#4F8FF9);
+    color:white;
+    padding:35px 25px;
+    border-radius:0 0 35px 35px;
+    box-shadow:var(--shadow);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.user-card{
+    background:rgba(255,255,255,.18);
+    padding:10px 14px;
+    border-radius:14px;
+    color:#fff;
+    text-align:center;
+    font-size:13px;
+}
+
+.user-card span{
+    display:block;
+    margin-top:4px;
+}
+
+.logo h1{
+    font-size:30px;
+    letter-spacing:1px;
+}
+
+.logo p{
+    margin-top:8px;
+    opacity:.9;
+    font-size:14px;
+}
+
+/*==============================
+CONTENT
+==============================*/
+
+.container{
+    padding:22px;
+}
+
+.card{
+    background:white;
+    border-radius:22px;
+    padding:20px;
+    margin-bottom:22px;
+    box-shadow:var(--shadow);
+}
+
+.card-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.card-title i{
+    color:var(--primary);
+    font-size:22px;
+}
+
+.card-title h2{
+    font-size:18px;
+}
+
+.detail-item{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.detail-item:last-child{
+    margin-bottom:0;
+}
+
+.detail-item label{
+    font-size:13px;
+    color:#888;
+    margin-bottom:5px;
+}
+
+.detail-item span{
+    font-weight:600;
+    line-height:1.5;
+}
+
+/*==============================
+UPLOAD
+==============================*/
+
+.upload-box{
+    border:2px dashed #C9D5EA;
+    border-radius:18px;
+    padding:35px 15px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-box:hover{
+    border-color:var(--primary);
+    background:#F7FAFF;
+}
+
+.upload-box i{
+    font-size:50px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.upload-box h3{
+    margin-bottom:8px;
+}
+
+.upload-box p{
+    color:#888;
+    font-size:13px;
+}
+
+.upload-info{
+    margin:18px 0;
+    text-align:center;
+    font-weight:bold;
+    color:#666;
+}
+
+.preview-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.preview-container img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/*==============================
+BUTTON
+==============================*/
+
+.btn-upload{
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(135deg,#0D4FA6,#2563EB);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+}
+
+.btn-upload:hover{
+    transform:translateY(-2px);
+}
+
+.btn-upload:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+
+/*==============================
+BOTTOM NAV
+==============================*/
+
+.bottom-nav{
+    position:fixed;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:0;
+    width:100%;
+    max-width:420px;
+    background:white;
+    display:flex;
+    justify-content:space-evenly;
+    padding:12px 0;
+    box-shadow:0 -8px 25px rgba(0,0,0,.08);
+}
+
+.nav-btn{
+    border:none;
+    background:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    color:#666;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.nav-btn i{
+    font-size:22px;
+}
+
+.nav-btn.active{
+    color:var(--primary);
+}
+
+/*==============================
+LOADING
+==============================*/
+
+#loadingScreen{
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,.85);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#loadingScreen.show{
+    display:flex;
+}
+
+.loading-box{
+    width:280px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.spinner{
+    width:60px;
+    height:60px;
+    margin:auto;
+    border:5px solid #ddd;
+    border-top:5px solid var(--primary);
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.loading-box h3{
+    margin-top:20px;
+    color:var(--primary);
+}
+
+.loading-box p{
+    margin-top:10px;
+    color:#777;
+}
+
+//tambahan
+/* Tambahan untuk meningkatkan UX */
+
+/* Animasi loading yang lebih smooth */
+#loadingScreen {
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+}
+
+#loadingScreen.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Preview container responsif */
+.preview-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.preview-container img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.preview-container img:hover {
+  transform: scale(1.02);
+}
+
+/* Drag and drop visual feedback */
+.upload-box.dragover {
+  border-color: var(--primary);
+  background: #F0F6FF;
+  transform: scale(1.02);
+}
+
+/* Loading spinner improvement */
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border: 5px solid #e0e7ff;
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Tombol upload dengan disabled state lebih jelas */
+.btn-upload:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 480px) {
+  .preview-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .preview-container img {
+    height: 120px;
+  }
+  
+  .wrapper,
+  .success-wrapper {
+    max-width: 100%;
+  }
+}

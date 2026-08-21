@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SKALA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .sidebar-scroll::-webkit-scrollbar {
+            display: none
+        }
+
+        .sidebar-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none
+        }
+
+        body {
+            font-family: "Nunito", sans-serif
+        }
+    </style>
+</head>
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] font-sans text-[#172033]">
+    <div class="flex h-screen w-full">
+
+        <!-- SIDEBAR -->
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 z-50 flex w-70 -translate-x-full flex-col overflow-hidden bg-gradient-to-b from-[#173b75] via-[#3264b5] to-[#2b77c5] text-white shadow-[8px_0_30px_rgba(23,59,117,.16)] transition-transform duration-300 lg:relative lg:w-70 lg:translate-x-0 lg:shadow-none">
+
+            <!-- LOGO -->
+            <div class="shrink-0 px-6 pt-6 pb-5">
+                <div class="flex items-center gap-3.5">
+                    <div
+                        class="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-white/12 ring-1 ring-white/15 shadow-sm">
+                        <img src="../asset/folder.png" alt="Logo SKALA" class="h-15 w-15 object-contain">
+                    </div>
+                    <div class="min-w-0">
+                        <h1 class="text-[26px] font-black leading-none tracking-tight text-white">SKALA</h1>
+                        <p class="mt-1.5 text-[9px] font-bold leading-3.5 tracking-[.12em] text-white/75">SISTEM
+                            KELOLA<br>ARSIP DAN LAPORAN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+            <!-- NAVIGATION -->
+            <nav class="sidebar-scroll flex-1 overflow-y-auto px-4 py-5">
+                <p class="mb-3 px-3 text-[9px] font-extrabold uppercase tracking-[.2em] text-white/55">Menu Utama</p>
+
+                <ul class="space-y-1.5">
+                    <li>
+                        <a href="dashboard.html"
+                            class="flex items-center gap-3.5 rounded-xl bg-white/17 px-4 py-3 text-[13px] font-extrabold text-white shadow-sm ring-1 ring-white/10">
+                            <i class="fa-solid fa-house w-5 text-center text-[14px]"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../user/user.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-user w-5 text-center text-[14px]"></i>
+                            <span>Pengguna</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <button type="button"
+                            class="menu-toggle flex w-full items-center justify-between rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <span class="flex items-center gap-3.5">
+                                <i class="fa-solid fa-database w-5 text-center text-[14px]"></i>
+                                <span>Kelola Master</span>
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200"></i>
+                        </button>
+
+                        <div class="submenu hidden overflow-hidden pl-4 pt-1.5">
+                            <div class="space-y-1 border-l border-white/20 pl-3">
+                                <a href="../master/master-tahun/tahun.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">Master
+                                    Tahun</a>
+                                <a href="../master/master-teknis/teknis.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">Master
+                                    Teknis</a>
+
+                                <div>
+                                    <button type="button"
+                                        class="component-toggle flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+                                        <span>Master Komponen</span>
+                                        <i
+                                            class="fa-solid fa-chevron-down text-[8px] transition-transform duration-200"></i>
+                                    </button>
+
+                                    <div class="component-submenu hidden overflow-hidden pl-3 pt-1">
+                                        <div class="space-y-1 border-l border-white/15 pl-3">
+                                            <a href="../master/master-komponen/tujuan.html"
+                                                class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">Tujuan</a>
+                                            <a href="../master/master-komponen/sasaran.html"
+                                                class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">Sasaran</a>
+                                            <a href="../master/master-komponen/indikator.html"
+                                                class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">Indikator</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="../master/master-kegiatan/kegiatan.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">Master
+                                    Kegiatan</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="../download/download.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+                            <i class="fa-solid fa-download w-5 text-center text-[14px]"></i>
+                            <span>Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- SIDEBAR FOOTER -->
+            <div class="shrink-0 border-t border-white/15 p-4">
+                <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3 ring-1 ring-white/5">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                        <img src="../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain">
+                    </div>
+                    <div class="min-w-0">
+                        <p class="truncate text-[9px] font-black tracking-wide text-white">BADAN PUSAT STATISTIK</p>
+                        <p class="mt-0.5 text-[9px] font-semibold text-white/70">KOTA SUKABUMI</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MOBILE OVERLAY -->
+        <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden bg-[#0f172a]/55 backdrop-blur-[3px] lg:hidden"></div>
+
+        <!-- MAIN -->
+        <main class="flex min-w-0 flex-1 flex-col">
+
+            <!-- HEADER -->
+            <header
+                class="z-30 flex min-h-22 shrink-0 items-center justify-between border-b border-[#dce5ee] bg-white/95 px-4 shadow-[0_3px_18px_rgba(15,23,42,.05)] backdrop-blur-md sm:px-6 lg:px-8">
+
+                <div class="flex min-w-0 items-center gap-3.5">
+                    <button type="button" id="openSidebar"
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6] transition hover:bg-[#dcecfb] lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="min-w-0">
+                        <p class="truncate text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">Sistem
+                            Kelola Arsip & Laporan</p>
+                        <h2
+                            class="mt-0.5 truncate text-[21px] font-black tracking-[-.025em] text-[#0d4fa6] sm:text-[23px]">
+                            Dashboard</h2>
+                    </div>
+                </div>
+
+                <div class="ml-4 flex shrink-0 items-center gap-2.5 sm:gap-3">
+
+                    <!-- ADMIN PROFILE -->
+                    <div
+                        class="flex items-center gap-2.5 rounded-2xl border border-[#dce5ee] bg-[#fbfdff] px-2.5 py-2 shadow-sm sm:px-3">
+                        <div
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6]">
+                            <i class="fa-solid fa-user text-[12px]"></i>
+                        </div>
+
+                        <div class="hidden min-w-0 sm:block">
+                            <p class="text-[8px] font-extrabold uppercase tracking-[.15em] text-[#71839a]">Administrator
+                            </p>
+                            <p id="namaAdmin"
+                                class="mt-0.5 max-w-32 truncate text-xs font-black text-[#172033] lg:max-w-44">Admin</p>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down hidden text-[8px] text-[#71839a] sm:block"></i>
+                    </div>
+
+                    <!-- LOGOUT -->
+                    <button type="button" onclick="logout()" title="Logout"
+                        class="group flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f0d5d5] bg-[#fff8f8] text-[#c63a3a] transition-all duration-200 hover:border-[#c63a3a] hover:bg-[#c63a3a] hover:text-white">
+                        <i
+                            class="fa-solid fa-right-from-bracket text-[12px] transition-transform duration-200 group-hover:translate-x-0.5"></i>
+                    </button>
+
+                </div>
+            </header>
+
+            <!-- CONTENT -->
+            <div class="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-7">
+
+                <section
+                    class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dce5ee] bg-white shadow-[0_8px_30px_rgba(15,23,42,.06)]">
+
+                    <!-- CHART HEADER -->
+                    <div
+                        class="flex shrink-0 items-center justify-between gap-4 border-b border-[#edf1f5] px-5 py-4 sm:px-6 sm:py-5">
+
+                        <div class="min-w-0">
+                            <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">Statistik
+                                Kinerja</p>
+                            <h2 class="mt-1 text-lg font-black tracking-[-.02em] text-[#0d4fa6] sm:text-xl">Progress
+                                SKALA</h2>
+                            <p class="mt-0.5 hidden text-[11px] font-semibold text-[#71839a] sm:block">Ringkasan
+                                kegiatan dan tindak lanjut berdasarkan periode.</p>
+                        </div>
+
+                        <button id="btnBackToYearly" type="button"
+                            class="hidden shrink-0 items-center gap-2 rounded-xl bg-[#0d4fa6] px-3.5 py-2.5 text-[11px] font-extrabold text-white shadow-sm transition hover:bg-[#0a3b7c] sm:px-4 sm:text-xs">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Kembali ke Semua Bulan</span>
+                        </button>
+
+                    </div>
+
+                    <!-- CHART -->
+                    <div class="relative min-h-0 flex-1 w-full p-3 sm:p-5 lg:p-6">
+                        <div class="relative h-full w-full">
+                            <canvas id="progressChart"></canvas>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+            const openBtn = document.getElementById("openSidebar");
+
+            function openSidebar() {
+                sidebar.classList.remove("-translate-x-full");
+                overlay.classList.remove("hidden");
+                document.body.classList.add("overflow-hidden");
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add("-translate-x-full");
+                overlay.classList.add("hidden");
+                document.body.classList.remove("overflow-hidden");
+            }
+
+            if (openBtn) openBtn.addEventListener("click", openSidebar);
+            if (overlay) overlay.addEventListener("click", closeSidebar);
+
+            document.querySelectorAll(".menu-toggle").forEach(toggle => {
+                toggle.addEventListener("click", () => {
+                    const submenu = toggle.nextElementSibling;
+                    const arrow = toggle.querySelector(".fa-chevron-down");
+                    submenu.classList.toggle("hidden");
+                    if (arrow) arrow.classList.toggle("rotate-180");
+                });
+            });
+
+            document.querySelectorAll(".component-toggle").forEach(toggle => {
+                toggle.addEventListener("click", () => {
+                    const submenu = toggle.nextElementSibling;
+                    const arrow = toggle.querySelector(".fa-chevron-down");
+                    submenu.classList.toggle("hidden");
+                    if (arrow) arrow.classList.toggle("rotate-180");
+                });
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth >= 1024) {
+                    overlay.classList.add("hidden");
+                    document.body.classList.remove("overflow-hidden");
+                }
+            });
+        });
+    </script>
+
+    <script src="../../assets/js/authAdmin.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

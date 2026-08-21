@@ -1,0 +1,1006 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SKALA - Master Indikator Kinerja</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="../../../assets/css/output.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .sidebar-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sidebar-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        body {
+            font-family: "Nunito", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen overflow-hidden bg-[#e9f0f7] text-[#172033]">
+
+    <div class="flex h-screen w-full">
+
+        <!-- =====================================================
+             SIDEBAR
+        ====================================================== -->
+        <aside id="sidebar"
+            class="fixed inset-y-0 left-0 z-50 flex h-screen w-70 -translate-x-full flex-col overflow-hidden bg-gradient-to-b from-[#173b75] via-[#3264b5] to-[#2b77c5] text-white shadow-[8px_0_30px_rgba(23,59,117,.16)] transition-transform duration-300 lg:relative lg:w-70 lg:translate-x-0 lg:shadow-none">
+
+            <!-- LOGO -->
+            <div class="shrink-0 px-6 pb-5 pt-6">
+
+                <div class="flex items-center gap-3.5">
+
+                    <div
+                        class="flex h-13 w-13 shrink-0 items-center justify-center rounded-2xl bg-white/12 shadow-sm ring-1 ring-white/15">
+
+                        <img src="../../asset/folder.png" alt="Logo SKALA" class="h-13 w-13 object-contain">
+
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <h1 class="text-[26px] font-black leading-none tracking-tight text-white">
+                            SKALA
+                        </h1>
+
+                        <p class="mt-1.5 text-[9px] font-bold leading-3.5 tracking-[.12em] text-white/75">
+                            SISTEM KELOLA<br>
+                            ARSIP DAN LAPORAN
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mx-5 border-t border-white/15"></div>
+
+
+            <!-- =================================================
+                 NAVIGATION
+            ================================================== -->
+            <nav class="sidebar-scroll flex-1 overflow-y-auto px-4 py-5">
+
+                <p class="mb-3 px-3 text-[9px] font-extrabold uppercase tracking-[.2em] text-white/55">
+                    Menu Utama
+                </p>
+
+                <ul class="space-y-1.5">
+
+                    <!-- DASHBOARD -->
+                    <li>
+
+                        <a href="../../dashboard/dashboard.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-house w-5 text-center text-[14px]"></i>
+
+                            <span>Dashboard</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- PENGGUNA -->
+                    <li>
+
+                        <a href="../../user/user.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-user w-5 text-center text-[14px]"></i>
+
+                            <span>Pengguna</span>
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- KELOLA MASTER -->
+                    <li>
+
+                        <button type="button" id="btnKelolaMaster"
+                            class="menu-toggle flex w-full items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-[13px] font-extrabold text-white transition hover:bg-white/15">
+
+                            <span class="flex items-center gap-3.5">
+
+                                <i class="fa-solid fa-database w-5 text-center text-[14px]"></i>
+
+                                <span>Kelola Master</span>
+
+                            </span>
+
+                            <i id="iconDropdown"
+                                class="fa-solid fa-chevron-down rotate-180 text-[9px] transition-transform duration-200">
+                            </i>
+
+                        </button>
+
+
+                        <!-- MASTER MENU -->
+                        <div id="menuKelolaMaster" class="overflow-hidden">
+
+                            <div class="space-y-1 border-l border-white/20 pl-4 pt-1.5">
+
+                                <!-- MASTER TAHUN -->
+                                <a href="../../master/master-tahun/tahun.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                    Master Tahun
+
+                                </a>
+
+
+                                <!-- MASTER TEKNIS -->
+                                <a href="../../master/master-teknis/teknis.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                    Master Teknis
+
+                                </a>
+
+
+                                <!-- MASTER KOMPONEN -->
+                                <div>
+
+                                    <button type="button" id="btnKomponenKinerja"
+                                        class="component-toggle flex w-full items-center justify-between rounded-lg bg-white/10 px-3 py-2.5 text-left text-[12px] font-semibold text-white transition hover:bg-white/10">
+
+                                        <span>
+                                            Master Komponen
+                                        </span>
+
+                                        <i id="iconDropKomponen"
+                                            class="fa-solid fa-chevron-down rotate-180 text-[8px] transition-transform duration-200">
+                                        </i>
+
+                                    </button>
+
+
+                                    <!-- SUB MENU KOMPONEN -->
+                                    <div id="menuKomponenKinerja" class="component-submenu overflow-hidden pl-3 pt-1">
+
+                                        <div class="space-y-1 border-l border-white/15 pl-3">
+
+                                            <!-- TUJUAN -->
+                                            <a href="../../master/master-komponen/tujuan.html"
+                                                class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+
+                                                <span class="flex items-center gap-2">
+
+                                                    <i class="fa-solid fa-bullseye text-[9px]"></i>
+
+                                                    Tujuan
+
+                                                </span>
+
+                                            </a>
+
+
+                                            <!-- SASARAN -->
+                                            <a href="../../master/master-komponen/sasaran.html"
+                                                class="block rounded-lg px-3 py-2 text-[11px] font-semibold text-white/70 transition hover:bg-white/10 hover:text-white">
+
+                                                <span class="flex items-center gap-2">
+
+                                                    <i class="fa-solid fa-crosshairs text-[9px]"></i>
+
+                                                    Sasaran
+
+                                                </span>
+
+                                            </a>
+
+
+                                            <!-- INDIKATOR AKTIF -->
+                                            <a href="../../master/master-komponen/indikator.html"
+                                                class="block rounded-lg bg-white/15 px-3 py-2 text-[11px] font-extrabold text-white ring-1 ring-white/10">
+
+                                                <span class="flex items-center gap-2">
+
+                                                    <i class="fa-solid fa-chart-line text-[9px]"></i>
+
+                                                    Indikator
+
+                                                </span>
+
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- MASTER KEGIATAN -->
+                                <a href="../../master/master-kegiatan/kegiatan.html"
+                                    class="block rounded-lg px-3 py-2.5 text-[12px] font-semibold text-white/75 transition hover:bg-white/10 hover:text-white">
+
+                                    Master Kegiatan
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+
+                    <!-- DOWNLOAD -->
+                    <li>
+
+                        <a href="../../download/download.html"
+                            class="flex items-center gap-3.5 rounded-xl px-4 py-3 text-[13px] font-bold text-white/80 transition hover:bg-white/12 hover:text-white">
+
+                            <i class="fa-solid fa-download w-5 text-center text-[14px]"></i>
+
+                            <span>Download</span>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- SIDEBAR FOOTER -->
+            <div class="shrink-0 border-t border-white/15 p-4">
+
+                <div class="flex items-center gap-3 rounded-xl bg-white/10 p-3 ring-1 ring-white/5">
+
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+
+                        <img src="../../asset/logo.png" alt="Logo BPS" class="h-7 w-7 object-contain">
+
+                    </div>
+
+                    <div class="min-w-0">
+
+                        <p class="truncate text-[9px] font-black tracking-wide text-white">
+                            BADAN PUSAT STATISTIK
+                        </p>
+
+                        <p class="mt-0.5 text-[9px] font-semibold text-white/70">
+                            KOTA SUKABUMI
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MOBILE OVERLAY -->
+        <div id="sidebarOverlay" class="fixed inset-0 z-40 hidden bg-[#0f172a]/55 backdrop-blur-[3px] lg:hidden">
+        </div>
+
+
+        <!-- =====================================================
+             MAIN
+        ====================================================== -->
+        <main class="flex min-w-0 flex-1 flex-col">
+
+            <!-- HEADER -->
+            <header
+                class="z-30 flex min-h-22 shrink-0 items-center justify-between border-b border-[#dce5ee] bg-white/95 px-4 shadow-[0_3px_18px_rgba(15,23,42,.05)] backdrop-blur-md sm:px-6 lg:px-8">
+
+                <!-- LEFT -->
+                <div class="flex min-w-0 items-center gap-3.5">
+
+                    <!-- MOBILE MENU -->
+                    <button type="button" id="openSidebar"
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6] transition hover:bg-[#dcecfb] lg:hidden">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="min-w-0">
+
+                        <p class="truncate text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+
+                            Sistem Kelola Arsip & Laporan
+
+                        </p>
+
+                        <h2
+                            class="mt-0.5 truncate text-[21px] font-black tracking-[-.025em] text-[#0d4fa6] sm:text-[23px]">
+
+                            Master Komponen
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT -->
+                <div class="ml-4 flex shrink-0 items-center gap-2.5 sm:gap-3">
+
+                    <!-- ADMIN -->
+                    <div
+                        class="flex items-center gap-2.5 rounded-2xl border border-[#dce5ee] bg-[#fbfdff] px-2.5 py-2 shadow-sm sm:px-3">
+
+                        <div
+                            class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#e8f2fc] text-[#0d4fa6]">
+
+                            <i class="fa-solid fa-user text-[12px]"></i>
+
+                        </div>
+
+                        <div class="hidden min-w-0 sm:block">
+
+                            <p class="text-[8px] font-extrabold uppercase tracking-[.15em] text-[#71839a]">
+
+                                Administrator
+
+                            </p>
+
+                            <p id="namaAdmin"
+                                class="mt-0.5 max-w-32 truncate text-xs font-black text-[#172033] lg:max-w-44">
+
+                                Admin
+
+                            </p>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down hidden text-[8px] text-[#71839a] sm:block">
+                        </i>
+
+                    </div>
+
+
+                    <!-- LOGOUT -->
+                    <button type="button" onclick="logout()" title="Logout"
+                        class="group flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f0d5d5] bg-[#fff8f8] text-[#c63a3a] transition-all duration-200 hover:border-[#c63a3a] hover:bg-[#c63a3a] hover:text-white">
+
+                        <i
+                            class="fa-solid fa-right-from-bracket text-[12px] transition-transform duration-200 group-hover:translate-x-0.5">
+                        </i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT -->
+            <div class="flex min-h-0 flex-1 flex-col p-4 sm:p-5 lg:p-7">
+
+                <section
+                    class="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[22px] border border-[#dce5ee] bg-white shadow-[0_8px_30px_rgba(15,23,42,.06)]">
+
+                    <!-- SECTION HEADER -->
+                    <div
+                        class="flex shrink-0 items-center justify-between gap-4 border-b border-[#edf1f5] px-5 py-4 sm:px-6 sm:py-5">
+
+                        <div class="min-w-0">
+
+                            <p class="text-[9px] font-extrabold uppercase tracking-[.2em] text-[#71839a]">
+
+                                Master Komponen
+
+                            </p>
+
+                            <h2 class="mt-1 text-lg font-black tracking-[-.02em] text-[#0d4fa6] sm:text-xl">
+
+                                Data Indikator Kinerja
+
+                            </h2>
+
+                            <p class="mt-0.5 hidden text-[11px] font-semibold text-[#71839a] sm:block">
+
+                                Kelola indikator kinerja berdasarkan tujuan, sasaran dan teknis.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- TAB -->
+                        <div
+                            class="hidden shrink-0 items-center rounded-xl bg-[#e8f2fc] px-4 py-2 text-[10px] font-black uppercase tracking-[.12em] text-[#0d4fa6] sm:flex">
+
+                            INDIKATOR KINERJA
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         VIEW DATA
+                    ================================================== -->
+                    <section id="view-data" class="view-section active flex min-h-0 flex-1 flex-col">
+
+                        <!-- ACTION -->
+                        <div class="shrink-0 px-5 py-4 sm:px-6">
+
+                            <button type="button" id="btn-tambah"
+                                class="group flex w-full max-w-sm items-center gap-3 rounded-2xl border border-[#b9d7f5] bg-gradient-to-r from-[#0d4fa6] to-[#2b77c5] px-4 py-3 text-left text-white shadow-[0_8px_20px_rgba(13,79,166,.18)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(13,79,166,.25)]">
+
+                                <span
+                                    class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/15">
+
+                                    <i class="fa-solid fa-chart-line text-sm"></i>
+
+                                </span>
+
+                                <span class="min-w-0 flex-1">
+
+                                    <span class="block text-[9px] font-bold uppercase tracking-[.12em] text-white/70">
+
+                                        Master Komponen
+
+                                    </span>
+
+                                    <span class="mt-0.5 block text-sm font-black">
+
+                                        Tambah Indikator
+
+                                    </span>
+
+                                </span>
+
+                                <span
+                                    class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 transition-transform duration-200 group-hover:translate-x-0.5">
+
+                                    <i class="fa-solid fa-arrow-right text-[11px]"></i>
+
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- TABLE -->
+                        <div class="min-h-0 flex-1 overflow-auto px-5 pb-5 sm:px-6">
+
+                            <div class="overflow-hidden rounded-2xl border border-[#e2e8f0]">
+
+                                <table class="w-full min-w-[850px] border-collapse text-left" id="dataTable">
+
+                                    <thead>
+
+                                        <tr class="bg-[#f6f9fc]">
+
+                                            <th width="50"
+                                                class="border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+
+                                                No
+
+                                            </th>
+
+                                            <th
+                                                class="border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+
+                                                Kode Indikator
+
+                                            </th>
+
+                                            <th
+                                                class="border-b border-[#e2e8f0] px-5 py-4 text-left text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+
+                                                Uraian Indikator Kinerja
+
+                                            </th>
+
+                                            <th
+                                                class="border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+
+                                                Teknis
+
+                                            </th>
+
+                                            <th width="100"
+                                                class="border-b border-[#e2e8f0] px-5 py-4 text-center text-[10px] font-black uppercase tracking-[.08em] text-[#71839a]">
+
+                                                Aksi
+
+                                            </th>
+
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody class="divide-y divide-[#edf1f5] text-sm">
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================================
+                         VIEW FORM
+                    ================================================== -->
+                    <section id="view-form" class="view-section hidden min-h-0 flex-1 overflow-auto px-5 py-6 sm:px-6">
+
+                        <div class="mx-auto w-full max-w-5xl">
+
+                            <!-- FORM HEADER -->
+                            <div class="mb-6 rounded-2xl border border-[#dceaf8] bg-[#f5faff] p-5">
+
+                                <div class="flex items-center gap-3">
+
+                                    <div
+                                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#0d4fa6] text-white shadow-sm">
+
+                                        <i class="fa-solid fa-chart-line text-sm"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <p class="text-[9px] font-extrabold uppercase tracking-[.18em] text-[#71839a]">
+
+                                            Master Komponen
+
+                                        </p>
+
+                                        <h3 class="mt-0.5 text-lg font-black text-[#0d4fa6]">
+
+                                            Tambah Indikator Kinerja
+
+                                        </h3>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FORM -->
+                            <form id="dataForm"
+                                class="rounded-2xl border border-[#dce5ee] bg-white p-5 shadow-sm sm:p-6">
+
+                                <input type="hidden" id="in-index">
+
+
+                                <!-- TUJUAN -->
+                                <div class="grid gap-5 lg:grid-cols-[180px_1fr_1fr]">
+
+                                    <div class="flex items-start pt-3">
+
+                                        <label class="text-[11px] font-black uppercase tracking-[.08em] text-[#53657b]">
+
+                                            Tujuan
+
+                                        </label>
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="sel-tujuan"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Pilih Tujuan
+
+                                        </label>
+
+                                        <select id="sel-tujuan"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#fbfdff] px-4 py-3 text-sm font-bold text-[#172033] outline-none transition focus:border-[#0d4fa6] focus:ring-4 focus:ring-[#0d4fa6]/10"
+                                            required>
+
+                                        </select>
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="uraian-tujuan"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Uraian Tujuan
+
+                                        </label>
+
+                                        <input type="text" id="uraian-tujuan"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#f6f9fc] px-4 py-3 text-sm font-semibold text-[#64748b] outline-none"
+                                            readonly placeholder="Deskripsi Tujuan">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SASARAN -->
+                                <div class="mt-5 grid gap-5 lg:grid-cols-[180px_1fr_1fr]">
+
+                                    <div class="flex items-start pt-3">
+
+                                        <label class="text-[11px] font-black uppercase tracking-[.08em] text-[#53657b]">
+
+                                            Sasaran
+
+                                        </label>
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="sel-sasaran"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Pilih Sasaran
+
+                                        </label>
+
+                                        <select id="sel-sasaran"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#fbfdff] px-4 py-3 text-sm font-bold text-[#172033] outline-none transition focus:border-[#0d4fa6] focus:ring-4 focus:ring-[#0d4fa6]/10"
+                                            required>
+
+                                        </select>
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="uraian-sasaran"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Uraian Sasaran
+
+                                        </label>
+
+                                        <input type="text" id="uraian-sasaran"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#f6f9fc] px-4 py-3 text-sm font-semibold text-[#64748b] outline-none"
+                                            readonly placeholder="Deskripsi Sasaran">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- INDIKATOR -->
+                                <div class="mt-5 grid gap-5 lg:grid-cols-[180px_180px_1fr]">
+
+                                    <div class="flex items-start pt-3">
+
+                                        <label class="text-[11px] font-black uppercase tracking-[.08em] text-[#53657b]">
+
+                                            Indikator Kinerja
+
+                                        </label>
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="in-kode"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Kode
+
+                                        </label>
+
+                                        <input type="text" id="in-kode"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#fbfdff] px-4 py-3 text-sm font-bold text-[#172033] outline-none transition focus:border-[#0d4fa6] focus:ring-4 focus:ring-[#0d4fa6]/10"
+                                            required placeholder="Kode">
+
+                                    </div>
+
+                                    <div>
+
+                                        <label for="in-uraian"
+                                            class="mb-2 block text-[10px] font-extrabold uppercase tracking-[.08em] text-[#71839a] lg:hidden">
+
+                                            Uraian Indikator
+
+                                        </label>
+
+                                        <input type="text" id="in-uraian"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#fbfdff] px-4 py-3 text-sm font-semibold text-[#172033] outline-none transition focus:border-[#0d4fa6] focus:ring-4 focus:ring-[#0d4fa6]/10"
+                                            required placeholder="Masukkan uraian indikator...">
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TEKNIS -->
+                                <div class="mt-5 grid gap-5 lg:grid-cols-[180px_1fr]">
+
+                                    <div class="flex items-start pt-3">
+
+                                        <label for="in-teknis"
+                                            class="text-[11px] font-black uppercase tracking-[.08em] text-[#53657b]">
+
+                                            Teknis
+
+                                        </label>
+
+                                    </div>
+
+                                    <div>
+
+                                        <select id="in-teknis"
+                                            class="form-input w-full rounded-xl border border-[#dce5ee] bg-[#fbfdff] px-4 py-3 text-sm font-bold text-[#172033] outline-none transition focus:border-[#0d4fa6] focus:ring-4 focus:ring-[#0d4fa6]/10"
+                                            required>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- ACTION -->
+                                <div class="mt-7 flex justify-end gap-3 border-t border-[#edf1f5] pt-5">
+
+                                    <button type="button" id="btn-batal"
+                                        class="rounded-xl border border-[#dce5ee] bg-white px-5 py-2.5 text-xs font-extrabold text-[#64748b] transition hover:bg-[#f6f9fc]">
+
+                                        Batal
+
+                                    </button>
+
+                                    <button type="submit"
+                                        class="rounded-xl bg-[#0d4fa6] px-6 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-[#0a3b7c]">
+
+                                        <i class="fa-solid fa-floppy-disk mr-1.5"></i>
+
+                                        Simpan Data
+
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </section>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+        <!-- =====================================================
+             DELETE MODAL
+        ====================================================== -->
+        <div id="modalHapus"
+            class="modal-overlay fixed inset-0 z-[100] hidden items-center justify-center bg-[#0f172a]/55 px-4 backdrop-blur-[3px]">
+
+            <div
+                class="modal-box w-full max-w-sm rounded-2xl border border-[#dce5ee] bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,.18)]">
+
+                <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-red-50 text-red-500">
+
+                    <i class="fa-solid fa-trash text-sm"></i>
+
+                </div>
+
+                <h3 class="mt-4 text-center text-lg font-black text-[#172033]">
+                    Hapus Data?
+                </h3>
+
+                <p class="mt-2 text-center text-xs font-semibold leading-5 text-[#71839a]">
+
+                    Data yang sudah dihapus tidak dapat dikembalikan.
+
+                </p>
+
+                <div class="modal-btn mt-6 flex justify-center gap-3">
+
+                    <button type="button"
+                        class="btn-batal rounded-xl border border-[#dce5ee] bg-white px-5 py-2.5 text-xs font-extrabold text-[#64748b] transition hover:bg-[#f6f9fc]"
+                        onclick="tutupModal()">
+
+                        Batal
+
+                    </button>
+
+                    <button type="button"
+                        class="btn-simpan rounded-xl bg-red-500 px-5 py-2.5 text-xs font-extrabold text-white shadow-sm transition hover:bg-red-600"
+                        onclick="konfirmasiHapus()">
+
+                        Hapus
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR SCRIPT
+    ====================================================== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const sidebar = document.getElementById("sidebar");
+            const overlay = document.getElementById("sidebarOverlay");
+            const openBtn = document.getElementById("openSidebar");
+
+            function openSidebar() {
+                sidebar.classList.remove("-translate-x-full");
+                overlay.classList.remove("hidden");
+                document.body.classList.add("overflow-hidden");
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add("-translate-x-full");
+                overlay.classList.add("hidden");
+                document.body.classList.remove("overflow-hidden");
+            }
+
+            if (openBtn) {
+                openBtn.addEventListener("click", openSidebar);
+            }
+
+            if (overlay) {
+                overlay.addEventListener("click", closeSidebar);
+            }
+
+
+            /* KELOLA MASTER */
+
+            const btnMaster =
+                document.getElementById("btnKelolaMaster");
+
+            const masterMenu =
+                document.getElementById("menuKelolaMaster");
+
+            const masterIcon =
+                document.getElementById("iconDropdown");
+
+
+            if (btnMaster && masterMenu) {
+
+                btnMaster.addEventListener("click", () => {
+
+                    masterMenu.classList.toggle("hidden");
+
+                    if (masterIcon) {
+                        masterIcon.classList.toggle("rotate-180");
+                    }
+
+                });
+
+            }
+
+
+            /* MASTER KOMPONEN */
+
+            const btnKomponen =
+                document.getElementById("btnKomponenKinerja");
+
+            const komponenMenu =
+                document.getElementById("menuKomponenKinerja");
+
+            const komponenIcon =
+                document.getElementById("iconDropKomponen");
+
+
+            if (btnKomponen && komponenMenu) {
+
+                btnKomponen.addEventListener("click", (e) => {
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    komponenMenu.classList.toggle("hidden");
+
+                    if (komponenIcon) {
+                        komponenIcon.classList.toggle("rotate-180");
+                    }
+
+                });
+
+            }
+
+
+            /* OTOMATIS BUKA MASTER */
+
+            if (masterMenu) {
+                masterMenu.classList.remove("hidden");
+            }
+
+            if (masterIcon) {
+                masterIcon.classList.add("rotate-180");
+            }
+
+            if (komponenMenu) {
+                komponenMenu.classList.remove("hidden");
+            }
+
+            if (komponenIcon) {
+                komponenIcon.classList.add("rotate-180");
+            }
+
+
+            /* MOBILE */
+
+            document
+                .querySelectorAll("#sidebar a")
+                .forEach((link) => {
+
+                    link.addEventListener("click", () => {
+
+                        if (window.innerWidth < 1024) {
+                            closeSidebar();
+                        }
+
+                    });
+
+                });
+
+
+            /* RESIZE */
+
+            window.addEventListener("resize", () => {
+
+                if (window.innerWidth >= 1024) {
+
+                    overlay.classList.add("hidden");
+
+                    document.body.classList.remove(
+                        "overflow-hidden"
+                    );
+
+                }
+
+            });
+
+        });
+    </script>
+
+
+    <!-- AUTH ADMIN -->
+    <script src="../../../assets/js/authAdmin.js"></script>
+
+    <!-- CRUD INDIKATOR -->
+    <script src="indikator.js"></script>
+
+</body>
+
+</html>

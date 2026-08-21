@@ -1,0 +1,15 @@
+# Environment
+backend/.env
+.env
+
+# Node modules
+node_modules/
+backend/node_modules/
+
+# Upload lokal
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+
+# File sistem
+.DS_Store
+Thumbs.db

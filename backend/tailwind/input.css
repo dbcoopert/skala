@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@source "../../frontend";
+
+@theme {
+    --font-sans: "Nunito", sans-serif;
+
+    --color-skala-primary: #0d4fa6;
+    --color-skala-primary-dark: #0a3b7c;
+    --color-skala-primary-deep: #082f63;
+
+    --color-skala-blue: #2b77c5;
+    --color-skala-blue-light: #e8f2fc;
+
+    --color-skala-gold: #f0c878;
+    --color-skala-gold-dark: #c9962c;
+
+    --color-skala-bg: #f4f7fb;
+    --color-skala-text: #172033;
+    --color-skala-muted: #52657d;
+    --color-skala-light: #71839a;
+    --color-skala-border: #dbe4ee;
+
+    --color-skala-danger: #c63a3a;
+    --color-skala-danger-bg: #fdecec;
+}
+
+.sidebar-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes getar {
+    0%,100% { transform: translateX(0); }
+    20%,60% { transform: translateX(-6px); }
+    40%,80% { transform: translateX(6px); }
+}
+
+.input-error {
+    animation: getar .4s ease-in-out;
+}
